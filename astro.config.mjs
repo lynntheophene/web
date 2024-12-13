@@ -22,6 +22,12 @@ export default defineConfig({
   output: 'hybrid',
   site: 'https://jestsee.com',
 
+  markdown: {
+    shikiConfig: {
+      theme: 'poimandres'
+    }
+  },
+
   prefetch: {
     prefetchAll: true,
     defaultStrategy: 'load'

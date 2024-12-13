@@ -21,8 +21,8 @@ const {
   htmlDescription: description
 } = Astro.props
 
-const Title = forHomePage ? 'h2' : 'h1'
-const Description = forHomePage ? 'h3' : 'h2'
+const Section = forHomePage ? 'h2' : 'h1'
+const Title = forHomePage ? 'h3' : 'h2'
 const Container = forHomePage ? 'div' : 'section'
 ---
 
@@ -32,18 +32,18 @@ const Container = forHomePage ? 'div' : 'section'
     class='flex w-fit items-center gap-2 rounded-full bg-emerald-950/55 px-4 py-2 text-emerald-300'
   >
     <Icon />
-    <Title class='text-sm font-medium tracking-wide max-sm:text-xs'
-      >{section}</Title
+    <Section class='text-sm font-medium tracking-wide max-sm:text-xs'
+      >{section}</Section
     >
   </div>
-  <Description
+  <Title
     set:html={title}
     transition:animate={getCustomTransition(0.05)}
     class:list={[
       'font-heading font-semibold leading-none',
       forHomePage
-        ? 'text-[clamp(2rem,7vw,3.2rem)]'
-        : 'text-[clamp(2rem,7vw,3.5rem)]'
+        ? 'text-[clamp(2rem,7vw,3rem)]'
+        : 'text-[clamp(2rem,7vw,3.25rem)]'
     ]}
   />
   <p

@@ -23,7 +23,7 @@ const projects = await getCollection('projects')
   <ProjectHeader class='mt-16 sm:mt-40' />
   <section
     class='mt-12 grid gap-12 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3'
-    transition:animate={getCustomTransition(0.15)}
+    transition:animate={getCustomTransition(0.2)}
   >
     {projects.map(({ slug, data }) => <ProjectCard slug={slug} {...data} />)}
   </section>

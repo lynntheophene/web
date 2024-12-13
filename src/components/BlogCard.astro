@@ -1,0 +1,56 @@
+---
+import type { InferEntrySchema } from 'astro:content'
+
+import { ArrowRight } from './icons/ArrowRight'
+import Image from './Image'
+import Link from './Link'
+
+interface Props extends InferEntrySchema<'blog'> {
+  slug: string
+}
+
+const { slug, title, description, heroImage } = Astro.props
+---
+
+<Link href={`blog/${slug}`} class='group flex gap-8'>
+  <Image
+    src={heroImage}
+    alt={title}
+    align='center'
+    class='aspect-[1.5] transition-all duration-800 group-hover:scale-105'
+    wrapperProps={{ class: 'rounded-lg overflow-clip max-w-[280px]' }}
+    inferSize
+  />
+  <div class='flex w-full flex-col justify-between py-2'>
+    <div class='font-light'>
+      <div class='space-x-1 text-sm text-zinc-400'>
+        <span>September 23, 2024</span>
+        <span>•</span>
+        <span>15 min read</span>
+      </div>
+      <p class='font-display mt-3 text-xl font-semibold'>{title}</p>
+      <p class='text-zinc-400'>{description}</p>
+    </div>
+
+    <div class='flex items-center justify-between'>
+      <span
+        class='link-hover-animation group-hover:link-hovered-animation w-fit text-sm text-emerald-400'
+        >Read more
+        <ArrowRight
+          className='ml-1 inline-block transition-all duration-300 group-hover:ml-2'
+        />
+      </span>
+      <ul class='flex flex-wrap gap-2'>
+        {
+          ['zod', 'typescript'].map((item) => (
+            <li class='rounded bg-zinc-900 px-2 py-1 font-mono text-xs tracking-tight text-zinc-500'>
+              {item}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</Link>
+
+<style define:vars={{ offsetEnd: '24px' }}></style>

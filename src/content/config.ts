@@ -4,11 +4,11 @@ import { iconSchema } from './_icons'
 
 export const blog = defineCollection({
   type: 'content',
-  schema: ({ image }) =>
+  schema: () =>
     z.object({
       title: z.string(),
       description: z.string(),
-      heroImage: image(),
+      heroImage: z.string(),
       publishedDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),
       readingTime: z.number().optional(),

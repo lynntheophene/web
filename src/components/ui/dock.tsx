@@ -62,7 +62,7 @@ const Dock = React.forwardRef<HTMLUListElement, DockProps>(
         }}
         {...props}
         className={cn(
-          'supports-backdrop-blur:bg-black/10 mx-auto flex h-[58px] w-max rounded-full border border-shark-950 bg-black/80 p-2 backdrop-blur-lg',
+          'supports-backdrop-blur:bg-black/10 mx-auto flex h-[58px] w-max rounded-full border border-shark-950 bg-black/75 p-2 backdrop-blur-lg',
           {
             'items-start': direction === 'top',
             'items-center': direction === 'middle',

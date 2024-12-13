@@ -16,8 +16,6 @@ interface Props
 
 const { year, title, description, slug, heroImage, heroImageAlign } =
   Astro.props
-
-const offsetEnd = '24px'
 ---
 
 <Link href={`projects/${slug}`} class='group space-y-6'>
@@ -49,4 +47,4 @@ const offsetEnd = '24px'
   </div>
 </Link>
 
-<style define:vars={{ offsetEnd }}></style>
+<style define:vars={{ offsetEnd: '24px' }}></style>

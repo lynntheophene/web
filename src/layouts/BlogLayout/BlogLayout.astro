@@ -1,46 +1,26 @@
 ---
-import { ArrowOutward } from '@icons/ArrowOutward'
 import { ArrowRight } from '@icons/ArrowRight'
 import type { MarkdownHeading } from 'astro'
 import type { InferEntrySchema } from 'astro:content'
 
 import Image from '@/components/Image'
-import Link, { LinkArticle } from '@/components/Link'
+import Link from '@/components/Link'
 import SEO from '@/components/SEO.astro'
 import TableOfContent from '@/components/TableOfContent'
 import TopOverlay from '@/components/TopOverlay.astro'
 import ScrollProgressBar from '@/components/ui/scroll-progress-bar'
 import { BASE_URL } from '@/lib/baseUrl'
-import { formatDateByTimeZone } from '@/lib/utils'
 
 // import ReadingTimeTooltip from './components/ReadingTimeTooltip'
 import BaseLayout from '../BaseLayout.astro'
-import Links from '../components/Links.astro'
-// import MoreProjectCard from './components/MoreProjectCard.astro'
 
-interface Props extends InferEntrySchema<'projects'> {
+interface Props extends InferEntrySchema<'blog'> {
   headings: MarkdownHeading[]
   slug: string
 }
 
-const {
-  year,
-  description,
-  heroImage,
-  heroImageAlign,
-  title,
-  htmlTitle: _htmlTitle,
-  headings,
-  slug,
-  updatedDate,
-  latestCommitUrl,
-  links
-} = Astro.props
-
-const htmlTitle = _htmlTitle.replace(
-  '\\n',
-  "<br class='max-md:hidden' /><span class='md:hidden'>&nbsp;</span>"
-)
+const { description, heroImage, title, headings, slug, updatedDate } =
+  Astro.props
 ---
 
 <BaseLayout class='!max-w-[1024px]'>
@@ -59,47 +39,59 @@ const htmlTitle = _htmlTitle.replace(
     client:only='react'
   />
 
-  <section class='mt-16 sm:mt-24 sm:font-light lg:mt-32'>
-    <h2 class='text-zinc-400 sm:text-lg'>
-      {year}
-    </h2>
-    <h1
-      class='font-heading mt-4 text-[clamp(1.8rem,5vw,2.5rem)] font-bold leading-[1.25] sm:mt-6 md:leading-[1.1]'
-      set:html={htmlTitle}
-    />
-    <h3 class='mt-4 text-zinc-400 max-sm:text-sm'>
-      {description}
-    </h3>
-    {
-      links.length > 0 && (
-        <div class='mt-4 flex gap-4 max-sm:flex-col-reverse sm:mt-6 sm:items-center sm:justify-between'>
-          <Links links={links} />
-        </div>
-      )
-    }
-  </section>
-
   <Image
     src={heroImage}
     alt={title}
     title={title}
-    align={heroImageAlign}
-    wrapperProps={{ class: 'rounded-lg mt-8 sm:mt-12' }}
-    class='aspect-[1.5] w-full xs:aspect-[2]'
+    align='center'
+    wrapperProps={{ class: 'max-w-[928px] lg:mt-12 lg:rounded-md' }}
+    class='aspect-[2.5] w-full xs:aspect-[3.25]'
+    inferSize
     ambientMode
+    slot='decorator'
   />
 
-  <section class='mt-8 flex w-full gap-16 sm:mt-16'>
+  <section class='mt-8 sm:font-light'>
+    <div class='space-x-1 text-sm text-zinc-400'>
+      <span>September 23, 2024</span>
+      <span>•</span>
+      <span>15 min read</span>
+    </div>
+    <h1
+      class='font-heading mt-4 text-[clamp(1.8rem,5vw,2rem)] font-semibold leading-[1.25] !-tracking-[0.01em] md:leading-[1.1]'
+    >
+      {title}
+    </h1>
+    <h3 class='mt-2 text-zinc-400 max-sm:text-sm'>
+      {description}
+    </h3>
+    <ul class='mt-8 flex flex-wrap gap-2'>
+      {
+        ['zod', 'typescript'].map((item) => (
+          <li class='rounded bg-zinc-900 px-2 py-1 font-mono text-xs tracking-tight text-zinc-500'>
+            {item}
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <div
+    class='mt-8 h-[1px] w-full bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900'
+  >
+  </div>
+
+  <section class='mt-8 flex w-full gap-16'>
     <article
       id='article'
       class:list={[
-        'prose prose-invert max-w-none max-sm:prose-sm',
+        'prose prose-invert min-w-0 max-w-none max-sm:prose-sm',
         'prose-headings:font-display prose-headings:scroll-m-16 sm:prose-headings:scroll-m-24',
         'prose-a:article-link prose-a:text-[var(--projectAccentColor)]'
       ]}
     >
       <slot />
-      {
+      <!-- {
         updatedDate && (
           <p class='!mt-8 text-zinc-500'>
             Last updated on {formatDateByTimeZone(updatedDate)} UTC+7.
@@ -111,7 +103,7 @@ const htmlTitle = _htmlTitle.replace(
             )}
           </p>
         )
-      }
+      } -->
     </article>
 
     <aside class='w-60 shrink-0 space-y-8 max-lg:hidden'>
@@ -120,10 +112,6 @@ const htmlTitle = _htmlTitle.replace(
   </section>
 
   <section class='mt-16'>
-    <!-- <div class='mb-12 grid gap-6 max-lg:mx-auto md:grid-cols-2'>
-      <MoreProjectCard {...Astro.props} />
-      <MoreProjectCard {...Astro.props} />
-    </div> -->
     <Link
       href='/projects'
       class='!text-zinc-200 !no-underline'
@@ -132,7 +120,7 @@ const htmlTitle = _htmlTitle.replace(
       hoverEffectOffsetStart='24px'
     >
       <ArrowRight className='mr-2 inline-block size-4 -scale-x-100' />Explore
-      more projects</Link
+      more articles</Link
     >
   </section>
 </BaseLayout>
@@ -223,3 +211,13 @@ const htmlTitle = _htmlTitle.replace(
 
   document.addEventListener('astro:page-load', handleHeadingIntersection)
 </script>
+
+<!-- <script is:inline>
+  document.addEventListener('astro:before-swap', (event) => {
+    if (!event.viewTransition) return
+
+    if (event.to.pathname === '/' || event.to.pathname === '/projects') {
+      event.viewTransition.skipTransition()
+    }
+  })
+</script> -->

@@ -1,7 +1,7 @@
 ---
 import { blogMetaData } from '@/lib/metaData'
 
-import { Suitcase } from './icons/Suitcase'
+import { Pencil } from './icons/Pencil'
 import SectionHeader, {
   type Props as SectionHeaderProps
 } from './SectionHeader.astro'
@@ -11,7 +11,7 @@ interface Props extends Pick<SectionHeaderProps, 'forHomePage' | 'class'> {}
 
 <SectionHeader
   section='Blog'
-  icon={Suitcase}
+  icon={Pencil}
   {...blogMetaData}
   {...Astro.props}
 />

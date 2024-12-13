@@ -35,6 +35,9 @@ module.exports = {
             },
             strong: {
               fontWeight: '400'
+            },
+            pre: {
+              letterSpacing: '0'
             }
           }
         },
@@ -69,6 +72,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Switzer', 'sans'],
+        mono: ['"DM Mono"', 'monospace'],
         secondary: [
           '"Fustat SemiBold", sans',
           {

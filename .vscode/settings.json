@@ -10,5 +10,13 @@
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "tailwindCSS.classAttributes": [".*class*", "class:list", "className", ".*Class"],
+  "tailwindCSS.classAttributes": [
+    ".*class*",
+    "class:list",
+    "className",
+    ".*Class"
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    "(?:wrapperProps)\\s*=\\s*\\{\\{\\s*class:\\s*['\"]([^'\"]+)['\"]\\s*\\}\\}"
+  ]
 }
