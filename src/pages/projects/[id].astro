@@ -10,33 +10,28 @@ import { getProjectSchema, projectWebsite } from '@/lib/structuredData'
 
 export async function getStaticPaths() {
   const projectEntries = await getCollection('projects')
-  // return Promise.all(
-  //   projectEntries.map(async ({ data, ...rest }) => {
-  //     const getLastUpdatedTime = client.api.github['last-updated-file']
-  //     const { latestCommitUrl, lastUpdatedTime } = await getLastUpdatedTime
-  //       .$get({ query: { path: `projects/${rest.id}` } })
-  //       .then((res) => res.json())
+  return Promise.all(
+    projectEntries.map(async ({ data, ...rest }) => {
+      const getLastUpdatedTime = client.api.github['last-updated-file']
+      const { latestCommitUrl, lastUpdatedTime } = await getLastUpdatedTime
+        .$get({ query: { path: `projects/${rest.id}.mdx` } })
+        .then((res) => res.json())
 
-  //     const entry = {
-  //       ...rest,
-  //       data: {
-  //         ...data,
-  //         updatedDate: new Date(lastUpdatedTime),
-  //         latestCommitUrl
-  //       }
-  //     }
+      const entry = {
+        ...rest,
+        data: {
+          ...data,
+          updatedDate: new Date(lastUpdatedTime),
+          latestCommitUrl
+        }
+      }
 
-  //     return {
-  //       params: { id: entry.id },
-  //       props: { entry }
-  //     }
-  //   })
-  // )
-
-  return projectEntries.map((entry) => ({
-    params: { id: entry.id },
-    props: { entry }
-  }))
+      return {
+        params: { id: entry.id },
+        props: { entry }
+      }
+    })
+  )
 }
 
 const { entry } = Astro.props
