@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content'
+import { getCollection, render } from 'astro:content'
 
 import ContentWrapper from '@/components/ContentWrapper.astro'
 import BlogLayout from '@/layouts/BlogLayout'
@@ -7,15 +7,15 @@ import BlogLayout from '@/layouts/BlogLayout'
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog')
   return blogEntries.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { id: entry.id },
     props: { entry }
   }))
 }
 
 const { entry } = Astro.props
-const { Content, headings } = await entry.render()
+const { Content, headings } = await render(entry)
 ---
 
-<BlogLayout headings={headings} slug={entry.slug} {...entry.data}>
+<BlogLayout headings={headings} slug={entry.id} {...entry.data}>
   <ContentWrapper content={Content} />
 </BlogLayout>

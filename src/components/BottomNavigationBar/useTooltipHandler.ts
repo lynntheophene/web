@@ -1,9 +1,11 @@
 import React, { useRef } from 'react'
 
-export const useTooltipHandler = (navRef: React.RefObject<HTMLDivElement>) => {
+export const useTooltipHandler = (
+  navRef: React.RefObject<HTMLDivElement | null>
+) => {
   const tipX = useRef(0)
   const tipY = useRef(0)
-  const bounds = useRef<DOMRect>()
+  const bounds = useRef<DOMRect>(null)
 
   const setTipXY = () => {
     document.documentElement.style.setProperty(
@@ -26,7 +28,7 @@ export const useTooltipHandler = (navRef: React.RefObject<HTMLDivElement>) => {
   }
 
   const setupTooltip = () => {
-    const nav = navRef.current
+    const nav = navRef?.current
     if (!nav) return
 
     const navSize = nav.getBoundingClientRect().width

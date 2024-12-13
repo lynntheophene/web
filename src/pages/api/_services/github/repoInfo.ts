@@ -1,3 +1,4 @@
+import { GITHUB_ACCESS_TOKEN } from 'astro:env/server'
 import request from 'graphql-request'
 
 import { GetRepoInfo } from '@/lib/graphql'
@@ -12,7 +13,7 @@ const getLastUpdatedTime = async (
     document: GetRepoInfo,
     variables: { username: owner, repositoryName: repository },
     requestHeaders: {
-      Authorization: `Bearer ${import.meta.env.GITHUB_ACCESS_TOKEN}`
+      Authorization: `Bearer ${GITHUB_ACCESS_TOKEN}`
     }
   })
 

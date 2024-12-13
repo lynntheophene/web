@@ -143,7 +143,7 @@ export async function getStaticPaths() {
 
   return projects.map((project) => ({
     params: {
-      slug: project.slug // used as the key to map the og photo to the project
+      slug: project.id // used as the key to map the og photo to the project
     },
     props: { project }
   }))

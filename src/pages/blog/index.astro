@@ -26,6 +26,6 @@ const blogEntries = await getCollection('blog')
     class='mt-12 gap-12 sm:mt-16'
     transition:animate={getCustomTransition(0.2)}
   >
-    {blogEntries.map(({ slug, data }) => <BlogCard slug={slug} {...data} />)}
+    {blogEntries.map(({ id, data }) => <BlogCard slug={id} {...data} />)}
   </section>
 </BaseLayout>

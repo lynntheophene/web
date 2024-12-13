@@ -1,9 +1,10 @@
+import { glob } from 'astro/loaders'
 import { defineCollection, z } from 'astro:content'
 
-import { iconSchema } from './_icons'
+import { iconSchema } from './content/_icons'
 
 export const blog = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/[^_]*.mdx', base: './src/content/blog' }),
   schema: () =>
     z.object({
       title: z.string(),
@@ -17,7 +18,7 @@ export const blog = defineCollection({
 })
 
 export const projects = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/[^_]*.mdx', base: './src/content/projects' }),
   schema: ({ image }) =>
     z
       .object({

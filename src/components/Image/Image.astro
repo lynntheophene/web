@@ -1,4 +1,5 @@
 ---
+import type { UnresolvedImageTransform } from 'astro'
 import {
   getImage,
   Image as AstroImage,
@@ -28,11 +29,12 @@ const {
   wrapperProps,
   ambientMode,
   align = 'top',
+
   ...rest
 } = Astro.props
 
 const blurryImage = await getImage({
-  ...rest,
+  ...(rest as UnresolvedImageTransform),
   width: 20
 })
 

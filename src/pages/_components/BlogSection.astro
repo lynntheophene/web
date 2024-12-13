@@ -15,6 +15,6 @@ const blog = await getCollection('blog')
     <FancyLink class='max-lg:hidden' href='/blog'>View all blog</FancyLink>
   </div>
   <div class='mt-12 gap-12' transition:animate={getCustomTransition(0.2)}>
-    {blog.map(({ slug, data }) => <BlogCard slug={slug} {...data} />)}
+    {blog.map(({ id, data }) => <BlogCard slug={id} {...data} />)}
   </div>
 </section>

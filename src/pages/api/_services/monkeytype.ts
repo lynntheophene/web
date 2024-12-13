@@ -1,3 +1,5 @@
+import { MONKEYTYPE_API_KEY } from 'astro:env/server'
+
 import type { MonkeyTypeData } from '@/types'
 
 const mapResponse = (response: any) => {
@@ -10,7 +12,7 @@ const mapResponse = (response: any) => {
 }
 
 const getMonkeytypeData = async (): Promise<MonkeyTypeData> => {
-  const API_KEY = import.meta.env.MONKEYTYPE_API_KEY
+  const API_KEY = MONKEYTYPE_API_KEY
   const response = await fetch(
     'https://api.monkeytype.com/users/personalBests?mode=time',
     { headers: { Authorization: `ApeKey ${API_KEY}` } }

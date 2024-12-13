@@ -14,7 +14,7 @@ import { Swr } from '@icons/Swr'
 import { Tailwindcss } from '@icons/Tailwind'
 import { TypeScript } from '@icons/TypeScript'
 import { Vuejs } from '@icons/VueJs'
-import type { SVGProps } from 'react'
+import type { JSX, SVGProps } from 'react'
 
 type TechStack = {
   name: string

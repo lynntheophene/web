@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content'
+import { getCollection, render } from 'astro:content'
 import readingTime from 'reading-time'
 import type { BreadcrumbList, WithContext } from 'schema-dts'
 
@@ -10,33 +10,38 @@ import { getProjectSchema, projectWebsite } from '@/lib/structuredData'
 
 export async function getStaticPaths() {
   const projectEntries = await getCollection('projects')
-  return Promise.all(
-    projectEntries.map(async ({ data, ...rest }) => {
-      const getLastUpdatedTime = client.api.github['last-updated-file']
-      const { latestCommitUrl, lastUpdatedTime } = await getLastUpdatedTime
-        .$get({ query: { path: `projects/${rest.id}` } })
-        .then((res) => res.json())
+  // return Promise.all(
+  //   projectEntries.map(async ({ data, ...rest }) => {
+  //     const getLastUpdatedTime = client.api.github['last-updated-file']
+  //     const { latestCommitUrl, lastUpdatedTime } = await getLastUpdatedTime
+  //       .$get({ query: { path: `projects/${rest.id}` } })
+  //       .then((res) => res.json())
 
-      const entry = {
-        ...rest,
-        data: {
-          ...data,
-          updatedDate: new Date(lastUpdatedTime),
-          latestCommitUrl
-        }
-      }
+  //     const entry = {
+  //       ...rest,
+  //       data: {
+  //         ...data,
+  //         updatedDate: new Date(lastUpdatedTime),
+  //         latestCommitUrl
+  //       }
+  //     }
 
-      return {
-        params: { slug: entry.slug },
-        props: { entry }
-      }
-    })
-  )
+  //     return {
+  //       params: { id: entry.id },
+  //       props: { entry }
+  //     }
+  //   })
+  // )
+
+  return projectEntries.map((entry) => ({
+    params: { id: entry.id },
+    props: { entry }
+  }))
 }
 
 const { entry } = Astro.props
-const { Content, headings } = await entry.render()
-const { minutes, words } = readingTime(entry.body)
+const { Content, headings } = await render(entry)
+const { minutes, words } = readingTime(entry.body!)
 
 const projectStructuredData = getProjectSchema(entry)
 
@@ -54,7 +59,7 @@ const breadcrumbsStructuredData: WithContext<BreadcrumbList> = {
       '@type': 'ListItem',
       position: 2,
       name: entry.data.title,
-      item: `${import.meta.env.SITE}/projects/${entry.slug}/`
+      item: `${import.meta.env.SITE}/projects/${entry.id}/`
     }
   ]
 }
@@ -67,7 +72,7 @@ const jsonLd = {
 
 <ProjectLayout
   headings={headings}
-  slug={entry.slug}
+  slug={entry.id}
   readingTime={Math.ceil(minutes)}
   wordsCount={words}
   {...entry.data}
