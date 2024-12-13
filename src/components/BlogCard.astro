@@ -12,27 +12,35 @@ interface Props extends InferEntrySchema<'blog'> {
 const { slug, title, description, heroImage } = Astro.props
 ---
 
-<Link href={`blog/${slug}`} class='group flex gap-8'>
+<Link href={`blog/${slug}`} class='group flex gap-8 max-md:flex-col'>
   <Image
     src={heroImage}
     alt={title}
     align='center'
-    class='aspect-[1.5] transition-all duration-800 group-hover:scale-105'
-    wrapperProps={{ class: 'rounded-lg overflow-clip max-w-[280px]' }}
+    class='aspect-[2] transition-all duration-800 group-hover:scale-105 md:aspect-[1.5]'
+    wrapperProps={{ class: 'rounded-lg overflow-clip md:max-w-[280px]' }}
     inferSize
   />
-  <div class='flex w-full flex-col justify-between py-2'>
+  <div class='flex w-full flex-col justify-between lg:py-2'>
     <div class='font-light'>
       <div class='space-x-1 text-sm text-zinc-400'>
         <span>September 23, 2024</span>
         <span>•</span>
         <span>15 min read</span>
       </div>
-      <p class='font-display mt-3 text-xl font-semibold'>{title}</p>
-      <p class='text-zinc-400'>{description}</p>
+      <p
+        class='font-display mt-3 line-clamp-2 text-lg font-semibold md:text-xl'
+      >
+        {title}
+      </p>
+      <p class='mt-2 line-clamp-2 text-zinc-400 max-md:text-sm'>
+        {description}
+      </p>
     </div>
 
-    <div class='flex items-center justify-between'>
+    <div
+      class='mt-4 flex justify-between gap-6 max-xs:flex-col-reverse xs:mt-6 xs:items-center'
+    >
       <span
         class='link-hover-animation group-hover:link-hovered-animation w-fit text-sm text-emerald-400'
         >Read more
