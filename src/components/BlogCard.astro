@@ -1,15 +1,18 @@
 ---
-import type { InferEntrySchema } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
 
+import BlogInfo from './BlogInfo.astro'
 import { ArrowRight } from './icons/ArrowRight'
 import Image from './Image'
 import Link from './Link'
 
-interface Props extends InferEntrySchema<'blog'> {
-  slug: string
-}
+interface Props extends CollectionEntry<'blog'> {}
 
-const { slug, title, description, heroImage } = Astro.props
+const {
+  id: slug,
+  data: { heroImage, title, publishedDate, description },
+  body
+} = Astro.props
 ---
 
 <Link href={`blog/${slug}`} class='group flex gap-8 max-md:flex-col'>
@@ -23,11 +26,7 @@ const { slug, title, description, heroImage } = Astro.props
   />
   <div class='flex w-full flex-col justify-between lg:py-2'>
     <div class='font-light'>
-      <div class='space-x-1 text-sm text-zinc-400'>
-        <span>September 23, 2024</span>
-        <span>•</span>
-        <span>15 min read</span>
-      </div>
+      <BlogInfo publishedDate={publishedDate} body={body} />
       <p
         class='font-display mt-3 line-clamp-2 text-lg font-semibold leading-[1.4] md:text-xl'
       >

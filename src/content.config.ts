@@ -13,7 +13,8 @@ export const blog = defineCollection({
       publishedDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),
       readingTime: z.number().optional(),
-      wordsCount: z.number().optional()
+      wordsCount: z.number().optional(),
+      latestCommitUrl: z.string().optional()
     })
 })
 

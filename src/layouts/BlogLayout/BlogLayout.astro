@@ -2,14 +2,17 @@
 import { ArrowRight } from '@icons/ArrowRight'
 import type { MarkdownHeading } from 'astro'
 import type { InferEntrySchema } from 'astro:content'
+import dayjs from 'dayjs'
 
+import { ArrowOutward } from '@/components/icons/ArrowOutward'
 import Image from '@/components/Image'
-import Link from '@/components/Link'
+import Link, { LinkArticle } from '@/components/Link'
 import SEO from '@/components/SEO.astro'
 import TableOfContent from '@/components/TableOfContent'
 import TopOverlay from '@/components/TopOverlay.astro'
 import ScrollProgressBar from '@/components/ui/scroll-progress-bar'
 import { BASE_URL } from '@/lib/baseUrl'
+import { formatDateByTimeZone } from '@/lib/utils'
 
 // import ReadingTimeTooltip from './components/ReadingTimeTooltip'
 import BaseLayout from '../BaseLayout.astro'
@@ -19,8 +22,17 @@ interface Props extends InferEntrySchema<'blog'> {
   slug: string
 }
 
-const { description, heroImage, title, headings, slug, updatedDate } =
-  Astro.props
+const {
+  description,
+  heroImage,
+  title,
+  headings,
+  slug,
+  publishedDate,
+  updatedDate,
+  latestCommitUrl,
+  readingTime
+} = Astro.props
 ---
 
 <BaseLayout class='!max-w-[1024px]'>
@@ -53,9 +65,15 @@ const { description, heroImage, title, headings, slug, updatedDate } =
 
   <section class='mt-8 sm:font-light'>
     <div class='space-x-1 text-sm text-zinc-400'>
-      <span>September 23, 2024</span>
-      <span>•</span>
-      <span>15 min read</span>
+      <span>{dayjs(publishedDate).format('MMMM D, YYYY')}</span>
+      {
+        readingTime && (
+          <>
+            <span>•</span>
+            <span>{Math.ceil(readingTime)} min read</span>
+          </>
+        )
+      }
     </div>
     <h1
       class='font-heading mt-4 text-[clamp(1.8rem,5vw,2rem)] font-semibold leading-[1.25] !-tracking-[0.01em] md:leading-[1.1]'
@@ -91,7 +109,7 @@ const { description, heroImage, title, headings, slug, updatedDate } =
       ]}
     >
       <slot />
-      <!-- {
+      {
         updatedDate && (
           <p class='!mt-8 text-zinc-500'>
             Last updated on {formatDateByTimeZone(updatedDate)} UTC+7.
@@ -103,7 +121,7 @@ const { description, heroImage, title, headings, slug, updatedDate } =
             )}
           </p>
         )
-      } -->
+      }
     </article>
 
     <aside class='w-60 shrink-0 space-y-8 max-lg:hidden'>

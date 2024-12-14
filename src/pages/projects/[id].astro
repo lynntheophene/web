@@ -10,6 +10,7 @@ import { getProjectSchema, projectWebsite } from '@/lib/structuredData'
 
 export async function getStaticPaths() {
   const projectEntries = await getCollection('projects')
+
   return Promise.all(
     projectEntries.map(async ({ data, ...rest }) => {
       const getLastUpdatedTime = client.api.github['last-updated-file']
