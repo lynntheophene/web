@@ -95,8 +95,12 @@ const TooltipContent = React.forwardRef<
         {...restProps}
       >
         {children}
-        {showArrow && <TooltipArrowPrimitive />}
-        {showArrow && <TooltipArrow aria-hidden='true' />}
+        {showArrow && (
+          <>
+            <TooltipArrowPrimitive />
+            <TooltipArrow aria-hidden='true' />
+          </>
+        )}
       </TooltipPrimitives.Content>
     </TooltipPrimitives.Portal>
   )

@@ -115,7 +115,7 @@ const {
 
   <section class='mt-16'>
     <Link
-      href='/projects'
+      href='/blog'
       class='!text-zinc-200 !no-underline'
       styled
       hoverStyled
@@ -213,13 +213,3 @@ const {
 
   document.addEventListener('astro:page-load', handleHeadingIntersection)
 </script>
-
-<!-- <script is:inline>
-  document.addEventListener('astro:before-swap', (event) => {
-    if (!event.viewTransition) return
-
-    if (event.to.pathname === '/' || event.to.pathname === '/projects') {
-      event.viewTransition.skipTransition()
-    }
-  })
-</script> -->
