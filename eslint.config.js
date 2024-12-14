@@ -9,6 +9,9 @@ export default [
   // js.configs.recommended,
   ...eslintPluginAstro.configs.recommended,
   {
+    ignores: ['public/*']
+  },
+  {
     files: ['**/*.astro'],
     languageOptions: {
       parser: astroParser

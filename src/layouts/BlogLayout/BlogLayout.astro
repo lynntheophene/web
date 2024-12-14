@@ -1,9 +1,9 @@
 ---
 import { ArrowRight } from '@icons/ArrowRight'
 import type { MarkdownHeading } from 'astro'
-import type { InferEntrySchema } from 'astro:content'
-import dayjs from 'dayjs'
+import type { CollectionEntry } from 'astro:content'
 
+import BlogInfo from '@/components/BlogInfo.astro'
 import { ArrowOutward } from '@/components/icons/ArrowOutward'
 import Image from '@/components/Image'
 import Link, { LinkArticle } from '@/components/Link'
@@ -17,21 +17,15 @@ import { formatDateByTimeZone } from '@/lib/utils'
 // import ReadingTimeTooltip from './components/ReadingTimeTooltip'
 import BaseLayout from '../BaseLayout.astro'
 
-interface Props extends InferEntrySchema<'blog'> {
+interface Props extends CollectionEntry<'blog'> {
   headings: MarkdownHeading[]
-  slug: string
 }
 
 const {
-  description,
-  heroImage,
-  title,
+  id,
   headings,
-  slug,
-  publishedDate,
-  updatedDate,
-  latestCommitUrl,
-  readingTime
+  body,
+  data: { title, description, heroImage, pubDate, updatedDate, latestCommitUrl }
 } = Astro.props
 ---
 
@@ -39,7 +33,7 @@ const {
   <SEO
     title={title}
     description={description}
-    imageUrl={`${BASE_URL}/api/og/${slug}`}
+    imageUrl={`${BASE_URL}/api/og/${id}`}
     type='article'
     slot='seo'
   />
@@ -64,17 +58,7 @@ const {
   />
 
   <section class='mt-8 sm:font-light'>
-    <div class='space-x-1 text-sm text-zinc-400'>
-      <span>{dayjs(publishedDate).format('MMMM D, YYYY')}</span>
-      {
-        readingTime && (
-          <>
-            <span>•</span>
-            <span>{Math.ceil(readingTime)} min read</span>
-          </>
-        )
-      }
-    </div>
+    <BlogInfo pubDate={pubDate} body={body} />
     <h1
       class='font-heading mt-4 text-[clamp(1.8rem,5vw,2rem)] font-semibold leading-[1.25] !-tracking-[0.01em] md:leading-[1.1]'
     >

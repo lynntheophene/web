@@ -10,7 +10,7 @@ export const blog = defineCollection({
       title: z.string(),
       description: z.string(),
       heroImage: z.string(),
-      publishedDate: z.coerce.date(),
+      pubDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),
       readingTime: z.number().optional(),
       wordsCount: z.number().optional(),

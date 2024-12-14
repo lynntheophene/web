@@ -3,15 +3,15 @@ import dayjs from 'dayjs'
 import calculateReadingTime from 'reading-time'
 
 interface Props {
-  publishedDate: Date
+  pubDate: Date
   body?: string
 }
 
-const { publishedDate, body } = Astro.props
+const { pubDate, body } = Astro.props
 ---
 
 <div class='space-x-1 text-sm text-zinc-400'>
-  <span>{dayjs(publishedDate).format('MMMM D, YYYY')}</span>
+  <span>{dayjs(pubDate).format('MMMM D, YYYY')}</span>
   {
     body && (
       <>

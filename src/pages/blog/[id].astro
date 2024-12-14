@@ -38,6 +38,6 @@ const { entry } = Astro.props
 const { Content, headings } = await render(entry)
 ---
 
-<BlogLayout headings={headings} slug={entry.id} {...entry.data}>
+<BlogLayout headings={headings} {...entry}>
   <ContentWrapper content={Content} />
 </BlogLayout>

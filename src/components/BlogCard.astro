@@ -10,7 +10,7 @@ interface Props extends CollectionEntry<'blog'> {}
 
 const {
   id: slug,
-  data: { heroImage, title, publishedDate, description },
+  data: { heroImage, title, pubDate, description },
   body
 } = Astro.props
 ---
@@ -26,7 +26,7 @@ const {
   />
   <div class='flex w-full flex-col justify-between lg:py-2'>
     <div class='font-light'>
-      <BlogInfo publishedDate={publishedDate} body={body} />
+      <BlogInfo pubDate={pubDate} body={body} />
       <p
         class='font-display mt-3 line-clamp-2 text-lg font-semibold leading-[1.4] md:text-xl'
       >
