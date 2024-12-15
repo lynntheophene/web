@@ -1,6 +1,7 @@
 ---
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js'
 
+import MarkdownImage from './Image/MarkdownImage.astro'
 import { LinkArticle } from './Link'
 
 interface Props {
@@ -10,4 +11,4 @@ interface Props {
 const { content: Content } = Astro.props
 ---
 
-<Content components={{ a: LinkArticle }} />
+<Content components={{ a: LinkArticle, img: MarkdownImage }} />

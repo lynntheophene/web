@@ -10,25 +10,28 @@ interface Props extends CollectionEntry<'blog'> {}
 
 const {
   id: slug,
-  data: { heroImage, title, pubDate, description },
+  data: { heroImage, title, pubDate, description, tags },
   body
 } = Astro.props
 ---
 
-<Link href={`blog/${slug}`} class='group flex gap-8 max-md:flex-col'>
+<Link
+  href={`blog/${slug}`}
+  class='group flex gap-8 border-t border-t-zinc-900 py-10 max-md:flex-col'
+>
   <Image
     src={heroImage}
     alt={title}
     align='center'
     class='aspect-[2] transition-all duration-800 group-hover:scale-105 md:aspect-[1.5]'
-    wrapperProps={{ class: 'rounded-lg overflow-clip md:max-w-[280px]' }}
+    wrapperProps={{ class: 'rounded-lg overflow-clip md:max-w-[260px]' }}
     inferSize
   />
   <div class='flex w-full flex-col justify-between lg:py-2'>
     <div class='font-light'>
       <BlogInfo pubDate={pubDate} body={body} />
       <p
-        class='font-display mt-3 line-clamp-2 text-lg font-semibold leading-[1.4] md:text-xl'
+        class='font-display mt-3 line-clamp-2 text-lg font-semibold leading-[1.4]'
       >
         {title}
       </p>
@@ -49,7 +52,7 @@ const {
       </span>
       <ul class='flex flex-wrap gap-2'>
         {
-          ['zod', 'typescript'].map((item) => (
+          tags.map((item) => (
             <li class='rounded bg-zinc-900 px-2 py-1 font-mono text-xs tracking-tight text-zinc-500'>
               {item}
             </li>

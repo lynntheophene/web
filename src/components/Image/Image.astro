@@ -1,28 +1,10 @@
 ---
 import type { UnresolvedImageTransform } from 'astro'
-import {
-  getImage,
-  Image as AstroImage,
-  type LocalImageProps,
-  type RemoteImageProps
-} from 'astro:assets'
+import { getImage, Image as AstroImage } from 'astro:assets'
 
-const alignClass = {
-  top: {
-    wrapper: 'bg-top',
-    image: 'object-top'
-  },
-  center: {
-    wrapper: 'bg-center',
-    image: 'object-center'
-  }
-}
+import { alignClass, type CustomImageProps } from './types'
 
-type Props = {
-  wrapperProps?: astroHTML.JSX.HTMLAttributes
-  ambientMode?: boolean
-  align?: keyof typeof alignClass
-} & (LocalImageProps | RemoteImageProps)
+type Props = CustomImageProps
 
 const {
   class: className,

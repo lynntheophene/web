@@ -1,0 +1,8 @@
+---
+import Image from './Image.astro'
+import type { CustomImageProps } from './types'
+
+type Props = CustomImageProps
+---
+
+<Image {...Astro.props} inferSize />
