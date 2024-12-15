@@ -25,7 +25,15 @@ const {
   id,
   headings,
   body,
-  data: { title, description, heroImage, pubDate, updatedDate, latestCommitUrl }
+  data: {
+    title,
+    description,
+    heroImage,
+    pubDate,
+    updatedDate,
+    latestCommitUrl,
+    tags
+  }
 } = Astro.props
 ---
 
@@ -69,7 +77,7 @@ const {
     </h3>
     <ul class='mt-8 flex flex-wrap gap-2'>
       {
-        ['zod', 'typescript'].map((item) => (
+        tags.map((item) => (
           <li class='rounded bg-zinc-900 px-2 py-1 font-mono text-xs tracking-tight text-zinc-500'>
             {item}
           </li>
