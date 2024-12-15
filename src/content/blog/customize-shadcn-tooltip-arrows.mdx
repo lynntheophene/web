@@ -8,21 +8,19 @@ tags:
   - css
 ---
 
-import LinkCard from '@/components/LinkCard.astro'
-
 ## Introduction
 
 [Shadcn](https://ui.shadcn.com/) is a go-to library for copy-paste UI components in React projects. One commonly used component is the Tooltip, which is built on top of `@radix-ui/react-tooltip` .
 
 The default tooltip looks like this:
 
-![image.png](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183408/Tooltip_Arrows_Customization_Image_iedgjs.webp)
+![Shadcn's tooltip component](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183408/Tooltip_Arrows_Customization_Image_iedgjs.webp)
 
 ## Adding Tooltip Arrows
 
 While the provided component works well out of the box, I found myself wanting to add more customization—like adding an arrow to the tooltip. For inspiration, I turned to the Tooltip component from [tremor.so](https://tremor.so/docs/ui/tooltip), which is also based on `@radix-ui/react-tooltip`.
 
-![image.png](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183406/Shadcn_Tooltip_Arrows_Image_o8gzwv.webp)
+![Tooltip component from tremor.so](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183406/Shadcn_Tooltip_Arrows_Image_o8gzwv.webp)
 
 Fortunately, adding an arrow is straightforward since `@radix-ui/react-tooltip` includes an `Arrow` component. You simply need to include it inside the `Content` component.
 
@@ -64,7 +62,7 @@ Adding a `border` directly to the `Arrow` using Tailwind classes seems like a go
 
 However, this approach doesn’t work as expected. The `border` property applies to the rectangular boundary of the element, not the arrow shape itself.
 
-![image.png](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183406/Tooltip_Arrows_Customization_Image_1_mikon1.webp)
+![Tooltip arrow with square border](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183406/Tooltip_Arrows_Customization_Image_1_mikon1.webp)
 
 ### Using the `stroke` Property
 
@@ -83,7 +81,7 @@ Since the `Arrow` is an SVG element, you can use the `stroke` property to define
 
 This works better, but the arrow’s top border is still visible. To fix this, let’s explore another method.
 
-![image.png](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183405/Tooltip_Arrows_Customization_u4t1ec.png)
+![Tooltip arrow with a proper border but visible top border](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183405/Tooltip_Arrows_Customization_u4t1ec.png)
 
 ### **Exploring the Drop Shadow Option**
 
@@ -100,11 +98,9 @@ Another method is using a `drop-shadow` to simulate the border:
 
 This creates a visually seamless tooltip with an arrow and border, but it might not always be the most precise solution depending on your use case.
 
-![image.png](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183404/Shadcn_Tooltip_Arrows_Image_1_eojqrs.webp)
+![Tooltip arrow with proper border](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183404/Shadcn_Tooltip_Arrows_Image_1_eojqrs.webp)
 
 It’s worth mentioning that this solution is inspired by the Tooltip component from [Origin UI](https://originui.com/), which provides various customizable tooltip variants that can save development time.
-
-{/* <LinkCard url='https://originui.com/tooltips' /> */}
 
 > _How about styling it even more, like using my own custom SVG?_
 
@@ -112,17 +108,17 @@ It’s worth mentioning that this solution is inspired by the Tooltip component 
 
 I often visit Vercel’s website, and their dropdown navigation bar caught my eye, particularly the _arrow_.
 
-![image.png](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183409/Tooltip_Arrows_Customization_Image_2_tu7wfm.webp)
+![Expanded dropdown navigation bar from Vercel](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183409/Tooltip_Arrows_Customization_Image_2_tu7wfm.webp)
 
 Curious about how it was designed, I opened the dev tools, inspected the elements, and found the SVG arrow. I then copied it and pasted it into Figma for a closer look.
 
-![image.png](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183407/Tooltip_Arrows_Customization_Image_3_mehrdd.webp)
+![SVG arrow from Vercel's dropdown navigation bar](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183407/Tooltip_Arrows_Customization_Image_3_mehrdd.webp)
 
 I thought it could be an interesting design choice for a tooltip arrow.
 
 ### Positioning
 
-![image.png](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183405/Shadcn_Tooltip_Arrows_Image_2_lwivup.webp)
+![Tooltip's position](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183405/Shadcn_Tooltip_Arrows_Image_2_lwivup.webp)
 
 Positioning the SVG arrow depends on the tooltip’s placement—**top**, **bottom**, **left**, or **right**. The `Content` component exposes a `data-side` attribute, which you can use to adjust positioning dynamically:
 
@@ -154,11 +150,11 @@ Positioning the SVG arrow depends on the tooltip’s placement—**top**, **bott
 
 Next, we could replace the built-in tooltip `Arrow` component with our custom design. It should work perfectly, right?
 
-![image.png](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183408/Tooltip_Arrows_Customization_Image_4_j7v925.webp)
+![Tooltip with custom SVG arrow](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183408/Tooltip_Arrows_Customization_Image_4_j7v925.webp)
 
 Well, not quite yet. Take a look at this: the arrow is stuck in the center of the tooltip instead of being positioned near the trigger.
 
-![Screen Recording Dec 14 2024.gif](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734226077/Screen_Recording_Dec_14_2024_from_Shadcn_Tooltip_Arrows_y2aokg.gif)
+![Custom SVG arrow centered on the tooltip](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734226077/Screen_Recording_Dec_14_2024_from_Shadcn_Tooltip_Arrows_y2aokg.gif)
 
 This undesired behavior happens because we only defined a static position for each side. Instead, we need to use a dynamic position to solve this issue.
 
@@ -166,7 +162,7 @@ This undesired behavior happens because we only defined a static position for ea
 
 Let’s start by using the built-in `Arrow` component again. If you inspect the `Arrow` component in the dev tools while simulating the tooltip position change, you’ll notice that the SVG element is wrapped in a `span` with a `left` CSS property.
 
-![image.png](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183404/Customize_Shadcn_Tooltip_Arrows_ywmi3y.webp)
+![Dynamic left CSS value of the built-in tooltip arrow](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183404/Customize_Shadcn_Tooltip_Arrows_ywmi3y.webp)
 
 This value dynamically changes based on the tooltip's position. We can capture this `left` CSS value and apply it to our custom arrow component.
 
@@ -245,7 +241,7 @@ export default () => (
 
 It’s working as expected now 🥳🎉
 
-![Screen Recording Dec 14 2024.gif](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183780/Screen_Recording_Dec_14_from_Shadcn_Tooltip_Arrows_quyz7y.gif)
+![Final result](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183780/Screen_Recording_Dec_14_from_Shadcn_Tooltip_Arrows_quyz7y.gif)
 
 P.S. You might want to adjust the top position if you prefer displaying the tooltip on the left or right side.
 
