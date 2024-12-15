@@ -1,18 +1,23 @@
 import { ImageResponse } from '@vercel/og'
-import type { APIRoute } from 'astro'
+import type {
+  APIRoute,
+  GetStaticPaths,
+  InferGetStaticParamsType,
+  InferGetStaticPropsType
+} from 'astro'
 import { type CollectionEntry, getCollection } from 'astro:content'
 import fs from 'fs'
 import path from 'path'
 import type { ReactElement } from 'react'
 
+type AllCollectionEntry = CollectionEntry<'projects' | 'blog'>
+
 type OGAPIRoute = APIRoute<
-  { project: CollectionEntry<'projects'> },
-  { slug: string }
+  InferGetStaticPropsType<typeof getStaticPaths>,
+  InferGetStaticParamsType<typeof getStaticPaths>
 >
 
-const generateHtml = (
-  data: CollectionEntry<'projects'>['data']
-): ReactElement => {
+const generateHtml = (data: AllCollectionEntry['data']): ReactElement => {
   const image = fs.readFileSync(
     path.resolve(process.cwd(), 'public/images/og_background.png')
   )
@@ -105,7 +110,7 @@ const generateHtml = (
 
 export const GET: OGAPIRoute = async ({ props }) => {
   const {
-    project: { data }
+    posts: { data }
   } = props
   const html = generateHtml(data)
 
@@ -138,13 +143,14 @@ export const GET: OGAPIRoute = async ({ props }) => {
 // getStaticPaths is used to limit the OG images generated.
 // This prevents dynamic generation of OG images, which could be abused.
 // Instead, OG images are generated only for existing articles during build time.
-export async function getStaticPaths() {
+export const getStaticPaths = (async () => {
   const projects = await getCollection('projects')
+  const blog = await getCollection('blog')
 
-  return projects.map((project) => ({
+  return [...projects, ...blog].map((posts) => ({
     params: {
-      slug: project.id // used as the key to map the og photo to the project
+      slug: posts.id // used as the key to map the og photo to the posts
     },
-    props: { project }
+    props: { posts }
   }))
-}
+}) satisfies GetStaticPaths

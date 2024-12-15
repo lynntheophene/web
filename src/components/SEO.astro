@@ -28,6 +28,11 @@ const defaultProps: SEOProps = {
       title: metaData.title,
       type: props.type ?? 'website',
       ...props.openGraph?.basic
+    },
+    optional: {
+      siteName: mainMetaData.title,
+      description: metaData.description,
+      ...props.openGraph?.optional
     }
   },
   twitter: {
