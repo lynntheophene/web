@@ -9,12 +9,10 @@ import Image from '@/components/Image'
 import Link, { LinkArticle } from '@/components/Link'
 import SEO from '@/components/SEO.astro'
 import TableOfContent from '@/components/TableOfContent'
-import TopOverlay from '@/components/TopOverlay.astro'
 import ScrollProgressBar from '@/components/ui/scroll-progress-bar'
 import { BASE_URL } from '@/lib/baseUrl'
 import { formatDateByTimeZone } from '@/lib/utils'
 
-// import ReadingTimeTooltip from './components/ReadingTimeTooltip'
 import BaseLayout from '../BaseLayout.astro'
 
 interface Props extends CollectionEntry<'blog'> {
