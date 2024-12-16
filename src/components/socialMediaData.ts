@@ -17,8 +17,6 @@ export const SOCIAL_MEDIA_DATA = [
   {
     name: 'Resume',
     icon: Scroll,
-    // href: 'https://rxresu.me/jestsee/resume'
-    // href: 'https://docs.google.com/document/d/1P8vhQVBFwWHhuAuh60X7GhSPyCo9gAHXmFKdbDUV9nI/edit?usp=sharing'
     href: 'https://read.cv/jestsee'
   },
   {

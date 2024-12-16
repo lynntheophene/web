@@ -17,28 +17,41 @@ type FooterContent = {
   }[]
 }
 
+const socialMediaData = [
+  ...SOCIAL_MEDIA_DATA,
+  { icon: X, href: 'https://twitter.com/jestseee', name: 'twitter' }
+]
+
 const FOOTER_CONTENTS: FooterContent[] = [
   {
     title: 'Me',
     links: [
-      { text: 'Blog', href: '/blog' },
       { text: 'Projects', href: '/projects' },
+      { text: 'Blog', href: '/blog' },
       { text: 'Bookmarks', href: '/bookmarks' }
     ]
   },
   {
     title: 'This site',
     links: [
-      { text: 'Credits', href: '#' },
-      { text: 'Design', href: '#' },
-      { text: 'Source code', href: '#' }
+      { text: 'Attribution', href: '#' },
+      { text: 'Analytics', href: '#' },
+      { text: 'Source code', href: 'https://github.com/jestsee/jestsee.com' }
     ]
   },
   {
     title: 'Elsewhere',
     links: [
-      { text: 'Figma', href: '#', withIcon: true },
-      { text: 'Codepen', href: '#', withIcon: true }
+      {
+        text: 'Bluesky',
+        href: 'https://bsky.app/profile/jestsee.com',
+        withIcon: true
+      },
+      {
+        text: 'Monkeytype',
+        href: 'https://monkeytype.com/profile/jestsee_',
+        withIcon: true
+      }
     ]
   }
 ]
@@ -85,7 +98,7 @@ const FOOTER_CONTENTS: FooterContent[] = [
         <div class='space-y-6'>
           <ul class='flex gap-3 text-zinc-200'>
             {
-              SOCIAL_MEDIA_DATA.map(({ icon: Icon, href, name }) => (
+              socialMediaData.map(({ icon: Icon, href, name }) => (
                 <li>
                   <Link href={href} target='_blank' aria-label={name}>
                     <Icon className='size-5' />
@@ -93,15 +106,6 @@ const FOOTER_CONTENTS: FooterContent[] = [
                 </li>
               ))
             }
-            <li>
-              <Link
-                href='https://twitter.com/jestseee'
-                target='_blank'
-                aria-label='twitter'
-              >
-                <X className='size-5' />
-              </Link>
-            </li>
           </ul>
           <p class='text-xs text-zinc-500'>
             © 2024 Jesica. All rights reserved.
@@ -131,7 +135,7 @@ const FOOTER_CONTENTS: FooterContent[] = [
                         class='flex items-center gap-1 font-normal hover:text-zinc-200'
                       >
                         <span>{text}</span>
-                        {withIcon && <ArrowOutward className='size-3.5' />}
+                        {withIcon && <ArrowOutward className='size-3' />}
                       </Link>
                     </li>
                   ))}
