@@ -216,13 +216,13 @@ Then, we can call it inside the `Content` component.
 import CustomTooltipArrow from './tooltip-arrow'
 import TooltipArrowPrimitive from './tooltip-arrow-primitive'
 
-export default () => (
+export default ({ children, showArrow }) => (
   // Adjust each component props as needed
   <TooltipPrimitives.Provider>
     <TooltipPrimitives.Root>
       <TooltipPrimitives.Trigger />
       <TooltipPrimitives.Portal>
-        <TooltipPrimitives.Content ref={forwardedRef} {...props}>
+        <TooltipPrimitives.Content>
           {children}
           {showArrow && (
             <>
