@@ -3,8 +3,7 @@
 A personal website showcasing my work, built with Astro.
 Check out the live website [here](https://jestsee.com).
 
-<img width="720" alt="image" src="https://github.com/user-attachments/assets/7d9b49c9-dc0a-4cd9-8bc3-8294abc2f09c" />
-<img width="720" alt="image" src="https://github.com/user-attachments/assets/71ad34aa-4455-4152-860c-5207d0abb9a5" />
+https://github.com/user-attachments/assets/4c3df371-650c-4014-a8f7-42fd0c518d34
 
 ## 📚 Tech Stack
 
