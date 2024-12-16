@@ -14,6 +14,7 @@ type FooterContent = {
     text: string
     href: string
     withIcon?: boolean
+    inNewTab?: boolean
   }[]
 }
 
@@ -35,8 +36,16 @@ const FOOTER_CONTENTS: FooterContent[] = [
     title: 'This site',
     links: [
       { text: 'Attribution', href: '#' },
-      { text: 'Analytics', href: '#' },
-      { text: 'Source code', href: 'https://github.com/jestsee/jestsee.com' }
+      {
+        text: 'Analytics',
+        href: 'https://us.umami.is/share/Fmo9fhCyJtinAbWP/jestsee.com',
+        inNewTab: true
+      },
+      {
+        text: 'Source code',
+        href: 'https://github.com/jestsee/jestsee.com',
+        inNewTab: true
+      }
     ]
   },
   {
@@ -45,11 +54,13 @@ const FOOTER_CONTENTS: FooterContent[] = [
       {
         text: 'Bluesky',
         href: 'https://bsky.app/profile/jestsee.com',
+        inNewTab: true,
         withIcon: true
       },
       {
         text: 'Monkeytype',
         href: 'https://monkeytype.com/profile/jestsee_',
+        inNewTab: true,
         withIcon: true
       }
     ]
@@ -128,10 +139,11 @@ const FOOTER_CONTENTS: FooterContent[] = [
               <div class='space-y-4'>
                 <p class='text-zinc-200'>{title}</p>
                 <ul class='flex flex-col gap-3 text-zinc-400'>
-                  {links.map(({ text, href, withIcon }) => (
+                  {links.map(({ text, href, withIcon, inNewTab }) => (
                     <li>
                       <Link
                         href={href}
+                        target={inNewTab ? '_blank' : '_self'}
                         class='flex items-center gap-1 font-normal hover:text-zinc-200'
                       >
                         <span>{text}</span>
