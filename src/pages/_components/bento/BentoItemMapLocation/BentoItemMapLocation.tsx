@@ -1,10 +1,16 @@
 import 'leaflet/dist/leaflet.css'
 
 import { Map as MapLeaflet, type ZoomPanOptions } from 'leaflet'
-import { useRef, useState } from 'react'
-import { MapContainer, TileLayer } from 'react-leaflet'
+import { lazy, Suspense, useRef, useState } from 'react'
 
 import { cn } from '@/lib/utils'
+
+const MapContainer = lazy(() =>
+  import('react-leaflet').then((module) => ({ default: module.MapContainer }))
+)
+const TileLayer = lazy(() =>
+  import('react-leaflet').then((module) => ({ default: module.TileLayer }))
+)
 
 const LATITUDE = -6.147
 const LONGITUDE = 106.85
@@ -75,35 +81,40 @@ const BentoItemMapLocation = ({ className }: Props) => {
   return (
     // Make sure you set the height and width of the map container otherwise the map won't show
     <div className='group h-full'>
-      <MapContainer
-        ref={mapRef}
-        zoom={MAX_ZOOM}
-        center={[LATITUDE, LONGITUDE]}
-        dragging={false}
-        touchZoom={false} // Disables pinch-to-zoom on touch devices
-        scrollWheelZoom={false} // Disables zooming with the mouse wheel
-        doubleClickZoom={false} // Disables zooming on double-click
-        zoomControl={false} // Hides the zoom control
-        attributionControl={false} // Hides the attribution control
-        className={cn(
-          'brightness-[0.64] -hue-rotate-[24deg] saturate-[0.86]',
-          'h-full min-h-full w-full',
-          className
-        )}
-        trackResize
-      >
-        <TileLayer
-          url={MAP_URL}
-          zoomOffset={-1}
-          minZoom={1}
-          tileSize={512}
-          eventHandlers={{
-            tileloadstart: (event) => {
-              event.tile.setAttribute('loading', 'lazy')
-            }
-          }}
-        />
-      </MapContainer>
+      <Suspense fallback={<div>Loading map...</div>}>
+        <MapContainer
+          ref={mapRef}
+          zoom={MAX_ZOOM}
+          center={[LATITUDE, LONGITUDE]}
+          dragging={false}
+          touchZoom={false} // Disables pinch-to-zoom on touch devices
+          scrollWheelZoom={false} // Disables zooming with the mouse wheel
+          doubleClickZoom={false} // Disables zooming on double-click
+          zoomControl={false} // Hides the zoom control
+          attributionControl={false} // Hides the attribution control
+          className={cn(
+            'brightness-[0.64] -hue-rotate-[24deg] saturate-[0.86]',
+            'h-full min-h-full w-full',
+            className
+          )}
+          trackResize
+        >
+          <Suspense fallback={<div>Loading map...</div>}>
+            <TileLayer
+              url={MAP_URL}
+              zoomOffset={-1}
+              minZoom={1}
+              tileSize={512}
+              eventHandlers={{
+                tileloadstart: (event) => {
+                  event.tile.setAttribute('loading', 'lazy')
+                }
+              }}
+            />
+          </Suspense>
+        </MapContainer>
+      </Suspense>
+
       <div className='absolute inset-0 flex items-center justify-center'>
         <div className='relative size-16'>
           <div className='absolute size-full animate-ping rounded-full bg-emerald-300/20 opacity-65 blur-sm'></div>

@@ -9,7 +9,8 @@
     "build:node": "astro build --node",
     "preview": "astro build --node && astro preview --node --port 3000",
     "astro": "astro",
-    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
+    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\"",
+    "partytown": "partytown copylib public/~partytown"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
