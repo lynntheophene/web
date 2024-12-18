@@ -1,22 +1,21 @@
 ---
 import dayjs from 'dayjs'
-import calculateReadingTime from 'reading-time'
 
 interface Props {
   pubDate: Date
-  body?: string
+  readingTime?: number
 }
 
-const { pubDate, body } = Astro.props
+const { pubDate, readingTime } = Astro.props
 ---
 
 <div class='space-x-1 text-sm text-zinc-400'>
   <span>{dayjs(pubDate).format('MMMM D, YYYY')}</span>
   {
-    body && (
+    readingTime && (
       <>
         <span>•</span>
-        <span>{Math.ceil(calculateReadingTime(body).minutes)} min read</span>
+        <span>{Math.ceil(readingTime)} min read</span>
       </>
     )
   }

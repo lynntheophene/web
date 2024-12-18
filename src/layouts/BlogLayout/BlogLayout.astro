@@ -1,7 +1,7 @@
 ---
 import { ArrowRight } from '@icons/ArrowRight'
 import type { MarkdownHeading } from 'astro'
-import type { CollectionEntry } from 'astro:content'
+import type { InferEntrySchema } from 'astro:content'
 
 import BlogInfo from '@/components/BlogInfo.astro'
 import { ArrowOutward } from '@/components/icons/ArrowOutward'
@@ -15,23 +15,22 @@ import { formatDateByTimeZone } from '@/lib/utils'
 
 import BaseLayout from '../BaseLayout.astro'
 
-interface Props extends CollectionEntry<'blog'> {
+interface Props extends InferEntrySchema<'blog'> {
   headings: MarkdownHeading[]
+  id: string
 }
 
 const {
   id,
   headings,
-  body,
-  data: {
-    title,
-    description,
-    heroImage,
-    pubDate,
-    updatedDate,
-    latestCommitUrl,
-    tags
-  }
+  title,
+  description,
+  heroImage,
+  pubDate,
+  updatedDate,
+  latestCommitUrl,
+  tags,
+  readingTime
 } = Astro.props
 ---
 
@@ -64,7 +63,7 @@ const {
   />
 
   <section class='mt-8 sm:font-light'>
-    <BlogInfo pubDate={pubDate} body={body} />
+    <BlogInfo pubDate={pubDate} readingTime={readingTime} />
     <h1
       class='font-heading mt-4 text-[clamp(1.8rem,5vw,2rem)] font-semibold leading-[1.25] !-tracking-[0.01em] md:leading-[1.1]'
     >
