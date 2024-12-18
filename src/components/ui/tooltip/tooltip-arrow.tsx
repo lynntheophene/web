@@ -7,6 +7,7 @@ interface Props extends SVGProps<SVGSVGElement> {}
 const TooltipArrow = ({ className, ...rest }: Props) => {
   return (
     <svg
+      aria-hidden='true'
       id='tooltip-arrow'
       width='158'
       height='46'

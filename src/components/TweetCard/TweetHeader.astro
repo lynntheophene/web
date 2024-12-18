@@ -38,6 +38,7 @@ const { tweet } = Astro.props
         {
           tweet.user.verified || tweet.user.is_blue_verified ? (
             <svg
+              aria-hidden='true'
               aria-label='Verified Account'
               class='ml-1 inline h-4 w-4 text-sky-500'
               viewBox='0 0 24 24'
