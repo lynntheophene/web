@@ -22,7 +22,7 @@ const renderRect =
     const formattedDate =
       date.toLocaleDateString('en-US', { day: 'numeric', month: 'long' }) +
       getDateSuffix(date.getDate())
-    const tileInfo = `${formatNumber(data.count) || 'No'} contributions on ${formattedDate}`
+    const tileInfo = `${data.count ? formatNumber(data.count) : 'No'} contributions on ${formattedDate}`
 
     return (
       <rect
@@ -36,24 +36,21 @@ const renderRect =
 interface Props extends GithubContributionData {}
 
 const BentoGithubActivity = (props: Props) => {
-  const [hoveredTile, setHoveredTile] = React.useState<string | null>(null)
+  const defaultValue = `${formatNumber(props.totalContributions)} contributions in the last year`
+  const [hoveredTile, setHoveredTile] = React.useState<string | null>(
+    defaultValue
+  )
 
   return (
-    <div
-      onMouseLeave={() => setHoveredTile(null)}
-      className='relative flex h-full flex-col justify-between px-4 pb-5 pt-4 max-md:gap-4'
-    >
+    <div className='relative flex h-full flex-col justify-between px-4 pb-5 pt-4 max-md:gap-4'>
       <div className='flex items-baseline justify-between gap-4 max-xs:flex-col'>
         <BentoBadge icon={Github} text='Github activity' />
-        <p className='line-clamp-1 text-sm'>
-          {hoveredTile
-            ? hoveredTile
-            : `${formatNumber(props.totalContributions) ?? 'No'} contributions in the last year`}
-        </p>
+        <p className='line-clamp-1 text-sm'>{hoveredTile}</p>
       </div>
       <div className='w-full overflow-x-scroll'>
         <HeatMap
           {...getDateProps()}
+          onMouseLeave={() => setHoveredTile(defaultValue)}
           className='w-[550px]'
           value={props.contributions ?? []}
           weekLabels={false}
