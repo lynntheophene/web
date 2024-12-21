@@ -79,6 +79,10 @@
   );
 }
 
+:focus {
+  @apply outline outline-2 outline-offset-2 outline-emerald-300;
+}
+
 @keyframes fade-in-bottom {
   0% {
     transform: translateY(50px);

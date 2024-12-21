@@ -40,6 +40,8 @@ const ZoomButton = (props: ZoomButtonProps) => {
         hide && 'scale-0',
         className
       )}
+      aria-hidden={hide}
+      tabIndex={hide ? -1 : 0}
     >
       {children}
     </button>
@@ -112,19 +114,19 @@ const BentoItemMapLocation = ({ className }: Props) => {
       </div>
 
       <ZoomButton
-        onClick={zoomIn}
-        className='bottom-4 right-4'
-        hide={currentZoom >= MAX_ZOOM}
-      >
-        +
-      </ZoomButton>
-
-      <ZoomButton
         onClick={zoomOut}
         className='bottom-4 left-4'
         hide={currentZoom <= MIN_ZOOM}
       >
         -
+      </ZoomButton>
+
+      <ZoomButton
+        onClick={zoomIn}
+        className='bottom-4 right-4'
+        hide={currentZoom >= MAX_ZOOM}
+      >
+        +
       </ZoomButton>
     </div>
   )

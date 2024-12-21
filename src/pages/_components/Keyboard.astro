@@ -13,11 +13,17 @@ const { class: className } = Astro.props
   <div class='board'>
     {
       SOCIAL_MEDIA_DATA.map(({ name, href, icon: Icon }) => (
-        <a class='key-position' target='_blank' {...{ href }}>
-          <button aria-label={name} class='key' data-key={name}>
+        <div class='key-position'>
+          <a
+            aria-label={name}
+            class='key'
+            data-key={name}
+            target='_blank'
+            {...{ href }}
+          >
             <Icon />
-          </button>
-        </a>
+          </a>
+        </div>
       ))
     }
   </div>
