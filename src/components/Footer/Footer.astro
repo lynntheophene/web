@@ -110,7 +110,7 @@ const FOOTER_CONTENTS: FooterContent[] = [
           <ul class='flex gap-3 text-zinc-200'>
             {
               socialMediaData.map(({ icon: Icon, href, name }) => (
-                <li>
+                <li class='focus-within:rounded focus-within:outline focus-within:outline-offset-4 focus-within:outline-emerald-300'>
                   <Link href={href} target='_blank' aria-label={name}>
                     <Icon className='size-5' />
                   </Link>

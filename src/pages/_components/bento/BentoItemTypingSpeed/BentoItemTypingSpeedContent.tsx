@@ -49,7 +49,7 @@ const TypingSpeed = (props: Props) => {
     <a
       href='https://monkeytype.com/profile/jestsee_'
       target='_blank'
-      className='relative flex h-full flex-col justify-between overflow-hidden px-5 pb-6 pt-4 max-md:gap-12'
+      className='relative flex h-full flex-col justify-between overflow-hidden rounded-3xl px-5 pb-6 pt-4 max-md:gap-12'
     >
       <p
         className={cn(
