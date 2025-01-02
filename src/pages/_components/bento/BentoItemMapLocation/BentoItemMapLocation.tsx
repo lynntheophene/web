@@ -4,6 +4,8 @@ import { Map as MapLeaflet, type ZoomPanOptions } from 'leaflet'
 import { useRef, useState } from 'react'
 import { MapContainer, TileLayer } from 'react-leaflet'
 
+import { Minus } from '@/components/icons/Minus'
+import { Plus } from '@/components/icons/Plus'
 import { cn } from '@/lib/utils'
 
 const LATITUDE = -6.147
@@ -37,6 +39,7 @@ const ZoomButton = (props: ZoomButtonProps) => {
       className={cn(
         'absolute size-10 rounded-full bg-zinc-950 text-3xl leading-none outline outline-2 outline-slate-700',
         'scale-100 transition-all duration-300 hover:outline-4',
+        'flex items-center justify-center',
         hide && 'scale-0',
         className
       )}
@@ -118,7 +121,7 @@ const BentoItemMapLocation = ({ className }: Props) => {
         className='bottom-4 left-4'
         hide={currentZoom <= MIN_ZOOM}
       >
-        -
+        <Minus className='size-4' />
       </ZoomButton>
 
       <ZoomButton
@@ -126,7 +129,7 @@ const BentoItemMapLocation = ({ className }: Props) => {
         className='bottom-4 right-4'
         hide={currentZoom >= MAX_ZOOM}
       >
-        +
+        <Plus className='size-4' />
       </ZoomButton>
     </div>
   )

@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-export function LinkedIn(props: SVGProps<SVGSVGElement>) {
+export function LinkedIn(props: Readonly<SVGProps<SVGSVGElement>>) {
   return (
     <svg
       aria-hidden='true'
