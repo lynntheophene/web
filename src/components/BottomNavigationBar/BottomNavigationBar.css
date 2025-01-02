@@ -91,10 +91,18 @@
 }
 
 .tip {
-  left: anchor(left);
-  bottom: calc(anchor(top) + 1rem);
-  translate: calc(-50% + (var(--tip-x) * 1px));
-  /* translate: calc(-50% + (var(--tip-x) * 1px)) calc(var(--tip-y) * 1px + -50%); */
+  translate: calc(-125% + (var(--tip-x) * 1px));
+  bottom: 100px;
+}
+
+@supports (anchor-name: --my-nav) and (position-anchor: --my-nav) {
+  .tip {
+    left: anchor(left);
+    bottom: calc(anchor(top) + 1rem);
+    translate: calc(-50% + (var(--tip-x) * 1px));
+    /* translate: calc(-50% + (var(--tip-x) * 1px)) calc(var(--tip-y) * 1px + -50%); */
+  }
+
 }
 
 /* :has() hovering stuff */
