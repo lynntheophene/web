@@ -1,22 +1,20 @@
 :root {
   --speed: 0.25;
   --blur: 4;
-  --ease-in: linear(
-    0 0%,
-    0.0039 6.25%,
-    0.0156 12.5%,
-    0.0352 18.75%,
-    0.0625 25%,
-    0.0977 31.25%,
-    0.1407 37.5%,
-    0.1914 43.74%,
-    0.2499 49.99%,
-    0.3164 56.25%,
-    0.3906 62.5%,
-    0.5625 75%,
-    0.7656 87.5%,
-    1 100%
-  );
+  --ease-in: linear(0 0%,
+      0.0039 6.25%,
+      0.0156 12.5%,
+      0.0352 18.75%,
+      0.0625 25%,
+      0.0977 31.25%,
+      0.1407 37.5%,
+      0.1914 43.74%,
+      0.2499 49.99%,
+      0.3164 56.25%,
+      0.3906 62.5%,
+      0.5625 75%,
+      0.7656 87.5%,
+      1 100%);
   --ease: ease;
   --nav: 'nav';
 }
@@ -108,28 +106,36 @@
 /* :has() hovering stuff */
 :root:has(nav li:nth-of-type(1):is(:hover)) {
   --active: 1;
+
   .tip__track div:nth-of-type(1) {
     --shown: 1;
   }
 }
+
 :root:has(nav li:nth-of-type(2):is(:hover)) {
   --active: 2;
+
   .tip__track div:nth-of-type(2) {
     --shown: 1;
   }
 }
+
 :root:has(nav li:nth-of-type(3):is(:hover)) {
   --active: 3;
+
   .tip__track div:nth-of-type(3) {
     --shown: 1;
   }
 }
+
 :root:has(nav li:nth-of-type(4):is(:hover)) {
   --active: 4;
+
   .tip__track div:nth-of-type(4) {
     --shown: 1;
   }
 }
+
 :root:has(nav li:nth-of-type(5):is(:hover)) {
   --active: 5;
 
@@ -137,6 +143,7 @@
     --shown: 1;
   }
 }
+
 :root:has(nav li:nth-of-type(6):is(:hover)) {
   --active: 6;
 
@@ -158,8 +165,7 @@
 }
 
 .tip__track {
-  transition: translate calc(var(--speed) * 1s) calc(var(--speed) * 1s)
-    var(--ease);
+  transition: translate calc(var(--speed) * 1s) calc(var(--speed) * 1s) var(--ease);
 }
 
 .tip__track div {
@@ -175,6 +181,7 @@
     --show: 1;
     filter: blur(0);
   }
+
   .tip__track {
     transition-delay: 0s;
   }
