@@ -18,7 +18,7 @@ const Video = ({ src, ...props }: Props) => {
 
   return (
     <div className='relative'>
-      <video controls {...props}>
+      <video {...props} controls={!playButton}>
         <source src={src} type='video/mp4' />
         Your browser does not support the video tag.
       </video>
