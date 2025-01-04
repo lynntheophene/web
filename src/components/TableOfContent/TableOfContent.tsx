@@ -64,7 +64,7 @@ const TableOfContent = ({ headings, className }: Props) => {
       <ul
         className={cn(
           'mt-2 space-y-1.5 text-[0.9rem] text-zinc-600',
-          'scrollbar-color max-h-[480px] overflow-scroll'
+          'scrollbar-color max-h-[480px] overflow-y-scroll'
         )}
       >
         {groupedHeadings.map((heading) => {
