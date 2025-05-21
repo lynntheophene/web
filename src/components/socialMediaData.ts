@@ -7,21 +7,21 @@ export const SOCIAL_MEDIA_DATA = [
   {
     name: 'Github',
     icon: GithubOutline,
-    href: 'https://github.com/jestsee'
+    href: 'https://github.com/lynntheophene'
   },
   {
     name: 'LinkedIn',
     icon: LinkedIn,
-    href: 'https://linkedin.com/in/jestsee/'
+    href: 'https://www.linkedin.com/in/lynn-theophene-0aa334257/'
   },
   {
     name: 'Resume',
     icon: Scroll,
-    href: 'https://read.cv/jestsee'
+    href: 'https://dancing-mauve-ox.slab.com/posts/k-j-theophene-xavier-lynn-nz4fh1v4'
   },
   {
     name: 'Email',
     icon: Mail,
-    href: 'mailto:me@jestsee.com'
+    href: 'mailto:lynntheophene@gmail.com'
   }
 ]

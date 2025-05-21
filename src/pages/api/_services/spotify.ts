@@ -58,31 +58,43 @@ const getRecentlyPlayed = async (accessToken: string) => {
     getAccessTokenHeader(accessToken)
   )
 
-  const {
-    items: [{ track }]
-  } = await response.json()
+  const data = await response.json()
+  if (!data.items || !Array.isArray(data.items) || data.items.length === 0) {
+    // Handle no recently played tracks
+    return null
+  }
+
+  const { track } = data.items[0]
+  if (!track) {
+    // Handle missing track data
+    return null
+  }
 
   return { isPlaying: false, ...mapSpotifyData(track) }
 }
 
 const getSpotifyData = async () => {
   const tokenData = await getAccessToken()
-
   const { access_token } = tokenData
 
   const nowPlayingResponse = await getNowPlayingResponse(access_token)
 
   if (nowPlayingResponse.status === 204) {
-    return getRecentlyPlayed(access_token)
+    const recent = await getRecentlyPlayed(access_token)
+    return recent
   }
 
   const { item: track } = await nowPlayingResponse.json()
+  if (!track) {
+    // Handle missing track data
+    return null
+  }
 
   return { isPlaying: true, ...mapSpotifyData(track) }
 }
 
-export type SpotifyData = ReturnType<typeof mapSpotifyData> & {
+export type SpotifyData = (ReturnType<typeof mapSpotifyData> & {
   isPlaying: boolean
-}
+}) | null
 
 export default getSpotifyData

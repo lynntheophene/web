@@ -8,7 +8,7 @@ const getGithubContributions = async (): Promise<GithubContributionData> => {
   const response = await request({
     url: 'https://api.github.com/graphql',
     document: GetGithubContributions,
-    variables: { userName: 'jestsee' },
+    variables: { userName: 'lynntheophene' },
     requestHeaders: {
       Authorization: `Bearer ${GITHUB_ACCESS_TOKEN}`
     }

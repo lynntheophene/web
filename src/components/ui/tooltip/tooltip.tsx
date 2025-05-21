@@ -3,6 +3,7 @@
 import * as TooltipPrimitives from '@radix-ui/react-tooltip'
 import Markdown from 'markdown-to-jsx'
 import React from 'react'
+import * as SeparatorPrimitive from '@radix-ui/react-separator'
 
 import { cn } from '@/lib/utils'
 
@@ -60,7 +61,7 @@ const TooltipProvider = ({
 const TooltipTrigger = TooltipPrimitives.Trigger
 
 const TooltipContent = React.forwardRef<
-  React.ElementRef<typeof TooltipPrimitives.Content>,
+  React.ComponentRef<typeof TooltipPrimitives.Content>,
   TooltipContentProps
 >((props, forwardedRef) => {
   const {
@@ -111,7 +112,7 @@ const TooltipContent = React.forwardRef<
  * and doesn't need any additional configuration
  */
 const Tooltip = React.forwardRef<
-  React.ElementRef<typeof TooltipPrimitives.Content>,
+  React.ComponentRef<typeof TooltipPrimitives.Content>,
   TooltipProps
 >(
   (
@@ -172,6 +173,20 @@ const Tooltip = React.forwardRef<
 )
 
 Tooltip.displayName = 'Tooltip'
+
+const Separator = React.forwardRef<
+  React.ComponentRef<typeof SeparatorPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
+>(
+  (props, forwardedRef) => {
+    return (
+      <SeparatorPrimitive.Root
+        ref={forwardedRef}
+        {...props}
+      />
+    )
+  }
+)
 
 export {
   Tooltip,

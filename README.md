@@ -1,7 +1,7 @@
 # jestsee.com
 
 A personal website showcasing my work, built with Astro.
-Check out the live website [here](https://jestsee.com).
+Check out the live website [here](https://lynntheophene.com).
 
 https://github.com/user-attachments/assets/a4e8c8a1-b901-477f-9768-f2acefa5de35
 
@@ -38,3 +38,4 @@ pnpm preview
 ```
 
 This will start a local server to preview the production build. It will be available at http://localhost:3000. You can adjust the local URL in the `package.json` file if needed.
+# lynntheophene.com

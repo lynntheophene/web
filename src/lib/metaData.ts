@@ -35,9 +35,9 @@ type MetaData = z.output<typeof metaDataSchema>
 type MetaDataInput = z.input<typeof metaDataSchema>
 
 const _mainMetaData: MetaDataInput = {
-  title: 'Jesica',
+  title: 'Lynn Theophene',
   description:
-    'A dedicated problem-solver who thrives{n}on learning and building.'
+    'Fueled by curiosity and guided by craft, I learn, I build, I solve, and I evolve.'
 }
 export const mainMetaData = metaDataSchema.parse(_mainMetaData)
 

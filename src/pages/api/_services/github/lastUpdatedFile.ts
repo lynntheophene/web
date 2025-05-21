@@ -7,8 +7,8 @@ interface LastUpdatedTimeData {
 
 const getLastUpdatedTimeByFile = async (
   filePath: string
-): Promise<LastUpdatedTimeData> => {
-  const API_URL = `https://api.github.com/repos/jestsee/jestsee.com/commits?`
+): Promise<LastUpdatedTimeData | null> => {
+  const API_URL = `https://api.github.com/repos/lynntheophene/lynntheophene.com/commits?`
 
   const params = new URLSearchParams({
     path: `src/content/${filePath}`,
@@ -19,7 +19,18 @@ const getLastUpdatedTimeByFile = async (
     headers: { Authorization: `Bearer ${GITHUB_ACCESS_TOKEN}` }
   })
 
-  const [data] = await response.json()
+  if (!response.ok) {
+    // Handle fetch error
+    return null
+  }
+
+  const dataArr = await response.json()
+  if (!Array.isArray(dataArr) || dataArr.length === 0) {
+    // No commits found for this file
+    return null
+  }
+
+  const [data] = dataArr
 
   return {
     lastUpdatedTime: data.commit.committer.date,
