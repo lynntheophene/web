@@ -24,3 +24,8 @@ pnpm-debug.log*
 .idea/
 
 .vercel/
+
+# .gitignore
+.env
+.env.example
+secrets.json
