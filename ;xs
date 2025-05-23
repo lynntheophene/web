@@ -1,0 +1,2558 @@
+[33mcommit b1a7d9e32e17837affc0b76d09033c121b9c38fd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: lynntheophene <lynntheophene@gmail.com>
+Date:   Fri May 23 20:27:45 2025 +0530
+
+    Initial clean commit
+
+[33mcommit f4a142ea1565c172b0770b9528f85f857a0612a7[m
+Author: lynntheophene <lynntheophene@gmail.com>
+Date:   Thu May 22 20:33:36 2025 +0530
+
+    Commit without secrets
+
+[33mcommit b7c084a76a40968145b3053b1145b9b128db39b8[m
+Author: lynntheophene <lynntheophene@gmail.com>
+Date:   Thu May 22 20:24:27 2025 +0530
+
+    fixed the githu api issue which was causing the undef return error
+
+[33mcommit 9975d938d270d000b8bc231cc728f991ef861301[m
+Author: lynntheophene <lynntheophene@gmail.com>
+Date:   Wed May 21 18:14:59 2025 +0530
+
+    Your commit message here
+
+[33mcommit f1e047a36ee41155aa7eb4f05eaf9951a2e63585[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Jan 5 11:27:26 2025 +0700
+
+    chore: handle prefers reduced motion on marquee component
+
+[33mcommit 76f906a2b7bfbb29348aecc0af100e15a6ed611f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Jan 5 06:55:00 2025 +0700
+
+    chore: update video component & remove unused file
+
+[33mcommit e5a29f7ec308f680dc9cc5a858f8ba869f9b6626[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Jan 4 08:33:53 2025 +0700
+
+    chore: update table of content style
+
+[33mcommit f61cf566960e2b69d5c7034a9f22ce423b7572ab[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Jan 3 20:07:19 2025 +0700
+
+    feat: Add zoom-to-mouse functionality guide for OBS Studio
+
+[33mcommit 7bf06e10beba64c2dac97b63bdf386cb9222c4bc[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Jan 3 19:41:57 2025 +0700
+
+    feat: add Video component
+
+[33mcommit 642c27319c6d5ee713bc26520a969fd906393913[m
+Merge: 245e8ab 261dc9c
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Jan 2 13:23:13 2025 +0700
+
+    Merge pull request #4 from frashid17/patch-1
+    
+    Enhance Footer with Dynamic Year Display
+
+[33mcommit 261dc9c466c3e17436718760d7acee18db48c599[m
+Author: Patrick Mwangi <82177473+frashid17@users.noreply.github.com>
+Date:   Thu Jan 2 09:18:37 2025 +0300
+
+    Update Footer.astro
+
+[33mcommit 245e8abcc1a882aa9bd11457fc1cfd1f28b9db25[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Jan 2 12:38:17 2025 +0700
+
+    feat: add icon for map zoom buttons
+
+[33mcommit 7376946393b9f66bef19ecd7f57f605f76848e52[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Jan 2 11:59:44 2025 +0700
+
+    feat: add view transition fallback for unsupported browser
+
+[33mcommit 5b83e09827c0ae1819c60e970a0ffddf51d0d30d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Jan 2 11:00:52 2025 +0700
+
+    fix: bottom navigation bar behavior on firefox
+
+[33mcommit bf2b7250b9dd24f1f8b80ecaa4ffd66616dc15c7[m
+Author: Patrick Mwangi <82177473+frashid17@users.noreply.github.com>
+Date:   Thu Jan 2 02:46:54 2025 +0300
+
+    Update footer to dynamically display the current year
+
+[33mcommit 492f0a0716053ac4857699c899cfd93afe3c9890[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Dec 31 22:05:31 2024 +0700
+
+    Update README.md
+
+[33mcommit 4d8d6d9d638746e1c3440be5e6a31a38b2fd5901[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Dec 21 16:24:09 2024 +0700
+
+    chore: update focus style
+
+[33mcommit 565452a8fe2a4dbfceb2fb8bee6514deb11103ac[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Dec 21 15:56:44 2024 +0700
+
+    feat: update focus style
+
+[33mcommit 66765f95aca79a96f6ee1f453be3ce5899641a3e[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Dec 21 14:41:23 2024 +0700
+
+    feat: add custom focus style
+
+[33mcommit 8957b934123b81b1ddaa7ab7cb963e643577a2e1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Dec 18 18:39:13 2024 +0700
+
+    chore: add aria-hidden to svgs
+
+[33mcommit 528b38c18b1108dbd598d98d298d4001f7b4aeb1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Dec 18 18:27:21 2024 +0700
+
+    chore: remove dead link and fix github tile
+
+[33mcommit f86ad84da187d62e888b7a17856a1ed7219524b4[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Dec 18 17:59:45 2024 +0700
+
+    chore: refactor blog and projects dynamic path
+
+[33mcommit ec01511d05c87a90467647c3dbb0b1df68257e60[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 16 18:42:32 2024 +0700
+
+    chore: update blog section button
+
+[33mcommit 19b5ea5af50fe34c3165c3061abb8acc1192490c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 16 18:15:22 2024 +0700
+
+    chore: revert map changes
+
+[33mcommit dcc8ddc705b58ba5ecc6402a7fcb86122831884c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 16 18:05:04 2024 +0700
+
+    chore: try to lazy load the map component
+
+[33mcommit b237152fd051a98860764ede196bb38c75d54447[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 16 09:22:30 2024 +0700
+
+    feat: update footer content
+
+[33mcommit 3a5d63a130f6dfba9c6ba2a69a1707a2289b208d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 16 09:05:03 2024 +0700
+
+    chore: update code snippet
+
+[33mcommit f008174887c5be0fdd65b3913ef9abdccc223a06[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 16 08:56:17 2024 +0700
+
+    Update README.md
+
+[33mcommit cef8f3e75e6fea8705ee9ad70b2aefe8d6a13044[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 16 08:41:29 2024 +0700
+
+    chore: update readme & add .env.example
+
+[33mcommit 65f42508d7fc7efc87d5f7e1ab079fa581942119[m
+Merge: 60dd075 d90d521
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 16 08:25:32 2024 +0700
+
+    Merge remote-tracking branch 'refs/remotes/origin/master'
+
+[33mcommit d90d521097f397d38e48d219cbf4c58cfd7cfc80[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 16 08:15:01 2024 +0700
+
+    Update README.md
+
+[33mcommit 60dd075635722b3f8e992a1aee64165d066647c8[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 16 07:58:26 2024 +0700
+
+    chore: remove unused icons
+
+[33mcommit f6f28f81a0b3a2c13ba5ef63588fb62f0e047b62[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 16 07:08:29 2024 +0700
+
+    chore: remove unused imports
+
+[33mcommit 535989b2f41fb96a8217a0b22e9a99c2c930e663[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Dec 15 11:22:52 2024 +0700
+
+    feat: og image for blog post
+
+[33mcommit ff4f1fd1f6f80165fd988758d3b0aac25f363ae3[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Dec 15 10:59:03 2024 +0700
+
+    chore: update images' alt text
+
+[33mcommit 84e4477809393d10005ea20ad794171a563f2df7[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Dec 15 10:36:33 2024 +0700
+
+    feat: add new blog post
+
+[33mcommit 7fee822d6dbe198b5fa7feba3223f395208b272b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Dec 15 10:17:17 2024 +0700
+
+    feat: add markdown image component
+
+[33mcommit 07200d0d30416cfb3c77c1d0b92f5569cfb7b641[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Dec 15 08:10:05 2024 +0700
+
+    feat: add blog tags
+
+[33mcommit bec4524dbf1fd8a761b33a779680b3aa2c9c6506[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Dec 14 21:59:51 2024 +0700
+
+    fix: explore more articles button
+
+[33mcommit df7db76d152c5a82f6cd8ba83dd8d1efb7eb499e[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Dec 14 10:38:24 2024 +0700
+
+    chore: setup rss
+
+[33mcommit e0de4daa8548e30a4bd7a0672f2d68baf71421be[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Dec 14 09:07:25 2024 +0700
+
+    fix: partytown error
+
+[33mcommit 33232ccbdb204d5d4d153a2d28bbb54c4ebceaff[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Dec 14 07:13:54 2024 +0700
+
+    feat: display reading time
+
+[33mcommit 131e34a78e08b43cb5d01e38edc70b7c82b1b5bc[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 13 21:25:53 2024 +0700
+
+    chore: bring back last updated time on project page
+
+[33mcommit 9f1e14bb10ff8b32be618028f417d0addebfb46e[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 13 20:38:59 2024 +0700
+
+    feat: responsive blog card
+
+[33mcommit ce1af4c9eb92bd7d941fbbe1da424a4471fda0bf[m
+Merge: 8af5323 3499624
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 13 18:53:44 2024 +0700
+
+    Merge pull request #3 from jestsee/chore/update-astro-5
+    
+    Chore/update astro 5
+
+[33mcommit 8af532373bd1609c41c62902820f2c76b660ad2a[m
+Merge: 1e038c9 cac360a
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 13 18:50:01 2024 +0700
+
+    Merge pull request #2 from jestsee/feat/blog-layout
+    
+    Feat/blog layout
+
+[33mcommit 349962413280cb4368783579e9096eb64964dad1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 13 18:46:31 2024 +0700
+
+    fix: build error
+
+[33mcommit 72e4f817a845bb45144a043eeb61681587d62ca7[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 13 18:41:44 2024 +0700
+
+    fix: type error
+
+[33mcommit b8f040ad383a16373aa800b7d8cc22178368c4a2[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 13 18:26:33 2024 +0700
+
+    fix: type error
+
+[33mcommit d427344812d5addcc7c32ff5515bdd5a7f2a4a6a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 13 18:16:04 2024 +0700
+
+    chore: update env schema
+
+[33mcommit 9c5f16b38f80fb07f4993fd43fb1072bd9f54f93[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 13 17:41:26 2024 +0700
+
+    chore: refactor environment variables
+
+[33mcommit adbd740311b0e6b47e33a0813554a4f542cf1bcc[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 13 10:27:55 2024 +0700
+
+    chore: update projects config
+
+[33mcommit 0092fadf8630897234edb7e59b4a8d1ddf835b28[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 13 10:18:11 2024 +0700
+
+    chore: update blog config
+
+[33mcommit 46fb0859308ed434149c5c9762f63f027bc0d8d1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 13 08:48:33 2024 +0700
+
+    chore: update to astro 5 and implement cache on server island
+
+[33mcommit cac360a60a8a355d03b52ccf37bf178fef4062dc[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Dec 12 21:07:43 2024 +0700
+
+    feat: display blog post
+
+[33mcommit db27fde553afa9b21a3c8f1746f0bc00d4e40d3b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Dec 12 19:14:32 2024 +0700
+
+    chore: update blog config
+
+[33mcommit fe53072954d21a6eff6938a8df725f9f47a2e524[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Dec 12 19:13:27 2024 +0700
+
+    feat: add DM Mono font
+
+[33mcommit 113cec0ba222542cb689868e870bcfb933dc9e7c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Dec 12 10:27:57 2024 +0700
+
+    chore: update blog card & remove unused components
+
+[33mcommit 44bfc0a35eb32bdb3e6f3edf3d7e82788c7750b9[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Dec 11 10:39:12 2024 +0700
+
+    chore: update blog card's style
+
+[33mcommit 4b7ed4749a84212497075a22d6091e0b94db9582[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Dec 11 10:31:27 2024 +0700
+
+    feat: add blog card
+
+[33mcommit 8a257fbe4ab0503df0fa3e0dfb4b581c661db650[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Dec 10 09:49:41 2024 +0700
+
+    chore: update transitions
+
+[33mcommit 1e038c9c688de5ba6f97007a8b8118e17faa82e2[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Dec 10 08:23:23 2024 +0700
+
+    chore: adjust some styles
+
+[33mcommit 291209dadfb3cb4a5806f4b52123551c369b3af3[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 9 17:20:00 2024 +0700
+
+    fix: z-index during page transitions
+
+[33mcommit 9f66ebbda6b03167190f136126e419c7b3122853[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 9 16:36:54 2024 +0700
+
+    fix: tooltip arrow
+
+[33mcommit a602d26746e1468701791564d8937eb4c10a5aa1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 9 14:17:55 2024 +0700
+
+    fix: tooltip's style
+
+[33mcommit 1ea0ac5ee3a097cdd90fe311ec414d2594fa64c8[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 9 13:39:29 2024 +0700
+
+    fix: collapsed whitespace in projects article
+
+[33mcommit df4f3354af47e9e8f245f014406a27952e424ecf[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 9 13:31:29 2024 +0700
+
+    chore: setup local build preview
+
+[33mcommit 1b3e7b882a088696b09cd9b09ae3d620eb30853d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 9 11:06:25 2024 +0700
+
+    feat: add decorator on projects page
+
+[33mcommit 2587db523a87e91502342bf5c865c1b2cb77d3c5[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Dec 8 20:17:39 2024 +0700
+
+    chore: update transition duration
+
+[33mcommit c2e46c4e3cd84fe446d192582d507cb85dfd6515[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Dec 7 19:22:43 2024 +0700
+
+    chore: move layout components and adjust some stylings
+
+[33mcommit 007f6cce8ce089eaabcd98e235af1ada7301485f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Dec 7 18:51:19 2024 +0700
+
+    chore: update meta data and some styling
+
+[33mcommit ee863fb24775d2ec06290e7f3745a79c4a42884b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Dec 7 16:48:37 2024 +0700
+
+    chore: add BlogHeader component
+
+[33mcommit 93d40d21242dd464d2a2090de7582f5b96baaa26[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Dec 7 16:34:02 2024 +0700
+
+    chore: set props error for SEO component
+
+[33mcommit e7f7abf5417fc0c50819ef9e64c1d7c6ee7350b7[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Dec 7 16:25:33 2024 +0700
+
+    chore: refactor metadata
+
+[33mcommit 85330d9e23cf7afa0de749d90606d6cb5f84e023[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 6 20:47:28 2024 +0700
+
+    feat: update enter animation
+
+[33mcommit 22eb236869ceae69b036668349160ccecb698827[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 6 19:50:12 2024 +0700
+
+    feat: update favicon and some styings
+
+[33mcommit 04db7b014262f9a225b51a8b75b98f4a863448d9[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Dec 6 10:17:14 2024 +0700
+
+    fix: overflow on windows
+
+[33mcommit e404eba45eafca52356bee505ff865ad3843de4a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Dec 5 18:19:06 2024 +0700
+
+    chore: skip view transition based on specific target path
+
+[33mcommit 7b4c36321951d5269309fe5b916f489655b8ec0e[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Dec 5 16:26:25 2024 +0700
+
+    feat: change favicon
+
+[33mcommit 47fb8e533f3a87b8fc2b0143d9c7fa1c7c810ed1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Dec 5 15:59:01 2024 +0700
+
+    chore: setup prefetch
+
+[33mcommit db5c2cce3bb6ddec703379c887630e285b82d508[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Dec 5 13:23:14 2024 +0700
+
+    chore: fix build error
+
+[33mcommit b28d5a1037e46d6f21bbdc842c874b736093e7bb[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Dec 5 13:18:16 2024 +0700
+
+    chore: fix build error
+
+[33mcommit e1572bba3c1cd365de853174f2d622a1145549ae[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Dec 5 13:11:30 2024 +0700
+
+    chore: refactor under construction page
+
+[33mcommit 54e0fd9065e6d7e1730a64c5beead866c63fbb6e[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Dec 5 13:07:35 2024 +0700
+
+    chore: refactor component for SEO
+
+[33mcommit fbf759e8e8e1994378c17726c953d37f86908086[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Dec 3 18:02:48 2024 +0700
+
+    feat: add number formatter
+
+[33mcommit 1e09c67c00bdd03815ca5faef48d6d064592832a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 2 22:00:24 2024 +0700
+
+    chore: setup astro font
+
+[33mcommit f7c8a6e1031a309ba4ff57ecd35127962d2c607f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 2 21:27:49 2024 +0700
+
+    chore: fix LCP issue
+
+[33mcommit 45e3af3b7cee999f6884402f07f57036e5093969[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 2 20:28:23 2024 +0700
+
+    chore: setup partytown
+
+[33mcommit 8009e080277f99c9d585dd3d22997469fca058c5[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 2 20:19:43 2024 +0700
+
+    chore: setup compressor
+
+[33mcommit 84a6025dce1b5b33c1191fdb07649ad7aff387fb[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 2 20:13:38 2024 +0700
+
+    chore: fix fade in animation
+
+[33mcommit 87bec54896f52f9a62e1468e03ebda6cfceaa602[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 2 18:58:13 2024 +0700
+
+    chore: add padding between github cards
+
+[33mcommit 9a085a04312511100d8065d0d9cfc5b6670ef7b3[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 2 18:56:56 2024 +0700
+
+    feat: add bookmarked android project article
+
+[33mcommit 737ca11528d41e97d9b7375dce4cd782e255a3d1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 2 17:55:36 2024 +0700
+
+    chore: update umami config
+
+[33mcommit 19f1ac61da3632a952c3c5353bacca7e40ffb7dd[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Dec 2 17:33:00 2024 +0700
+
+    chore: update projects config
+
+[33mcommit 0d91ac6b31e85f00e3db471ecf9aca11f0dc9221[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Dec 1 17:22:03 2024 +0700
+
+    feat: add enter animation for hero section
+
+[33mcommit b9a5ed03a95bcaea6e8c6ff36c60fc6de4f45414[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Dec 1 11:22:43 2024 +0700
+
+    chore: fix og image url
+
+[33mcommit 7247913c065028cc13d9e7ab076bda5d8bcb0bee[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Dec 1 11:19:16 2024 +0700
+
+    feat: add default og image
+
+[33mcommit 20f08fea4872d304019d3cc5d77eedbff9c276e7[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Dec 1 10:36:01 2024 +0700
+
+    feat: add email
+
+[33mcommit 4cfc12b7e32d6982cac22f4154dac19551b3bc04[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Dec 1 09:12:18 2024 +0700
+
+    feat: add add resume link
+
+[33mcommit fe249e5b34684ea434202053e42b04e983b60e94[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Dec 1 07:32:14 2024 +0700
+
+    chore: fix project tag hierarchy
+
+[33mcommit 823541b1a847af16da3cd91ffa0c1d9aa4447f64[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Dec 1 06:44:47 2024 +0700
+
+    chore: update styles
+
+[33mcommit db8dda5a944a05afef0ef4d5474dad0f6a65b35a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 30 18:43:32 2024 +0700
+
+    chore: add some labels for accessibility
+
+[33mcommit 48087c60dbca6e70132e83f2e3b17d24a8c37722[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 30 18:27:37 2024 +0700
+
+    chore: add lazy loading to map tile image
+
+[33mcommit eaa831dce0fed4c1cf630da95a5f7383c3b7690a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 30 16:47:25 2024 +0700
+
+    chore: add aria-label for some components
+
+[33mcommit bdc0c265ec9799d60df15a287329fe86e9d96fd0[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 30 13:04:39 2024 +0700
+
+    feat: update bookmarked project's article
+
+[33mcommit 53999a1a51d8415fe78a429a62de77100ba5321a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 30 09:57:20 2024 +0700
+
+    feat: add hover effect on github contributions chart
+
+[33mcommit c7cb027ae9d2cb166d4a2155b9d06d7def329377[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 29 23:13:09 2024 +0700
+
+    feat: update some styles and finish bookmarked project article
+
+[33mcommit 4661069aef695141466fcac0205a554f8e950a1d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 29 16:19:42 2024 +0700
+
+    chore: remove unused dependency
+
+[33mcommit 44bd715ad7538e8370a3bbf559af7e24a8804a90[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 29 16:16:59 2024 +0700
+
+    fix: build error
+
+[33mcommit 1abe4952e6834f423d52a1ade9f6fe7796146f5b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 29 16:11:26 2024 +0700
+
+    fix: build error
+
+[33mcommit c02994db3472a67691be7ceecc4ebfab5d92807a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 29 16:09:08 2024 +0700
+
+    chore: update bookmarked project
+
+[33mcommit 57e8062e785e34bac37bda7b25ff09a6bcbbec5f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 29 14:58:39 2024 +0700
+
+    chore: update tweet card
+
+[33mcommit f871b239ba166a2de791136c5d07256dbbe98e35[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 29 14:18:05 2024 +0700
+
+    chore: refactor project title
+
+[33mcommit 8b10aa2020a1147726aabead96ad91c30a5169b9[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 29 14:17:10 2024 +0700
+
+    chore: update image's style
+
+[33mcommit 75cbd1c64d56a8858c19280f8e80437845c1028f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 29 11:30:22 2024 +0700
+
+    feat: style TweetCard
+
+[33mcommit e9c8ef734f39e155d9e57bc3b4761e713c573098[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 29 09:40:01 2024 +0700
+
+    feat: add TweetCard
+
+[33mcommit eb9b49014a5c5c2451436fdc7501e4dbf7a7695d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 29 06:57:41 2024 +0700
+
+    fix: imports
+
+[33mcommit 70e831008ece317be383e204192b064e0e472fa2[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 28 23:12:17 2024 +0700
+
+    chore: update bookmarked project
+
+[33mcommit ec9b2551e244fc3cea71ec5725b5721af98ff9ef[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 28 19:00:13 2024 +0700
+
+    chore: setup mdx eslint
+
+[33mcommit 328dea9ddd1a06564c415c43a5a4eef6f02cc33a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 28 15:00:15 2024 +0700
+
+    chore: adjust styles for smaller screen
+
+[33mcommit da5f6e383fdb68dcdb2c5fd9f3b2a72fd08e2490[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 28 14:12:39 2024 +0700
+
+    chore: setup endpoint for tweet data
+
+[33mcommit 44b8b6b37d63a6cb2dd80032d34fac1e5bbe03cc[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 28 11:46:49 2024 +0700
+
+    chore: display project's updated time
+
+[33mcommit 7f8c2ffa24971dea1013984d9fdf22a2d5ab52d2[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 28 11:44:51 2024 +0700
+
+    chore: deploy updated endpoint for github file last updated time
+
+[33mcommit a3ecc056478634435cd578ada8adb178a7a4a56b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 28 11:39:46 2024 +0700
+
+    chore: remove unused variables
+
+[33mcommit 5d5a99de54cf96f1ec0a043f6c107b4d29abb05c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 28 11:33:14 2024 +0700
+
+    chore: update font weight
+
+[33mcommit cd2634ee361f94c99ede2f9c8c31c4160308fd6e[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 28 11:17:13 2024 +0700
+
+    chore: update display font
+
+[33mcommit a39a57c78c0fd422c21db5b3a5f0f130585d7d07[m
+Merge: d46bbc7 b131868
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 28 08:49:09 2024 +0700
+
+    Merge branch 'master' of https://github.com/jestsee/portfolio-revamp
+
+[33mcommit b131868af2f510123fbaebc01520c37c67d0c2e7[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 28 08:41:58 2024 +0700
+
+    chore: add Fustat font
+
+[33mcommit d46bbc7d4bc1eca0c4a9c1f125a7074c1dbadd47[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 27 23:07:04 2024 +0700
+
+    chore: tooltip able to display markdown content
+
+[33mcommit 8e1e1f4d1e784561e311e3ca1b29823f9a2ba7d1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 27 22:30:12 2024 +0700
+
+    chore: adjust links color
+
+[33mcommit 9e0bb8c84886c118d21e2ab411d2a9915fc8ef96[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 27 21:59:37 2024 +0700
+
+    feat: display repo info on github card
+
+[33mcommit 8ea0c2bf43078570eba4fb11c117859b39e55c41[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 27 20:06:55 2024 +0700
+
+    chore: refactor repo info API
+
+[33mcommit 93edb989cd9cc161be76988952861121dbcec055[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 27 19:38:00 2024 +0700
+
+    chore: rename API service files
+
+[33mcommit 1f8b21908107e707a461486f73c45e3eb28e7387[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 27 19:13:05 2024 +0700
+
+    chore: refactor API files
+
+[33mcommit 1506b1ff70cc76d53341ab21ee8d1aeec28486ae[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 27 18:34:36 2024 +0700
+
+    chore: update scroll progress bar
+
+[33mcommit eeb9805aecb3237b6566fdd47703e014ab29d70c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 27 18:17:21 2024 +0700
+
+    chore: update article headings
+
+[33mcommit b72e272b1b1845087a8ebddb78e06a27fd86395e[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 27 17:25:44 2024 +0700
+
+    chore: update hover styles
+
+[33mcommit bdf34e0c3e1e7240fa81c88b6099415312ba78e4[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 27 14:51:15 2024 +0700
+
+    chore: remove unused code and update hero section
+
+[33mcommit c0ab53960e8f5a214bfb018401460634b6719bb6[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 27 12:15:28 2024 +0700
+
+    chore: adjust styles
+
+[33mcommit c5ceb873cd12f17e6685699175ffb1871ade0569[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 27 08:27:54 2024 +0700
+
+    chore: adjust styles
+
+[33mcommit 93398a615c91b8ac1b5cf920ec7ef7bfa723eeb0[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 26 23:10:57 2024 +0700
+
+    chore: adjust some styles
+
+[33mcommit 2fb9ce5277c824bbaba7900d646f69a7dd7e7587[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 26 14:08:33 2024 +0700
+
+    chore: adjust font styles
+
+[33mcommit d8727864f12937a1b45e18d5cc29472f933242a8[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 26 13:24:18 2024 +0700
+
+    fix: build error
+
+[33mcommit c4b7b73addc65fe558db50890eb8441755cdc359[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 26 13:13:54 2024 +0700
+
+    chore: adjust top overlay and scroll progress bar
+
+[33mcommit af9417e8f91bbf54c86620807112102934fd0691[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 26 12:32:35 2024 +0700
+
+    chore: update project layout
+
+[33mcommit 4df8381059e7e127324b110ae2fccfce04b2becb[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 26 11:35:25 2024 +0700
+
+    chore: setup umami analytics
+
+[33mcommit eed1a3d3716ea333fd74c2df1099b1ce166fed1a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 26 11:30:48 2024 +0700
+
+    chore: setup vercel analytics
+
+[33mcommit c60f2af7a7270e83f29ddc150c1c7c7d9a6c3e48[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 26 11:23:47 2024 +0700
+
+    chore: rename files
+
+[33mcommit a799ac7bb9b12506a0ab3f6c0d0951282b7c519a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 26 10:53:18 2024 +0700
+
+    chore: refactor layout's directory
+
+[33mcommit fe33ff78ca1f7f03e0a1493b5a0ec5bcd2dd1c67[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 26 10:36:06 2024 +0700
+
+    chore: update cards and use rem for font size
+
+[33mcommit 78517b00fc3a94246d26b6598bfd8f49613a4c1e[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 25 20:06:23 2024 +0700
+
+    feat: use Work Sans font for headings
+
+[33mcommit 6679c26e5a74c389e75b748c5efd70ebbd248f28[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 24 23:26:34 2024 +0700
+
+    feat: responsive project layout
+
+[33mcommit d8160307d383987e7c1ce7026fad336a5f65b44d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 24 22:49:52 2024 +0700
+
+    feat: display words count
+
+[33mcommit 30564c25864faf800a723cabd907182df019da5a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 24 22:07:00 2024 +0700
+
+    feat: update project layout
+
+[33mcommit 0899fee5ceff18090e7b559604ca67765bbcdd67[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 24 18:48:41 2024 +0700
+
+    chore: refactor font styles
+
+[33mcommit 3a2ff41ad6d4b05fbc5f46c3fa4f0165faaf00e6[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 24 11:29:06 2024 +0700
+
+    chore: adjust top overlay position
+
+[33mcommit a67b7dfe3cf1da86d5bc1d279439aa7cfb246e1b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 23 22:32:58 2024 +0700
+
+    feat: add github card
+
+[33mcommit b180bca47012b6a5ab84c3e66af4245208f8c192[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 23 22:09:36 2024 +0700
+
+    feat: add reading time estimation
+
+[33mcommit e4a5acfe874abc91c73617e23495bf009d0e944f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 23 21:47:09 2024 +0700
+
+    feat: add top overlay to article page
+
+[33mcommit 210c1aabac4ba4309c2066e36153cf13a62dec45[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 23 18:47:50 2024 +0700
+
+    chore: remove unnecessary logic from scroll progress bar
+
+[33mcommit 9d9d94651f7e5fb3b667a5ace7f0a98109405cc4[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 23 17:48:20 2024 +0700
+
+    chore: update scroll progress bar
+
+[33mcommit 45b89070ded588f8340700fc2edfb71eb3a64b5a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 23 17:28:33 2024 +0700
+
+    chore: adjust project layout
+
+[33mcommit 3dfcdb72ddc7c2d52682822a6606aebc6e3fa020[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 23 17:08:23 2024 +0700
+
+    chore: set target element for scroll progress bar
+
+[33mcommit 75d14f162a1c2b9bcc9c632ebde2d77c9c44976f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 23 14:31:49 2024 +0700
+
+    chore: refactor tooltip
+
+[33mcommit 44846b6de9372bbf6dd46c564b91d389aafe04ed[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 23 09:23:50 2024 +0700
+
+    chore: divide tooltip component based on its part
+
+[33mcommit 2e7bd9573ab523a908b080a600874ca3741d0d0f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 23 06:10:51 2024 +0700
+
+    chore: adjust some font weights
+
+[33mcommit 6a1f8040260eeed77fb9adc9ad8bb42383b8d6bc[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 22 23:15:54 2024 +0700
+
+    chore: add preload font
+
+[33mcommit 10c9d98dd43808551715d844da9230f8c3237fbe[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 22 22:47:07 2024 +0700
+
+    chore: update some styles
+
+[33mcommit 5587738f92e5090a0b0c67aa1fc06c3d516e0d2f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 22 22:25:51 2024 +0700
+
+    chore: rename css variables
+
+[33mcommit c42bc373396eee1156ede5184c380b46661e0dff[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 22 22:25:16 2024 +0700
+
+    feat: update project card style
+
+[33mcommit 20dd8aae15e59386b458c8f6478b4d2ce7678df3[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 22 20:47:11 2024 +0700
+
+    chore: move custom tailwind utilities to css file
+
+[33mcommit 06fda8eecb1527698607022c055983a81da85434[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 22 20:13:47 2024 +0700
+
+    feat: update anchor tag styles
+
+[33mcommit 637a90ee96a894e828f5bbd6fd676056e46e5afb[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 22 17:30:17 2024 +0700
+
+    feat: update font for headings
+
+[33mcommit 86b5b2c0fc21b0de20b29136c6ebddf3fb2fe1f5[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 22 16:22:57 2024 +0700
+
+    feat: style anchor tag inside article
+
+[33mcommit 98ef42bff3a4f59086abdaf9045d891b3c8e526a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 21 18:14:56 2024 +0700
+
+    feat: update scroll progress bar
+
+[33mcommit 93fa66ed63ac1c09d354661deeaf66ba485c14d7[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 19 22:34:02 2024 +0700
+
+    feat: add author card
+
+[33mcommit a2f8cfd9c3ae61363a84b2ca93b7722e78568109[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 19 12:53:22 2024 +0700
+
+    chore: bring back the og image
+
+[33mcommit 5516a5fa83fa39df099ac749b3f730c344bb7893[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 19 12:50:18 2024 +0700
+
+    chore: debug build error
+
+[33mcommit c47f66645d21a94421d446d1fef1e4a0bdf91006[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 19 12:47:04 2024 +0700
+
+    chore: debug build error
+
+[33mcommit f46b13bfe142f743eb27bfe33b2725d475461c15[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 19 12:01:14 2024 +0700
+
+    fix: build error
+
+[33mcommit 63e35109f31d25891f3f673ead301812285a7f92[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 19 11:59:10 2024 +0700
+
+    fix: build error
+
+[33mcommit 6989dc4ad52ce6e1892b170682cbc33c532f4423[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 19 11:57:10 2024 +0700
+
+    fix: build error
+
+[33mcommit a4893f67c1307adcf90969ce7cf2b5651a66ff33[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 19 11:52:09 2024 +0700
+
+    chore: update OG image font
+
+[33mcommit ba00f491609b96563dbb5ac50f7e550355a32260[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 19 11:36:54 2024 +0700
+
+    feat: change font and its related style
+
+[33mcommit e3407d7576a7dbc78a85318468c6feee4bdac71c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 19 08:03:25 2024 +0700
+
+    chore: refactor Image and LinkCard component
+
+[33mcommit 8c5c8012542bd6e5af010921b024af041a8ffc3c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 18 21:23:20 2024 +0700
+
+    chore: remove unnecessary styles
+
+[33mcommit 72e312d0ec92014149863e7fe7210a540a089a57[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 18 19:24:18 2024 +0700
+
+    feat: add main website structured data
+
+[33mcommit c620a413ca587de34fafe069f13da40e07c98ade[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 18 19:18:22 2024 +0700
+
+    feat: update image's style inside LinkCard
+
+[33mcommit 2cae24a8686031d9ec970dbf1e99d1c874cdbbbf[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 18 18:41:43 2024 +0700
+
+    fix: favicon inside LinkCard
+
+[33mcommit 2d8126de013c174eeef74fddf7880e59af01595c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 18 17:53:14 2024 +0700
+
+    feat: add structured data
+
+[33mcommit f6a381611849406368dc54340b08c08a069d956d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 18 16:55:51 2024 +0700
+
+    feat: setup sitemap
+
+[33mcommit fbe234b7de5b451c8298b9b2cca8ba82dbf05cca[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 18 16:43:51 2024 +0700
+
+    feat: update LinkCard component
+
+[33mcommit 16b76f307c8e99145ea8038f639a4b1d6aa6b7eb[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 18 09:24:12 2024 +0700
+
+    feat: add LinkCard component
+
+[33mcommit 14eca570ebc039948df9ec5abecb09c62d887a8b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 17 15:42:18 2024 +0700
+
+    feat: setup endpoint to fetch link metadata
+
+[33mcommit 35e2ab11a6c849132c3194e84c149396acb01c29[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 17 15:29:28 2024 +0700
+
+    chore: update tooltip's style
+
+[33mcommit 09817fa87f704e442de3d911431a571011b5435f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 17 11:40:24 2024 +0700
+
+    chore: update cta inside bento section
+
+[33mcommit f4af89cb0d7f8c67085f2a08950413d5f935a635[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 17 09:59:06 2024 +0700
+
+    chore: update hero section
+
+[33mcommit 40cb92b3d52893f5ee19d1115a2570afe8fa4b98[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 22:12:06 2024 +0700
+
+    chore: group tooltip into a folder
+
+[33mcommit bca09711238bf898273d6556165d91067241114d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 22:06:38 2024 +0700
+
+    feat: customize tooltip arrow
+
+[33mcommit 509a532dede81068638e40dc601e6701b3e67670[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 17:06:43 2024 +0700
+
+    chore: implement server island for now playing bento item
+
+[33mcommit 9055638e7aa80aadf14248a8bf842613a0b8cfdf[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 16:07:44 2024 +0700
+
+    feat: add under construction page
+
+[33mcommit 7264412974ef00d260f14d97fd3b4dac3e94c1e1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 14:56:30 2024 +0700
+
+    chore: update font color
+
+[33mcommit ae73ad35744058fb50fd40ae9b50a63137ffacd4[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 14:00:50 2024 +0700
+
+    chore: update font color
+
+[33mcommit 60496945e777822144eb346c907b718df5e479cf[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 13:42:12 2024 +0700
+
+    chore: update styles
+
+[33mcommit 2dc127f098db5d67a7733675b939ff06306fdf54[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 10:06:12 2024 +0700
+
+    chore: refactor layout props
+
+[33mcommit 25ee4db22bfe02ef976b05d89ae6048573f73f39[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 09:30:57 2024 +0700
+
+    fix: build error
+
+[33mcommit fa21a751f96353f39e5254659e652d0d85dea10a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 09:27:43 2024 +0700
+
+    chore: debug build error
+
+[33mcommit 88e18546309b72d0d74f76bfc7ca881740477c99[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 09:25:25 2024 +0700
+
+    chore: debug build error
+
+[33mcommit 7b6f908dd54862a57814c341a8dea72e23af6687[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 09:21:25 2024 +0700
+
+    fix: build error
+
+[33mcommit e95b057ef1563444090417bfd334773b22ddbcfa[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 08:26:28 2024 +0700
+
+    chore: debug build error
+
+[33mcommit 1932eda44f7cda879820eec0f1c56e2a7bb56d87[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 08:18:13 2024 +0700
+
+    fix: build error
+
+[33mcommit fca8c76eabb14df4aead10a859d882de5bdf0b21[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 08:12:57 2024 +0700
+
+    chore: refactor getStaticPaths for projects page
+
+[33mcommit 956a19baab7f83c15cf8f62cac8a9f1779aba3a4[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 07:54:50 2024 +0700
+
+    feat: add fancy link button
+
+[33mcommit c74a3405aa080cd44a652ee2ccb6122e60087497[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 16 06:54:54 2024 +0700
+
+    feat: update favicon
+
+[33mcommit 93409146b9c1d2942f3a3f59c85cc09e81a8f5eb[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 15 19:51:49 2024 +0700
+
+    feat: display latest commit url on project detail page
+
+[33mcommit 66b13b20364db1d94e4d1bca56b7a1a21de275fe[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 15 19:45:16 2024 +0700
+
+    feat: display last updated time on project page
+
+[33mcommit 01facfc2874018805fc8666af3a4dc47a1b2e824[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 15 11:09:16 2024 +0700
+
+    feat: add explore more projects button
+
+[33mcommit 92a694141a84cb1b5b32f871c2739d7de695b499[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 15 10:03:59 2024 +0700
+
+    feat: add more project card
+
+[33mcommit b6ad6e4baf47470ed9e768cea0b7a29287bf2d41[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 15 08:16:52 2024 +0700
+
+    feat: update og image styles
+
+[33mcommit 765564cea3972478ef72d01c8f2b272ecc930447[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 15 07:58:45 2024 +0700
+
+    chore: map project list data
+
+[33mcommit 6cef6123b715bfbfb0e5f0a6597515ff9e19edf3[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 15 07:11:26 2024 +0700
+
+    chore: map contributors data
+
+[33mcommit 52dfb568737bfadde29f9fbbf593a25ca5b7c020[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 14 23:08:29 2024 +0700
+
+    chore: update article's font size for smaller screen
+
+[33mcommit 5ec6e81bc3be1ebeb86e766b17e0e0c5e3c84613[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 14 21:57:48 2024 +0700
+
+    chore: update content styles
+
+[33mcommit b3c8b7c2fb0a4c485c31b971056babd3000358aa[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 14 13:15:38 2024 +0700
+
+    chore: update styles
+
+[33mcommit 3b0f2609f6a8819b1dbfd3f6a36ea0ffb1579490[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 14 12:13:30 2024 +0700
+
+    chore: update font
+
+[33mcommit f90b5b9918cced678ab1e59ebb9f52219a4dac78[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 14 09:43:20 2024 +0700
+
+    fix: unnecessary space in link component
+
+[33mcommit 724c7b229b9a577b694d331fb47153cf385ce7f6[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 13 16:15:31 2024 +0700
+
+    feat: add inter font for paragraph
+
+[33mcommit c6c5c1fb5ca0b7df96521a3a467f9970374e9fe2[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 12 22:34:42 2024 +0700
+
+    chore: update og background
+
+[33mcommit eac390d511f6dec98b027565eabf5c1708a21a1e[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 12 22:24:30 2024 +0700
+
+    chore: update hero section styles
+
+[33mcommit a4e7553a2252f878cd685c20a1125696c22fa416[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 12 20:17:31 2024 +0700
+
+    fix: hopefully the og image works now 🥺
+
+[33mcommit 9b3ea0eec52f0b5474a3ce52c35915490f908ef8[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 12 20:03:44 2024 +0700
+
+    chore: check image directory location after deployed
+
+[33mcommit a9f46e4bd0aecc9105578695f85245d6fb3b6279[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 12 18:48:04 2024 +0700
+
+    fix: build error
+
+[33mcommit d6bd9ced4f2ca9a6e8a7f2a3d3d8765ce9688657[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 12 18:46:08 2024 +0700
+
+    feat: display og image
+
+[33mcommit 45c950e9867105d4f4d78544c644acaa528654ce[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 12 18:01:47 2024 +0700
+
+    chore: setup vercel/og
+
+[33mcommit cc01033364cec3121e411777c7b504e3b1f2fca2[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 12 12:50:35 2024 +0700
+
+    feat: update anchor link icon
+
+[33mcommit 97c64d12eaaf028d3cd32634d644a6f3a0641fb8[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 12 12:15:05 2024 +0700
+
+    chore: update BASE_URL based on vercel env
+
+[33mcommit a26e10918460c73c226e9b1e8da9c5878dc11119[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 12 11:43:13 2024 +0700
+
+    chore: check vercel env
+
+[33mcommit e7ddfff67f69b80d81cd788a3e9ec71b674de1fc[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 12 11:39:55 2024 +0700
+
+    chore: check vercel env
+
+[33mcommit dd78e1c8e3bdaa2097bea2f162ce64c618f0773c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 12 10:03:24 2024 +0700
+
+    chore: add scrollIntoView for navigation with hash
+
+[33mcommit 76b80217114159050a7a18a79dbdfb703264f523[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 12 08:51:11 2024 +0700
+
+    fix: stuck while navigating back
+
+[33mcommit c581dc33d40a6e9925c2c4b36caeca6e11eb3976[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 11 22:02:47 2024 +0700
+
+    feat: handle anchor tags behavior
+
+[33mcommit 0a6cbcc664ae8a34671aa1f076d73f62321866b1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 11 21:16:13 2024 +0700
+
+    chore: setup anchor tag icon
+
+[33mcommit 7e55ca59b787fa3bc2c12b4bf74d3cd9a4ddd73d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 11 19:45:36 2024 +0700
+
+    chore: adjust styling
+
+[33mcommit 60a4b987b11f9c8cf1667df06ec066aa8ad9a623[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 11 14:51:19 2024 +0700
+
+    feat: implement intersection observer for table of content
+
+[33mcommit 2d54200e23380f4efff5c969dec1cd20fbf2afb1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 11 12:43:08 2024 +0700
+
+    feat: update table of content
+
+[33mcommit 7c5ad68f3879d4c55deca646cf080823a20799fb[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 11 09:28:40 2024 +0700
+
+    chore: refactor collection's config
+
+[33mcommit 0c0f87be4eeb7bad3dba55d7a3a1c51482e0cedf[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 11 08:27:18 2024 +0700
+
+    feat: update text styling
+
+[33mcommit f774e87e73c8ed834fd31570b88175345763e65c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 10 22:58:06 2024 +0700
+
+    feat: update text styling
+
+[33mcommit 0b28a53ed9bc1f338f1e6a7836be35be1dfdc496[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 10 22:01:40 2024 +0700
+
+    feat: update hero section
+
+[33mcommit b11f0acb52f12c51a7e7b9ccd28f14055f6a6165[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 10 18:33:37 2024 +0700
+
+    feat: update font
+
+[33mcommit f66678bbd0b106f13446e63576b00c300bd7b67c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 9 11:10:27 2024 +0700
+
+    fix: project's title line break on smaller screen
+
+[33mcommit d5bb6dcc11c1b5342d32eb89b478b598f99a8ec7[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 8 19:26:42 2024 +0700
+
+    chore: setup rehype and styling mdx content
+
+[33mcommit 9346b05118c46cbd02b35196573bbb02b61d8098[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 8 17:29:39 2024 +0700
+
+    chore: parse line break on title
+
+[33mcommit b4c18fdb73dc0489948cdc2bbeaceee0e7afb907[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 8 16:58:06 2024 +0700
+
+    chore: map links data from mdx
+
+[33mcommit b3355e447de9c0e45c2a508646f9cf37dd65341c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 8 16:26:51 2024 +0700
+
+    chore: setup mdx integration
+
+[33mcommit 002ecd0a24f48565d98b45940f9391edb24a0004[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 8 10:49:33 2024 +0700
+
+    feat: implement image ambient mode
+
+[33mcommit a2904e3dc80d93fe1cddecca80d42e1c9f1f9516[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 7 22:53:15 2024 +0700
+
+    feat: implement gradient scroll progress bar
+
+[33mcommit 6e38c1c0f4e1866659315410daba8c0a3292c6ed[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 7 21:11:07 2024 +0700
+
+    chore: update scroll progress bar
+
+[33mcommit 5855d473efd2f6f73357eb90c670e3b933217b97[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Nov 7 20:50:08 2024 +0700
+
+    feat: add scroll progress bar
+
+[33mcommit 27a99855b975eb6a11043dda7151e8eccd287a27[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Nov 6 07:01:20 2024 +0700
+
+    fix: image placeholder position & hide navbar tooltip on smaller screen
+
+[33mcommit 3c8718f0612f0f9a42770ceccc1ecc83b752ce14[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 5 10:42:12 2024 +0700
+
+    fix: update bottom navbar state when back navigation happen
+
+[33mcommit 453e4bce2e8fa1d25571921082095c8a94f107f4[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Nov 5 10:03:35 2024 +0700
+
+    chore: refactor base layout
+
+[33mcommit 97754ba9f03ca3484c2cde0d15809300f25adbdf[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 4 23:01:38 2024 +0700
+
+    fix: styling on project detail page
+
+[33mcommit eb7f2700c2fdef8b71a7074640040b4d365c5ff6[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 4 22:46:50 2024 +0700
+
+    fix: build error
+
+[33mcommit 89bd22e4225a87e57c2f60fc4702c38c1da259b1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 4 22:42:08 2024 +0700
+
+    feat: able to customize each page title
+
+[33mcommit 22481cfa3dafa8ffbf36a1cfbf477ffc378ffc86[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 4 22:12:31 2024 +0700
+
+    feat: add title, description and other detail on project detail page
+
+[33mcommit 2adb4f328400ec235a2f5360b4b750196d151c80[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 4 12:11:14 2024 +0700
+
+    chore: update custom image component
+
+[33mcommit cceb6b150cc7abfd0dd2834a4d714d2ff55e1736[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Nov 4 08:03:27 2024 +0700
+
+    chore: use custom link on footer
+
+[33mcommit add4b7254c2e4a7cccc700275bc118d5ab7552c4[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 3 21:25:50 2024 +0700
+
+    chore: add custom link component
+
+[33mcommit 4e8265265ca078d9d6b61594febdb5dffda06553[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 3 19:12:34 2024 +0700
+
+    chore: adjust some styling
+
+[33mcommit 4ed280f935bdddb1129b3981abf7f50ef8712a6b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 3 16:34:47 2024 +0700
+
+    feat: replace image with custom image component in project card
+
+[33mcommit c16a94ccbfc42a277ae380d5ee8ed3721fe23dfd[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 3 16:07:46 2024 +0700
+
+    feat: add custom image component with blur placeholder
+
+[33mcommit 26c673ae70394a2eb84cc53833d6a9d373ecef5a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 3 13:57:55 2024 +0700
+
+    feat: add hover effect to project card
+
+[33mcommit 9f81e5834c4d5aeccbd15bd1adb0d3622e41fddd[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 3 11:38:55 2024 +0700
+
+    feat: add links to project card
+
+[33mcommit 729edf2f8b79b00579e09698a8154b8490abe29d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 3 07:57:29 2024 +0700
+
+    chore: adjust project section's padding
+
+[33mcommit f6eb27780670267d1ccbcfcedb112c7ff45cf247[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 3 07:53:25 2024 +0700
+
+    feat: add project section on homepage
+
+[33mcommit 0392a6d8b701ca74ef6912b855e59814b2111010[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 3 07:23:15 2024 +0700
+
+    feat: adjust raylight on projects page based on screen's width
+
+[33mcommit f43727904d0bdd3a8252ec0710096e7883628641[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 3 07:12:34 2024 +0700
+
+    feat: responsive project layout
+
+[33mcommit aa2a1bed092e34477bd27edd1fd90a0cfce2ebee[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 3 06:29:38 2024 +0700
+
+    chore: move bento item component to each folder
+
+[33mcommit 9b95fef9888465c4926adff745565c999e2fcb20[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Nov 3 06:18:23 2024 +0700
+
+    chore: move each component to each folders & remove unnecessar files
+
+[33mcommit 50c6b95034095600502c86f164140e45656192a5[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 2 22:56:09 2024 +0700
+
+    chore: update hero & map styles
+
+[33mcommit 98922cc1d07fc154c7407e1fcd55999f8239006e[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Nov 2 22:40:56 2024 +0700
+
+    feat: start working on projects page
+
+[33mcommit e0aa0722d1d447759dc9df16867e1f97941079f7[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 1 21:53:38 2024 +0700
+
+    fix: keyboard key cta
+
+[33mcommit a44364e64f638c061c947feaf941836c9fd6ea75[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 1 20:03:15 2024 +0700
+
+    feat: update notification card's hover effect
+
+[33mcommit e780bdada998590268ae29815c4c27eb0a5c4fc0[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 1 19:40:18 2024 +0700
+
+    feat: add enter animation on notification cards
+
+[33mcommit 09c53a51e8d3ae973d8b48451a2de23bea11976c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 1 17:36:15 2024 +0700
+
+    feat: display notification card inside featured work bento item
+
+[33mcommit 41cc91e8d85721c084458088f3ab497e6e96aad6[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Nov 1 10:04:30 2024 +0700
+
+    chore: rewrite bento item for featured work
+
+[33mcommit 0e602b5b98d713b25c9f03fe9f8165683bb099f3[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 31 22:12:27 2024 +0700
+
+    feat: add notification card component
+
+[33mcommit 27341512fdc4aaf686cdc61fe85eed76f74b7df0[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 29 19:27:45 2024 +0700
+
+    chore: remove unused components
+
+[33mcommit cff1d84805cb15b8c435f6716889e53956c0e754[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 29 16:13:04 2024 +0700
+
+    chore: rename 'works' to 'projects'
+
+[33mcommit 5847ab911f8c3dd376c3194b2420278652e019e8[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 29 14:16:53 2024 +0700
+
+    chore: update some stying
+
+[33mcommit 54a3576e95d477b44778cd24b140bf7b8a9c270f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 29 12:43:40 2024 +0700
+
+    feat: update the hero section
+
+[33mcommit 4b5a6ed3c9b8d4c924e0b51ebe6d37b76ef1b60d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 29 09:42:58 2024 +0700
+
+    chore: disable bottom navigation bar hover effect on mobile device
+
+[33mcommit 779d9be1a7d9cea1917d7ccf4e85f029fc50415a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 29 09:23:12 2024 +0700
+
+    chore: update date time based on time zone
+
+[33mcommit 282145571673039ca78e1aa5e0d15aedb289d73d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 29 08:33:45 2024 +0700
+
+    chore: fix deployment error
+
+[33mcommit 74035438eff241d3dd8f6687849df98dfee4fb96[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 29 08:06:58 2024 +0700
+
+    feat: display last updated time on footer
+
+[33mcommit 371d4c51660ebe3ccc43fac5445afcc819f4eb66[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 29 07:59:43 2024 +0700
+
+    feat: add API for fetching last updated time data
+
+[33mcommit 2590cba12f7f0cf03c5ff0988aa8dac821a6cad4[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Oct 28 22:05:38 2024 +0700
+
+    chore: fix padding
+
+[33mcommit 6e6f2d1fc20fa272238f08913b0ec73e6eb973bf[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Oct 28 20:18:26 2024 +0700
+
+    feat: responsive footer layout
+
+[33mcommit 4838e25b3217be0e66d0e6caa2580ae652619968[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Oct 28 20:00:59 2024 +0700
+
+    feat: adjust footer layout on smaller screen
+
+[33mcommit 00d05ff0a8615c2526756115e01d7a1026bf66ed[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Oct 28 18:42:02 2024 +0700
+
+    feat: add radial gradient above the footer
+
+[33mcommit e4bc2b1b556289d89b469b9625e321f478d309c7[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Oct 28 15:06:54 2024 +0700
+
+    feat: add footer
+
+[33mcommit ff52c20eed817711ed8fc47af0ec143e695e1af3[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Oct 28 12:38:54 2024 +0700
+
+    chore: refactor bottom navigation bar related hooks
+
+[33mcommit 72b82bcbed5a84100dca566be147d4c9f9782589[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Oct 28 12:28:41 2024 +0700
+
+    chore: move bottom nav bar related component to a folder
+
+[33mcommit 36d43a98febe2a46bac42cfc381a64ed5b46e985[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Oct 28 11:12:58 2024 +0700
+
+    fix: bottom nav bar scroll behavior when initial scroll position is not 0
+
+[33mcommit 99a706c7dee7d7292b711b3647b0382196035391[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Oct 28 08:24:49 2024 +0700
+
+    feat: update bottom navigation bar position based on user scroll's position
+
+[33mcommit b3238ea86a170e3d6c17d46df744f26b7eb0ad24[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Oct 28 08:20:04 2024 +0700
+
+    chore: add tech stacks used & refactor navbar tag structure
+
+[33mcommit df282121a2f5d9d22455e7f158d0b19791156c13[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 27 11:50:07 2024 +0700
+
+    chore: update cache control
+
+[33mcommit 42f1627f153fcc3ebc3b1748eb7831b75581db61[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 27 08:15:10 2024 +0700
+
+    chore: update env for base url
+
+[33mcommit 62428fcd8aa508e0d8b59964bf0655a9b731373a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 27 07:16:00 2024 +0700
+
+    chore: update log for checking vercel env url
+
+[33mcommit 45fc6e28b423c2fc4efce02a06d96bf83f9ed7ae[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 27 07:05:28 2024 +0700
+
+    chore: log for checking url env
+
+[33mcommit df5b9b0cbfe4b34f018f6a41229d27cec8e8a358[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 27 07:02:39 2024 +0700
+
+    chore: fix typo
+
+[33mcommit ea952240bd17ffe7bfe9e7d543f301dd381b78b2[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 27 06:49:46 2024 +0700
+
+    chore: handle spotify ads error
+
+[33mcommit 862e0b4bfb6b3fe4722b57c46bb2a3fd7dc56a8f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Oct 26 18:08:43 2024 +0700
+
+    chore: implement astro server island
+
+[33mcommit aa47cc80da7423ec958314b638b94da9ae4698d2[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Oct 26 07:05:25 2024 +0700
+
+    fix: hover effect on bento item
+
+[33mcommit 7e18a0fcdbb7af7194739c29f4c97704b047bbe9[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 25 21:29:17 2024 +0700
+
+    chore: make bottom nav bar more responsive
+
+[33mcommit cf5df0a7a978d60fda076f908da6e79102afbe61[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 25 19:25:52 2024 +0700
+
+    chore: fix some UI bugs on smaller screen
+
+[33mcommit 3ffd577d331a49114193d59288b9786ff725901f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 25 17:20:56 2024 +0700
+
+    chore: proxy the map API
+
+[33mcommit cfde8f2fdab4dfe5b110bc40125fc6419494adf8[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 25 15:07:40 2024 +0700
+
+    chore: update eslint config
+
+[33mcommit 4d900604456be5154191a35d483ec49702063faf[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 25 13:57:47 2024 +0700
+
+    chore: refactor folder components
+
+[33mcommit 86e86336649b372da3365fd159ec307c9801cbb1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 25 13:09:53 2024 +0700
+
+    chore: remove unused comments
+
+[33mcommit bcb872cc75787029bc6db6915fdf65fec721473b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 25 10:26:32 2024 +0700
+
+    chore: setup API for monkeytype data
+
+[33mcommit a3a29ed12ed2c4cc51220f66451b0ecdad159fdc[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 25 08:11:10 2024 +0700
+
+    chore: update github api cache control
+
+[33mcommit 07c4849b5463f69e5dd228b141511f12489377d9[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 24 20:13:30 2024 +0700
+
+    chore: implement cache for github api
+
+[33mcommit ac533b1940b4e4c095c71cf3db173bb5a659e992[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 24 19:41:13 2024 +0700
+
+    chore: update base url for hono client
+
+[33mcommit 2e42a6b99997076d7c3dd37d54ced06c5c41ad1c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 24 19:33:42 2024 +0700
+
+    chore: setup eslint for sort import
+
+[33mcommit 4456ccce729e24dd912f01a3298ada1dc4fc71c7[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 24 18:34:41 2024 +0700
+
+    chore: add api error handler
+
+[33mcommit 559c0060faafa1ad4063283859fd58b726eede38[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 24 17:51:41 2024 +0700
+
+    chore: use hono client for data fetching
+
+[33mcommit a365f60ec0a05e89fb9993e26628771d531664c9[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 24 11:36:08 2024 +0700
+
+    chore: setup hono rpc
+
+[33mcommit 1172eebb453372a12bac7f1f068453b9312f698b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 24 08:52:38 2024 +0700
+
+    feat: add hover effect on bento item for featured post
+
+[33mcommit b2fddc2010636db2485337808c1ff8f55fe52c0b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 22 22:35:04 2024 +0700
+
+    feat: add some on hover animations
+
+[33mcommit e60e778cb3c22b9b6292a9a2fe9b43b928d8d11d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 22 21:53:50 2024 +0700
+
+    feat: bento layout done
+
+[33mcommit 661afa63c836f3859c848fa1df67e1535fd21ca2[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 22 17:57:26 2024 +0700
+
+    feat: update bento card for tech stack section
+
+[33mcommit cb74c063300a0bb3fb53295d5d689c1d38156a18[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 22 17:42:59 2024 +0700
+
+    feat: enhance now playing & typing speed bento card
+
+[33mcommit 9cac0b0582d1ca4d9ebf2aa1e73b08a52b4e5ca1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 22 14:13:27 2024 +0700
+
+    feat: adjust photo position for featured work card
+
+[33mcommit 4b85edd3531c0431190b4fd647c1f80a7c6f687b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 22 11:59:22 2024 +0700
+
+    feat: update bento layout for smaller screen
+
+[33mcommit ba3ddf57b5b9e0bdd60ca0bbd47574ebec9cac2c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 22 11:37:01 2024 +0700
+
+    chore: refactor bento row style
+
+[33mcommit 4040b8b90b4f3ce6ed4c5a4a400455ecafe9e0d3[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 22 11:24:02 2024 +0700
+
+    feat: update bento layout (again)
+
+[33mcommit cbda66c0572d9bf693b4a60f66a5b3b3e2d52a16[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 22 08:37:14 2024 +0700
+
+    feat: change icon color when now playing card hovered
+
+[33mcommit d38ce5c279f023f97983c7f1686e1d0faf12bdd0[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Oct 21 08:15:22 2024 +0700
+
+    feat: update bento layout & handle buttons on hero section
+
+[33mcommit b007bbd4c83b812c99f3cab6c1543ec19341aa59[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 20 22:50:26 2024 +0700
+
+    chore: adjust the layout again 🤡
+
+[33mcommit 3512a55809e9de692f3543af1ab07ce726404006[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 20 16:27:37 2024 +0700
+
+    chore: adjust padding for smaller screen
+
+[33mcommit cc875711d29ccc0070bfabb62a5e73781f80237f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 20 15:47:56 2024 +0700
+
+    chore: add layout for small screen
+
+[33mcommit 56a6db1c352bddc6d33d88de169b077a2f79837d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 20 14:55:10 2024 +0700
+
+    chore: update bento layout
+
+[33mcommit 70ab4dc279d107d9bc570fc5d0de87a00ce368ba[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 20 12:53:21 2024 +0700
+
+    chore: adjust color & display bento badge
+
+[33mcommit c21e9d8eb833bb7832935847297d1f4c3017d6e4[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 20 08:20:00 2024 +0700
+
+    chore: refactor bento item layout
+
+[33mcommit c4ec52605ca9d01b44eb3d3caf9dca7af02b0561[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 20 08:07:19 2024 +0700
+
+    chore: add hover effect to each bento card
+
+[33mcommit 893e0d172e50a59ab8c996886c7072eafdbf353a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 20 07:27:35 2024 +0700
+
+    chore: refactor bento layout
+
+[33mcommit 6dea8fca49e6db3eb58afe8a37da67e1e85930f2[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Oct 19 18:38:07 2024 +0700
+
+    chore: adjust hero section padding
+
+[33mcommit 25814a0245d4bbcac240b86bde4d131c8adffd13[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Oct 19 18:07:54 2024 +0700
+
+    feat: add bento item for tips
+
+[33mcommit 724ba990b9daa226419c1f154b89091174159daf[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Oct 19 17:42:50 2024 +0700
+
+    feat: add cta to contact bento item
+
+[33mcommit 23e7e545029f5f9fcd8b4dbec18d8f9efe2f4b7c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Oct 19 17:06:09 2024 +0700
+
+    feat: add bento item for contact
+
+[33mcommit 369e7e6db5e5d00726a282129a682e8637f17ca4[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Oct 19 16:37:38 2024 +0700
+
+    feat: add photo card component
+
+[33mcommit 499fda32572acb1aec98e2b8e8e83efff49a96d9[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Oct 19 11:13:21 2024 +0700
+
+    feat: display last pushed time
+
+[33mcommit 2054cc542e443c0566cb1a6cf1cea7f8f87b3751[m
+Merge: a272a1c cf2f6dd
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Oct 19 06:52:56 2024 +0700
+
+    Merge branch 'try-blur-effect-on-hover'
+
+[33mcommit cf2f6dd6638339c33ba06783fe1e6dc584ab8b39[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Oct 19 06:52:17 2024 +0700
+
+    chore: map github response
+
+[33mcommit e2fa1fde83ebeb2bb15f2c2bf401a2769c67215d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 18 11:10:37 2024 +0700
+
+    chore: setup graphql
+
+[33mcommit 4326a3c070b8fce68463141fec30ab622cb34bae[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 18 08:16:40 2024 +0700
+
+    feat: display heat map
+
+[33mcommit 5360b3567e0eabc83dd4e491d8f3e3fca2462ea4[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 17 22:02:39 2024 +0700
+
+    chore: setup heat map
+
+[33mcommit 4f8b2583366b91203344844091390d0ec9ff39ce[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 17 20:07:50 2024 +0700
+
+    feat: rename components & add tech stack bento item
+
+[33mcommit f398e0fde57cb654bffbfd47bb088c07c5dcc24e[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 17 19:46:02 2024 +0700
+
+    chore: refactor folder structure
+
+[33mcommit e3457bda6c35742f56f28257ae4d751a2e13b1ff[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 17 19:35:40 2024 +0700
+
+    feat: styling bento item for typing speed
+
+[33mcommit 8c2ea6445d0e2d1d132bbb72777258d0e56ad0f4[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 17 14:53:12 2024 +0700
+
+    feat: display album image on now playing bento item
+
+[33mcommit 908984d5c9bcfcc7940042d44ff638804561beef[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 17 11:04:04 2024 +0700
+
+    feat: add typing speed bento item
+
+[33mcommit 7b31c82aa0f1753f6836ee24ac4858421114e5e7[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 15 22:58:27 2024 +0700
+
+    feat: responsive bento layout
+
+[33mcommit 80f3f8466e06c80cd7bdb00e12269b1f6ed2f919[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 15 20:09:47 2024 +0700
+
+    chore: setup spotify api
+
+[33mcommit a272a1c72e4578e61f2570d63f01cef1ddb8f355[m
+Merge: 7ad3867 2a1b0cb
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Oct 15 16:25:25 2024 +0700
+
+    Merge pull request #1 from jestsee/try-blur-effect-on-hover
+    
+    Try blur effect on hover
+
+[33mcommit 3b50fa810267eed9a8d6f939975ce3db9a68ec84[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Oct 14 17:45:22 2024 +0700
+
+    chore: working on now playing component
+
+[33mcommit 2a1b0cb88636b27f71920bf497ad35cddef07e66[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 13 22:03:08 2024 +0700
+
+    feat: add bento layout
+
+[33mcommit 6fb7524ea7052dc98554815a7b44793c72cbfd47[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 13 17:41:30 2024 +0700
+
+    feat: able to zoom in and zoom out
+
+[33mcommit bf6f9abaef4d71c18e26e69b5c0893262a746812[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 13 16:08:01 2024 +0700
+
+    chore: setup react leaflet
+
+[33mcommit d3d652371912c2a1be09e528faf628ac53bc98e2[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 13 08:45:37 2024 +0700
+
+    chore: remove unnecessary file
+
+[33mcommit 342d8198d3a6623209d2e476f605230c016cf56c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Oct 12 21:49:11 2024 +0700
+
+    fix: keyboard hover effect
+
+[33mcommit f51e87bb98326b41beef01670f69115102173f9b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 11 19:42:41 2024 +0700
+
+    feat: update bottom navigation bar tooltip color
+
+[33mcommit 453068638602557b15fe5dd9eb12aa73f79a6d69[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 11 18:52:33 2024 +0700
+
+    feat: hide tooltip after navigating
+
+[33mcommit 2516adfee64a3a9a6b1a9441ded909925bd55025[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 11 18:07:01 2024 +0700
+
+    fix: tooltip position after navigating
+
+[33mcommit c5a46a4ee3bd8bba278721716c95b51556d23ae3[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 10 22:40:01 2024 +0700
+
+    chore: refactor bottom navigation bar
+
+[33mcommit c26bf78061afe61ce06858fccc6b8a942c0f4f8a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 10 19:29:27 2024 +0700
+
+    feat: remove gap between bottom navigation item
+
+[33mcommit d2215e61b887d17c81942cf5dbf89b072c25e9eb[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 10 18:38:38 2024 +0700
+
+    feat: add fancy animated tooltip to the bottom navigation bar
+
+[33mcommit e457fd6db4b7797ffda5dbe0e523229593ba6fde[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Oct 7 09:39:58 2024 +0700
+
+    feat: responsive hero section layout
+
+[33mcommit 0629b28c4b9cf6e79a02a5111ad90205c07f08fc[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 6 16:46:45 2024 +0700
+
+    feat: update hero section layout
+
+[33mcommit 7af6eae734a359d2f82d41b33f83c9ee081d547a[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Oct 6 12:14:34 2024 +0700
+
+    feat: update keyboard icons
+
+[33mcommit 7ad3867fc7910521477fcf78ada5dc7bbd7bd3c5[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Oct 5 17:17:32 2024 +0700
+
+    chore: refactor hero components
+
+[33mcommit 1b0270423aeba29533a26e903e898aeff853a302[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 4 08:54:57 2024 +0700
+
+    fix: build error
+
+[33mcommit c17cf86d6bc01622570e2ff1780600114ea5e687[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Fri Oct 4 08:06:52 2024 +0700
+
+    feat: latest work section done
+
+[33mcommit cfe979a18c9b441d511542b5bd93f13873edbb42[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Oct 3 17:52:01 2024 +0700
+
+    feat: add latest work section
+
+[33mcommit f37a0e126e92e1cf6f70db7fcfc992225436e74d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Oct 2 22:48:33 2024 +0700
+
+    feat: add portfolio card v2
+
+[33mcommit 6d14512c98a43bf69c5c625ae20a503b5a0980c1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Oct 2 11:54:27 2024 +0700
+
+    feat: add portfolio card component
+
+[33mcommit fd3a94ab304ba1106795989e59bb5ad82f9b8778[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Sep 30 15:07:30 2024 +0700
+
+    feat: update styling & fix padding
+
+[33mcommit 89d3cd2822bbae0dcec1f6f14c08dd4a6a8cf086[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Sep 29 23:08:08 2024 +0700
+
+    feat: add background gradient
+
+[33mcommit cff938ac1c0568bb58e918ede07b28e047f5521b[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Sep 29 20:44:13 2024 +0700
+
+    feat: hide bottom navigation bar when scrolling down
+
+[33mcommit 74905696d4401297f58b56125eb1a8a6cdc4e362[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Sep 29 19:31:12 2024 +0700
+
+    fix: padding on smaller screen
+
+[33mcommit 346a4d7456acc83adee5a0aa6f5c1028de4ac805[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Sep 29 19:13:54 2024 +0700
+
+    fix: navbar animation after page transition
+
+[33mcommit acb2c6b1f06d0be7c54265f67693ebf4d4c6e338[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Sep 29 10:58:50 2024 +0700
+
+    feat: able to display selected page on navigation bar
+
+[33mcommit 01253980347c4ec349642699de9d9b4b7851ee11[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Sep 28 19:36:18 2024 +0700
+
+    feat: add tooltip
+
+[33mcommit 7806af35c82ef9b9fe6e997b09f5caecd7c41d9e[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Sep 28 18:06:38 2024 +0700
+
+    feat: add separator to bottom navigation bar
+
+[33mcommit 81112b5b1eb0be6d46c931e9ff66f6357c8d5a59[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Sep 28 17:52:36 2024 +0700
+
+    feat: add bottom navigation bar component
+
+[33mcommit d03074405f9abc5c2c65af4fdd2eba49eba22c7c[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Sep 28 16:03:06 2024 +0700
+
+    feat: add tech stack icons
+
+[33mcommit fb6fba7272b32e5ecf9820c8961e3fed19f81a51[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Sep 28 13:19:54 2024 +0700
+
+    chore: refactor folder structure & add marquee component
+
+[33mcommit 412ea9dba7ebb3b7354b7ae7564d77414802dbc2[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Sep 28 11:05:36 2024 +0700
+
+    feat: add instument font
+
+[33mcommit b00e15401f60b76f6de54f740fe9952dde50a88f[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Sep 26 17:50:19 2024 +0700
+
+    feat: responsive keycap's icon size
+
+[33mcommit 4c1dcb7ffb8613170c73a6459a1d204f7e8abcf1[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Sep 26 15:41:01 2024 +0700
+
+    feat: setup magicui & add gradient text component
+
+[33mcommit 4032ef3899c8a06e681353f99de36f2f21e305c3[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Thu Sep 26 13:09:54 2024 +0700
+
+    feat: update padding & adjust keycap's icon
+
+[33mcommit 55a6448f80afaa2e41b0683b93e707276d82d3b9[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Sep 25 16:14:51 2024 +0700
+
+    feat: responsive keyboard
+
+[33mcommit f1a4f673f0f0ce5e13e6057dedad20b4740be018[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Sep 25 15:49:29 2024 +0700
+
+    chore: update lock file
+
+[33mcommit 4f6de7d453c096cb0e5003a84e95f654544b4604[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Sep 25 14:56:31 2024 +0700
+
+    feat: add custom key to the keyboard
+
+[33mcommit 4ac4b7f651f4415f6c4ffb6bdf3cc890f3930483[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Sep 25 11:04:00 2024 +0700
+
+    chore: adjust keyboard size based on screen size
+
+[33mcommit 034bc8961d1a5c3a0083e30c60fba388b8f01eeb[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Sep 25 08:27:25 2024 +0700
+
+    feat: update tootlip
+
+[33mcommit dcb506b4f4f2421d9911e7c3750b9e1a6d5113d0[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Wed Sep 25 08:15:54 2024 +0700
+
+    feat: add tooltip to each key
+
+[33mcommit 0db406f22263071ef6bc311d4938c59321b44746[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Sep 24 22:06:24 2024 +0700
+
+    chore: remove unused files
+
+[33mcommit 0cfbcf6b829b167f3aa43c8a1ea1e845ea09a786[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Sep 24 20:59:02 2024 +0700
+
+    chore: remove unused fonts
+
+[33mcommit d6d5ea41f025d1eedf7c236def3fef5b8c46ca23[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Sep 24 20:31:08 2024 +0700
+
+    feat: update keyboard
+
+[33mcommit 8802e8bdacf570e92677587377624c78313e6952[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Tue Sep 24 08:39:18 2024 +0700
+
+    feat: add grid gradient background
+
+[33mcommit fe5ed94701b11675acaff658f50d667aa43b7722[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Sep 23 21:41:45 2024 +0700
+
+    chore: fix padding on small screen
+
+[33mcommit d2080ca0836a5f55653dd0f56229a2b85fc18d32[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Sep 23 21:33:14 2024 +0700
+
+    chore: fix styling on mobile screen
+
+[33mcommit 554a11dcef5d74e4cf29e233c28daa2ae3a312ec[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Sep 23 20:34:14 2024 +0700
+
+    chore: hide keyboard
+
+[33mcommit 063e929b7bf89864c8acc967051c1276b12f66e5[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Sep 23 19:32:04 2024 +0700
+
+    feat: hide side line on small screen
+
+[33mcommit 13d4f3d2fef228d157b7fff64786dc4a8f461bc0[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Sep 23 17:50:48 2024 +0700
+
+    feat: add social media icons
+
+[33mcommit da4112b1c67306fa5427dfc64eb34dce904c4a7d[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Sep 23 14:45:38 2024 +0700
+
+    feat: responsive layout
+
+[33mcommit db1f1b431d1773e07321224999878875e70e59de[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Sep 23 13:09:43 2024 +0700
+
+    feat: update keyboard position
+
+[33mcommit 9ceb9c381f33c1b6403c8226db00d43fb3219e50[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Mon Sep 23 08:47:08 2024 +0700
+
+    feat: styling hero section
+
+[33mcommit a37f6bc6a3f4e6f2b68388008dd5a427e7339418[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sun Sep 22 20:08:19 2024 +0700
+
+    chore: setup custom fonts
+
+[33mcommit b52119e6c4c8770451e35cf53ceff7f58103fdf8[m
+Author: Jesica <jestsee@gmail.com>
+Date:   Sat Sep 21 21:43:31 2024 +0700
+
+    chore: setup tailwind, eslint & prettier
+
+[33mcommit 8ac00cea6963081463c888d641e2e12fd83d0820[m
+Author: houston[bot] <astrobot-houston@users.noreply.github.com>
+Date:   Tue Sep 10 15:19:14 2024 +0700
+
+    Initial commit from Astro
