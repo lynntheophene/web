@@ -1,16 +1,13 @@
-# jestsee.com
+# lynntheophene.com
 
 A personal website showcasing my work, built with Astro.
-Check out the live website [here](https://lynntheophene.com).
 
-https://github.com/user-attachments/assets/a4e8c8a1-b901-477f-9768-f2acefa5de35
 
 ## 📚 Tech Stack
 
 - Framework: [Astro](https://astro.build/) with TypeScript
 - Styling: [Tailwind CSS](https://tailwindcss.com/)
 - Content: MDX
-- Hosting: Deployed on [Vercel](https://vercel.com/)
 
 ## 🚀 How to Run
 
