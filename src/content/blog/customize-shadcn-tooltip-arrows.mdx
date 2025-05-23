@@ -1,250 +1,87 @@
 ---
-title: Hacky Way to Customize Shadcn’s Tooltip Arrows
-description: A workaround for displaying a custom SVG arrow in shadcn’s tooltip.
-heroImage: https://images.unsplash.com/photo-1542587073-deebd77c2d73?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-pubDate: 2024-12-15
+title: How I 3D Printed a Minecraft Creeper (Without Blowing Up My Printer)
+description: A light-hearted tale of how I brought one of Minecraft’s most explosive characters to life—layer by layer.
+heroImage: ../../../public/images/prints.png
+heroImageAlign: center
+pubDate: 2025-05-23
 tags:
-  - react
-  - css
+  - 3d-printing
+  - minecraft
+  - hobby
+  - diy
 ---
 
 ## Introduction
 
-[Shadcn](https://ui.shadcn.com/) is a go-to library for copy-paste UI components in React projects. One commonly used component is the Tooltip, which is built on top of `@radix-ui/react-tooltip` .
+Sssssss… 💥  
+No, that wasn’t my filament spool unraveling. It was the unmistakable hiss of inspiration as I decided to print one of the most infamous characters in gaming: the **Minecraft Creeper**.
 
-The default tooltip looks like this:
+This wasn’t just a vanity project. I wanted a desktop companion to silently threaten my productivity. And what better than a pixelated, green, passive-aggressive shrub with legs?
 
-![Shadcn's tooltip component](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183408/Tooltip_Arrows_Customization_Image_iedgjs.webp)
+---
 
-## Adding Tooltip Arrows
+## Finding the File
 
-While the provided component works well out of the box, I found myself wanting to add more customization—like adding an arrow to the tooltip. For inspiration, I turned to the Tooltip component from [tremor.so](https://tremor.so/docs/ui/tooltip), which is also based on `@radix-ui/react-tooltip`.
+I started with a quick search on [Thingiverse](https://www.thingiverse.com/) and [Printables](https://www.printables.com/), and sure enough—there were dozens of Creeper models. I picked one that had:
 
-![Tooltip component from tremor.so](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183406/Shadcn_Tooltip_Arrows_Image_o8gzwv.webp)
+- Separated head and body parts (for easy painting/swapping)
+- Built-in supports
+- True voxel accuracy (because authenticity matters)
 
-Fortunately, adding an arrow is straightforward since `@radix-ui/react-tooltip` includes an `Arrow` component. You simply need to include it inside the `Content` component.
+Bonus: The model was sized for FDM printers and didn’t require resizing.
 
-```tsx
-import * as TooltipPrimitives from '@radix-ui/react-tooltip'
+---
 
-export default () => (
-  <TooltipPrimitives.Provider>
-    <TooltipPrimitives.Root>
-      <TooltipPrimitives.Trigger />
-      <TooltipPrimitives.Portal>
-        <TooltipPrimitives.Content>
-          <TooltipPrimitives.Arrow /> // Add the Arrow component here
-        </TooltipPrimitives.Content>
-      </TooltipPrimitives.Portal>
-    </TooltipPrimitives.Root>
-  </TooltipPrimitives.Provider>
-)
-```
+## Slicing the Creeper
 
-> _However, what if you want to add a border around the entire tooltip, including the arrow?_
+Here's how I sliced it in Cura:
 
-## Adding a Tooltip Border
+- **Layer Height**: 0.16mm (for extra blocky crispness)
+- **Infill**: 20% grid — symmetrical and Minecraft-approved
+- **Supports**: Touching build plate (the legs needed a little lift)
+- **Build Plate Adhesion**: Skirt (he's not *that* unstable)
 
-To achieve this, you’ll need to style the `Arrow` component. Let’s explore some approaches:
+Filament of choice? Matte army green PLA with black for the base. I wanted it to look as close to the in-game model as possible.
 
-### Naive Approach
+---
 
-Adding a `border` directly to the `Arrow` using Tailwind classes seems like a good starting point:
+## The Print
 
-```jsx
-<TooltipPrimitives.Arrow
-  className='border border-[var(--tooltip-border-color)] fill-[var(--tooltip-color)]'
-  width={12}
-  height={7}
-  aria-hidden='true'
-/>
-```
+This wasn’t the longest print I’ve done—about **4.5 hours** total.
 
-However, this approach doesn’t work as expected. The `border` property applies to the rectangular boundary of the element, not the arrow shape itself.
+But here’s where it got fun: I printed the head **separately**, rotated 45° to show it floating slightly above the body (just like the idle animation in-game). I used a short clear filament rod as a support peg. It turned out awesome.
 
-![Tooltip arrow with square border](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183406/Tooltip_Arrows_Customization_Image_1_mikon1.webp)
+No explosions occurred, but I did hold my breath when the legs started printing—they were thin and tall, and a wobble would’ve ruined everything. Thankfully, my printer was on its best behavior.
 
-### Using the `stroke` Property
+---
 
-Since the `Arrow` is an SVG element, you can use the `stroke` property to define a border:
+## Painting (Optional Chaos)
 
-```jsx
-<TooltipPrimitives.Arrow
-  className='border-none fill-[var(--tooltip-color)]'
-  stroke='var(--tooltip-border-color)'
-  stroke-width='2'
-  width={12}
-  height={7}
-  aria-hidden='true'
-/>
-```
+I kept it classic: green head, black pixel face, grayish legs. But for fun, I **painted one Creeper red**—because every now and then, one of them does feel a little extra.
 
-This works better, but the arrow’s top border is still visible. To fix this, let’s explore another method.
+I used acrylic paint and sealed it with matte Mod Podge. Pro tip: a tiny sponge works better than a brush for blocky models.
 
-![Tooltip arrow with a proper border but visible top border](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183405/Tooltip_Arrows_Customization_u4t1ec.png)
+---
 
-### **Exploring the Drop Shadow Option**
+## Desk Presence: Intimidating.
 
-Another method is using a `drop-shadow` to simulate the border:
+The Creeper now sits beside my monitor, judging me silently. Coworkers notice it during video calls. I once knocked it off my desk, and I swear it hissed on the way down.
 
-```jsx
-<TooltipPrimitives.Arrow
-  className='-my-px border-none fill-[var(--tooltip-color)] drop-shadow-[0_1px_0_red]'
-  width={12}
-  height={7}
-  aria-hidden='true'
-/>
-```
-
-This creates a visually seamless tooltip with an arrow and border, but it might not always be the most precise solution depending on your use case.
-
-![Tooltip arrow with proper border](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183404/Shadcn_Tooltip_Arrows_Image_1_eojqrs.webp)
-
-It’s worth mentioning that this solution is inspired by the Tooltip component from [Origin UI](https://originui.com/), which provides various customizable tooltip variants that can save development time.
-
-> _How about styling it even more, like using my own custom SVG?_
-
-## Custom SVG Arrow
-
-I often visit Vercel’s website, and their dropdown navigation bar caught my eye, particularly the _arrow_.
-
-![Expanded dropdown navigation bar from Vercel](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183409/Tooltip_Arrows_Customization_Image_2_tu7wfm.webp)
-
-Curious about how it was designed, I opened the dev tools, inspected the elements, and found the SVG arrow. I then copied it and pasted it into Figma for a closer look.
-
-![SVG arrow from Vercel's dropdown navigation bar](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183407/Tooltip_Arrows_Customization_Image_3_mehrdd.webp)
-
-I thought it could be an interesting design choice for a tooltip arrow.
-
-### Positioning
-
-![Tooltip's position](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183405/Shadcn_Tooltip_Arrows_Image_2_lwivup.webp)
-
-Positioning the SVG arrow depends on the tooltip’s placement—**top**, **bottom**, **left**, or **right**. The `Content` component exposes a `data-side` attribute, which you can use to adjust positioning dynamically:
-
-```css
-[data-side='top'] svg {
-  bottom: -9px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-[data-side='bottom'] svg {
-  top: -9px;
-  left: 50%;
-  transform: translateX(-50%) rotate(180deg);
-}
-
-[data-side='left'] svg {
-  right: -20.25px;
-  top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
-}
-
-[data-side='right'] svg {
-  left: -20.25px;
-  top: 50%;
-  transform: translateY(-50%) rotate(90deg);
-}
-```
-
-Next, we could replace the built-in tooltip `Arrow` component with our custom design. It should work perfectly, right?
-
-![Tooltip with custom SVG arrow](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183408/Tooltip_Arrows_Customization_Image_4_j7v925.webp)
-
-Well, not quite yet. Take a look at this: the arrow is stuck in the center of the tooltip instead of being positioned near the trigger.
-
-![Custom SVG arrow centered on the tooltip](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734226077/Screen_Recording_Dec_14_2024_from_Shadcn_Tooltip_Arrows_y2aokg.gif)
-
-This undesired behavior happens because we only defined a static position for each side. Instead, we need to use a dynamic position to solve this issue.
-
-### Dynamic Position
-
-Let’s start by using the built-in `Arrow` component again. If you inspect the `Arrow` component in the dev tools while simulating the tooltip position change, you’ll notice that the SVG element is wrapped in a `span` with a `left` CSS property.
-
-![Dynamic left CSS value of the built-in tooltip arrow](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183404/Customize_Shadcn_Tooltip_Arrows_ywmi3y.webp)
-
-This value dynamically changes based on the tooltip's position. We can capture this `left` CSS value and apply it to our custom arrow component.
-
-To track this `left` value, we need to observe it using a [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver).
-
-```tsx
-// tooltip-arrow-primitive.tsx
-
-import { Arrow } from '@radix-ui/react-tooltip'
-import React from 'react'
-
-const TooltipArrowPrimitive = () => {
-  const arrowRef = React.useRef<SVGSVGElement>(null)
-
-  React.useEffect(() => {
-    const spanArrow = arrowRef.current?.parentElement
-
-    const observer = new MutationObserver(() => {
-      if (!spanArrow) return
-
-      const style = window.getComputedStyle(spanArrow)
-
-      // Get our custom tooltip component by its id
-      const tooltipArrow = document.getElementById('tooltip-arrow')
-
-      // Assign the left value as the style attribute
-      tooltipArrow?.setAttribute('style', `left: ${style.left};`)
-    })
-
-    if (spanArrow) {
-      observer.observe(spanArrow, {
-        attributes: true, // Observe changes to attributes
-        attributeFilter: ['style'] // Only look for changes to the style attribute
-      })
-    }
-
-    return () => {
-      observer.disconnect()
-    }
-  }, [])
-
-  return <Arrow ref={arrowRef} id='primitive-arrow' className='opacity-0' />
-}
-
-export default TooltipArrowPrimitive
-```
-
-Then, we can call it inside the `Content` component.
-
-```tsx
-import CustomTooltipArrow from './tooltip-arrow'
-import TooltipArrowPrimitive from './tooltip-arrow-primitive'
-
-export default ({ children, showArrow }) => (
-  // Adjust each component props as needed
-  <TooltipPrimitives.Provider>
-    <TooltipPrimitives.Root>
-      <TooltipPrimitives.Trigger />
-      <TooltipPrimitives.Portal>
-        <TooltipPrimitives.Content>
-          {children}
-          {showArrow && (
-            <>
-              <TooltipArrowPrimitive />
-              <CustomTooltipArrow />
-            </>
-          )}
-        </TooltipPrimitives.Content>
-      </TooltipPrimitives.Portal>
-    </TooltipPrimitives.Root>
-  </TooltipPrimitives.Provider>
-)
-```
-
-### Final Result
-
-It’s working as expected now 🥳🎉
-
-![Final result](https://res.cloudinary.com/dj1jdtddj/image/upload/v1734183780/Screen_Recording_Dec_14_from_Shadcn_Tooltip_Arrows_quyz7y.gif)
-
-P.S. You might want to adjust the top position if you prefer displaying the tooltip on the left or right side.
+---
 
 ## Conclusion
 
-While this approach works, I’m sure there are UI libraries that allow for easier and more flexible tooltip styling. However, it feels rewarding to have found a workaround for this. If you're interested in exploring other options, you might want to check out [this discussion](https://github.com/radix-ui/primitives/discussions/868).
+This was one of the most satisfying low-effort, high-reward prints I’ve done. If you’ve got a printer, a few green filament scraps, and a love for Minecraft, I *highly* recommend trying this build.
+
+Just be careful where you place it. They’re known to blow up when provoked.
+
+> P.S. I’m now debating printing a full pixel-style biome scene around him. What have I started?
+
+---
+
+**STL Source**: [https://www.thingiverse.com/thing:1116836]  
+**Printer used**: [pursa mk2s]  
+**Filament**: [PLS+HS]
+
+Feel free to remix this idea, paint your own Creeper variants, or even rig one with a spring for a jump scare. Because 3D printing should always be a little dangerous... right?
+

@@ -1,69 +1,59 @@
 ---
-year: 2024
-title: 'Bookmarked Android: A Simple Viewer for My Bookmarked Content'
-description: 'Built with Jetpack Compose, it aims to offer an improved reading experience on my laggy phone.'
-heroImage: '../../assets/project_bookmarked_android.png'
+year: 2025
+title: 'Beetroot: A Web App to Combat Food Waste'
+description: 'Empowering users to minimize food waste through smart tracking and community sharing.'
+heroImage: '../../../public/images/hero.png'
 heroImageAlign: 'center'
 ---
 
 import GithubCard from '@/components/GithubCard.astro'
-import TweetCard from '@/components/TweetCard/TweetCard.astro'
 
 ## Overview
 
-This project serves as a follow-up to my original Bookmarked project. While it stands independently, feel free to explore the [original project](/projects/bookmarked) for context.
-
-Bookmarked Android is a native Android client designed to view my collection of bookmarked tweets. Built with Jetpack Compose, it focuses on delivering an improved reading experience, making it easier and more enjoyable to revisit saved tweets on my device.
+Beetroot7 is a web application designed to help users reduce food waste by tracking their food inventory, suggesting recipes based on available ingredients, and facilitating food sharing within communities. Built with Vite, React, and TypeScript, the app offers a seamless and responsive user experience across devices.
 
 ## Goals and Motivation
 
-I rely heavily on Notion for desktop use, but using it on my six-year-old Android phone has always been frustrating due to its sluggish performance—an understandable _limitation given my phone’s age._
-
-Since I often revisit my bookmarked tweets, it felt much more practical to have an efficient way to access them directly on my phone.
-
-I saw two potential solutions:
-
-- Buy a new phone.
-- Build my own bookmarked client for my current phone.
-
-While the first option was tempting, my wallet had other plans. During my research, I discovered that Notion is built with React Native. Inspired by this, I decided to get hands-on experience building an app with Jetpack Compose while solving my personal pain point.
+Food waste is a significant global issue, contributing to environmental degradation and resource inefficiency. Motivated by the desire to make a positive impact, I developed Beetroot7 to provide individuals with practical tools to manage their food consumption more effectively and foster a culture of sustainability.
 
 ## Tech Stack Used
 
-- **Jetpack Compose**: Used as the framework for building the app, providing a modern and declarative UI toolkit for Android.
-- **Hono**: A lightweight and fast framework for fetching and parsing data from the Notion API.
+- **Vite**: Enables fast development and optimized builds.
+- **React + TypeScript**: Provides a robust framework for building interactive user interfaces with type safety.
+- **Netlify**: Offers simple and efficient hosting with excellent performance.
 
 ## Features
+Beetroot focuses on delivering essential functionalities to help users minimize food waste:
 
-_Nothing too fancy here_—just a simple read-only app with the following features:
-
-- List View: Displays a collection of bookmarked tweets.
-- Infinite Scrolling: Seamless loading of tweets as you scroll.
-- Filtering: Options to filter by tweets, threads, or tags.
-- Full-Text Search: Powered by the Notion API for efficient keyword searches.
+- **Inventory Management**: Allows users to log and monitor their food items, keeping track of quantities and expiration dates.
+- **Recipe Suggestions**: Recommends recipes based on the ingredients users have on hand, encouraging the use of existing food items.
+- **Community Sharing**: Facilitates the sharing of surplus food with others in the community, promoting collective efforts to reduce waste.
+- **Notifications**: Alerts users when food items are nearing their expiration dates, prompting timely consumption.
 
 ## Challenges and How I Dealt with Them
 
-> Parsing JSON data is unbelievably hard
+> "Simplicity is the ultimate sophistication."
 
-Since this was my first time using Jetpack Compose and Kotlin, I initially struggled with parsing the complex response structure from the Notion API. The deeply nested JSON objects made it difficult to directly fetch and process the data on the client side.
+Designing an intuitive interface that encourages user engagement without overwhelming them was a key challenge. I focused on creating a clean and straightforward user experience, ensuring that the core functionalities are easily accessible and user-friendly.
 
-When the frustration peaked, I decided to involve a tool I was more familiar with: JavaScript. I built a lightweight backend using Hono.js to fetch and preprocess data from the Notion API. This backend simplified the JSON structure into a more consumable format, allowing the Android client to handle it with ease.
+Integrating community sharing features required careful consideration of privacy and trust. Implementing user authentication and secure data handling practices helped build a reliable platform for users to connect and share resources safely.
 
 ## Demo
 
-<TweetCard tweetId='1847967261589639599' />
-<TweetCard tweetId='1847968430248316939' class='mt-8' />
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+  <img src="/images/grocerylist.png" alt="Beetroot7 Inventory Management View" className="rounded-xl shadow-md" />
+  <img src="/images/recipies.png" alt="Recipe recipie" className="rounded-xl shadow-md" />
+  <img src="/images/cooking.png" alt="cooking recipie" className="rounded-xl shadow-md" />
+</div>
 
-## Repositories
+## Repository
 
-<div className='not-prose space-y-4'>
-  <GithubCard owner='jestsee' repository='bookmarked-android' />
-  <GithubCard owner='jestsee' repository='bookmarked-api-hono' />
+<div className='not-prose space-y-4 mt-8'>
+  <GithubCard owner='lynntheophene' repository='beetroot01' />
 </div>
 
 ## Outro
 
-As a JavaScript developer, I still found Kotlin challenging to work with, despite its syntax being somewhat similar to Flutter, which I have experience with. Although the syntax felt familiar, Kotlin's unique concepts and features required a bit of adjustment.
+Beetroot represents a step towards sustainable living by providing tools that empower individuals to make conscious decisions about their food consumption. By combining technology with community engagement, the app aims to foster a collective effort in combating food waste.
 
-And as expected, the app runs smoothly on my Android phone 🥳.
+Feel free to explore the app and join the movement towards a more sustainable future.

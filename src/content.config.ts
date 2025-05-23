@@ -5,11 +5,11 @@ import { iconSchema } from './content/_icons'
 
 export const blog = defineCollection({
   loader: glob({ pattern: '**/[^_]*.mdx', base: './src/content/blog' }),
-  schema: () =>
+  schema: ({ image }) =>
     z.object({
       title: z.string(),
       description: z.string(),
-      heroImage: z.string(),
+      heroImage: image(), // <-- use image() here
       tags: z.array(z.string()).optional().default([]),
       pubDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),

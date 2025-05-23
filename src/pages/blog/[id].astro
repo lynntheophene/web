@@ -6,6 +6,7 @@ import readingTime from 'reading-time'
 import ContentWrapper from '@/components/ContentWrapper.astro'
 import BlogLayout from '@/layouts/BlogLayout'
 import client from '@/lib/client'
+import UnderConstruction from '../_components/UnderConstruction.astro'
 
 export const getStaticPaths = (async () => {
   const blogEntries = await getCollection('blog')
@@ -31,6 +32,7 @@ const lastUpdatedTime = lastUpdated?.lastUpdatedTime ?? '';
 
 const { minutes } = readingTime(entry.body!)
 ---
+
 
 <BlogLayout
   headings={headings}

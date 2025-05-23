@@ -25,7 +25,4 @@ pnpm-debug.log*
 
 .vercel/
 
-# .gitignore
-.env
-.env.example
-secrets.json
+
