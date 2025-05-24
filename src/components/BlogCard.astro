@@ -4,16 +4,22 @@ import calculateReadingTime from 'reading-time'
 
 import BlogInfo from './BlogInfo.astro'
 import { ArrowRight } from './icons/ArrowRight'
-import Image from './Image'
 import Link from './Link'
 
-interface Props extends CollectionEntry<'blog'> {}
+
+type props =
+        {
+         blog:CollectionEntry<'blog'>
+
+        } 
+
+
 
 const {
   id: slug,
   data: { heroImage, title, pubDate, description, tags },
   body
-} = Astro.props
+} = Astro.props as props['blog']
 
 const { minutes } = calculateReadingTime(body!)
 ---
@@ -22,13 +28,13 @@ const { minutes } = calculateReadingTime(body!)
   href={`blog/${slug}`}
   class='group flex gap-8 border-t border-t-zinc-900 py-10 max-md:flex-col'
 >
-  <Image
-    src={heroImage.src}
-    alt={title}
-    align='center'
-    class='aspect-[2] transition-all duration-800 group-hover:scale-105 md:aspect-[1.5]'
-    wrapperProps={{ class: 'rounded-lg overflow-clip md:max-w-[260px]' }}
-    inferSize
+  <img 
+  src={heroImage.src}
+  alt={title}
+  class='aspect-[2] max-w-[120px] md:max-w-[180px] transition-all duration-800 group-hover:scale-105 md:aspect-[1.5] rounded-lg'
+  title={title}
+  loading='lazy'
+    
   />
   <div class='flex w-full flex-col justify-between lg:py-2'>
     <div class='font-light'>
@@ -55,7 +61,7 @@ const { minutes } = calculateReadingTime(body!)
       </span>
       <ul class='flex flex-wrap gap-2'>
         {
-          tags.map((item) => (
+          tags.map((item:string) => (
             <li class='rounded bg-zinc-900 px-2 py-1 font-mono text-xs tracking-tight text-zinc-500'>
               {item}
             </li>
