@@ -1,7 +1,6 @@
 ---
 import { ArrowRight } from '@icons/ArrowRight'
-import type { MarkdownHeading } from 'astro'
-import type { InferEntrySchema } from 'astro:content'
+
 
 import BlogInfo from '@/components/BlogInfo.astro'
 import { ArrowOutward } from '@/components/icons/ArrowOutward'
@@ -31,8 +30,7 @@ const {
   id,
   headings,
   title,
-  description,
-  heroImage,
+  description,// heroImage, was removed for simplicity
   pubDate,
   updatedDate,
   latestCommitUrl,

@@ -10,6 +10,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@icons/*": ["./src/components/icons/*"]
-    }
+    },
+    "types": ["astro/client"]  // <--- Add this line
   }
 }

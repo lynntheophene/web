@@ -8,7 +8,7 @@
   ],
   "prettier.documentSelectors": ["**/*.astro"],
   "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "astro-build.astro-vscode"
   },
   "tailwindCSS.classAttributes": [
     ".*class*",
@@ -18,5 +18,7 @@
   ],
   "tailwindCSS.experimental.classRegex": [
     "(?:wrapperProps)\\s*=\\s*\\{\\{\\s*class:\\s*['\"]([^'\"]+)['\"]\\s*\\}\\}"
-  ]
+  ],
+  "javascript.suggestionActions.enabled": false,
+  "typescript.suggestionActions.enabled": false
 }

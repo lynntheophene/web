@@ -9,6 +9,17 @@ import vercel from '@astrojs/vercel'
 import { defineConfig, envField } from 'astro/config'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
+// astro.config.mjs or astro.config.ts
+
+// Monkey patch global fetch during build
+if (!import.meta.env.DEV) {
+  const originalFetch = globalThis.fetch
+  globalThis.fetch = async (...args) => {
+    console.log('[build fetch]', args[0])
+    return originalFetch(...args)
+  }
+}
+
 
 let adapter = vercel()
 
@@ -115,3 +126,4 @@ export default defineConfig({
     partytown()
   ]
 })
+

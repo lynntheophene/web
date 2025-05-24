@@ -9,18 +9,23 @@ const getToken = (id: string) => {
 }
 
 const getTweetContent = async (id: string) => {
-  const URL = 'https://cdn.syndication.twimg.com/tweet-result?'
-  const params = new URLSearchParams({
-    id,
-    lang: 'en',
-    token: getToken(id)
-  }).toString()
+  try {
+    const URL = 'https://cdn.syndication.twimg.com/tweet-result?'
+    const params = new URLSearchParams({
+      id,
+      lang: 'en',
+      token: getToken(id)
+    }).toString()
 
-  const response = await fetch(URL + params)
+    const response = await fetch(URL + params)
+    const data = (await response.json()) as Tweet
 
-  const data = (await response.json()) as Tweet
-
-  return { tweet: enrichTweet(data) }
+    return { tweet: enrichTweet(data) }
+  } catch (err) {
+    console.error('Failed to fetch tweet content:', err)
+    return { tweet: null }
+  }
 }
+
 
 export default getTweetContent
