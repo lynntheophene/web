@@ -5,7 +5,7 @@ import type { InferEntrySchema } from 'astro:content'
 
 import BlogInfo from '@/components/BlogInfo.astro'
 import { ArrowOutward } from '@/components/icons/ArrowOutward'
-import Image from '@/components/Image'
+// import Image from '@/components/Image'
 import Link, { LinkArticle } from '@/components/Link'
 import SEO from '@/components/SEO.astro'
 import TableOfContent from '@/components/TableOfContent'
@@ -15,10 +15,17 @@ import { formatDateByTimeZone } from '@/lib/utils'
 
 import BaseLayout from '../BaseLayout.astro'
 
-interface Props extends InferEntrySchema<'blog'> {
-  headings: MarkdownHeading[]
-  id: string
-}
+// interface Props extends InferEntrySchema<'blog'> {
+//   headings: MarkdownHeading[]
+//   id: string
+// heroImage: {
+//   src: string
+//   width: number
+//   height: number
+//   format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif"
+// }
+
+
 
 const {
   id,
@@ -50,8 +57,8 @@ const {
     client:only='react'
   />
 
-  <Image
-    src={heroImage.src}
+  <!-- <Image
+     src={heroImage.src}
     alt={title}
     title={title}
     align='center'
@@ -60,7 +67,7 @@ const {
     inferSize
     ambientMode
     slot='decorator'
-  />
+  /> -->
 
   <section class='mt-8 sm:font-light'>
     <BlogInfo pubDate={pubDate} readingTime={readingTime} />
@@ -74,7 +81,7 @@ const {
     </h3>
     <ul class='mt-8 flex flex-wrap gap-2'>
       {
-        tags.map((item) => (
+        tags.map((item:string) => (
           <li class='rounded bg-zinc-900 px-2 py-1 font-mono text-xs tracking-tight text-zinc-500'>
             {item}
           </li>
