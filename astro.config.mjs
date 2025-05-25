@@ -5,7 +5,8 @@ import partytown from '@astrojs/partytown'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
-import netlify from '@astrojs/netlify'
+
+import vercel from '@astrojs/vercel'
 import { defineConfig, envField } from 'astro/config'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
@@ -21,7 +22,7 @@ if (!import.meta.env.DEV) {
 }
 
 
-let adapter = netlify()
+let adapter = vercel()
 
 if (process.argv[3] === '--node' || process.argv[4] === '--node') {
   adapter = node({ mode: 'standalone' })
