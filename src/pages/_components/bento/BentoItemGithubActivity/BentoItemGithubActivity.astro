@@ -14,10 +14,8 @@ Astro.response.headers.set('Cache-Control', 'public, max-age=86400')
     <BentoGithubActivityChart {...data} client:only='react' />
   ) : (
     // TODO: handle error
-    <p>
-     <img src="/images/githuberror.gif" alt="Error GIF" style="vertical-align: middle; width: 40px;"/>
-      Something went wrong 😔, I'm working on it!
-    </p>
+    <p>Something went wrong 😔, </p>
+    <img src="/images/githuberror.gif" alt="Error GIF" width="200" />
 
   )
 }
