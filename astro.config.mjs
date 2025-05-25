@@ -29,7 +29,7 @@ if (process.argv[3] === '--node' || process.argv[4] === '--node') {
 
 export default defineConfig({
   adapter,
-  output: 'server',
+  output: 'static',
   site: 'https://theophenelynn.vercel.app/',
 
   markdown: {
