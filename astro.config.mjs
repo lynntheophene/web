@@ -6,11 +6,10 @@ import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 
-import vercel from '@astrojs/vercel'
+import vercelServerless from '@astrojs/vercel/serverless' // ✅ CORRECT import
 import { defineConfig, envField } from 'astro/config'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
-// astro.config.mjs or astro.config.ts
 
 // Monkey patch global fetch during build
 if (!import.meta.env.DEV) {
@@ -21,18 +20,17 @@ if (!import.meta.env.DEV) {
   }
 }
 
-
-let adapter = vercel()
+// ✅ use serverless by default, fallback to node locally with CLI flag
+let adapter = vercelServerless({})
 
 if (process.argv[3] === '--node' || process.argv[4] === '--node') {
   adapter = node({ mode: 'standalone' })
 }
 
-// https://astro.build/config
 export default defineConfig({
   adapter,
   output: 'server',
-  site: 'https://theophenexavier.netlify.app/',
+  site: 'https://theophenelynn.vercel.app/',
 
   markdown: {
     shikiConfig: {

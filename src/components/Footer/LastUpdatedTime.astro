@@ -11,7 +11,7 @@ const response = await client.api.github['repo-info'][':owner'][
 ].$get({
   param: {
     owner: 'lynntheophene',
-    repository: 'lynntheophene.com'
+    repository: 'web'
   }
 })
 const data = response.status === 200 ? await response.json() : null
