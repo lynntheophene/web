@@ -5,22 +5,32 @@ import partytown from '@astrojs/partytown'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
-import vercel from '@astrojs/vercel'
+
+import vercel from '@astrojs/vercel' // ✅ CORRECT import
 import { defineConfig, envField } from 'astro/config'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
 
+// Monkey patch global fetch during build
+if (!import.meta.env.DEV) {
+  const originalFetch = globalThis.fetch
+  globalThis.fetch = async (...args) => {
+    console.log('[build fetch]', args[0])
+    return originalFetch(...args)
+  }
+}
+
+// ✅ use serverless by default, fallback to node locally with CLI flag
 let adapter = vercel()
 
 if (process.argv[3] === '--node' || process.argv[4] === '--node') {
   adapter = node({ mode: 'standalone' })
 }
 
-// https://astro.build/config
 export default defineConfig({
   adapter,
   output: 'static',
-  site: 'https://jestsee.com',
+  site: 'https://theophenelynn.vercel.app/',
 
   markdown: {
     shikiConfig: {
@@ -115,3 +125,4 @@ export default defineConfig({
     partytown()
   ]
 })
+
