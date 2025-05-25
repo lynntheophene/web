@@ -5,7 +5,7 @@ import partytown from '@astrojs/partytown'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
-import vercel from '@astrojs/vercel'
+import netlify from '@astrojs/netlify'
 import { defineConfig, envField } from 'astro/config'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
@@ -21,7 +21,7 @@ if (!import.meta.env.DEV) {
 }
 
 
-let adapter = vercel()
+let adapter = netlify()
 
 if (process.argv[3] === '--node' || process.argv[4] === '--node') {
   adapter = node({ mode: 'standalone' })
@@ -30,8 +30,8 @@ if (process.argv[3] === '--node' || process.argv[4] === '--node') {
 // https://astro.build/config
 export default defineConfig({
   adapter,
-  output: 'static',
-  site: 'https://lynntheophene.com',
+  output: 'server',
+  site: 'https://theophenexavier.netlify.app/',
 
   markdown: {
     shikiConfig: {
