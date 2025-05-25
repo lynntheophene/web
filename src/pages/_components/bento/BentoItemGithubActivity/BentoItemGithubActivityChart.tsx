@@ -1,17 +1,14 @@
+import { useState } from 'react'
 import { Github } from '@icons/Github'
 import HeatMap, { type SVGProps } from '@uiw/react-heat-map'
-import React from 'react'
-
 import { formatDate, formatNumber, getDateSuffix } from '@/lib/utils'
 import type { GithubContributionData } from '@/types'
-
 import BentoBadge from '../BentoBadge'
 
 const getDateProps = () => {
   const today = new Date()
   const sixMonthsAgo = new Date()
   sixMonthsAgo.setMonth(today.getMonth() - 6)
-
   return { startDate: sixMonthsAgo, endDate: today }
 }
 
@@ -23,7 +20,6 @@ const renderRect =
       date.toLocaleDateString('en-US', { day: 'numeric', month: 'long' }) +
       getDateSuffix(date.getDate())
     const tileInfo = `${data.count ? formatNumber(data.count) : 'No'} contributions on ${formattedDate}`
-
     return (
       <rect
         className='transition-all hover:brightness-125'
@@ -37,10 +33,8 @@ interface Props extends GithubContributionData {}
 
 const BentoGithubActivity = (props: Props) => {
   const defaultValue = `${formatNumber(props.totalContributions)} contributions in the last year`
-  const [hoveredTile, setHoveredTile] = React.useState<string | null>(
-    defaultValue
-  )
-
+  const [hoveredTile, setHoveredTile] = useState<string | null>(defaultValue)
+  
   return (
     <div className='relative flex h-full flex-col justify-between px-4 pb-5 pt-4 max-md:gap-4'>
       <div className='flex items-baseline justify-between gap-4 max-xs:flex-col'>
@@ -69,11 +63,9 @@ const BentoGithubActivity = (props: Props) => {
           }}
         />
       </div>
-      {
-        <p className='text-sm text-slate-200 max-sm:text-xs sm:max-lg:mt-4'>
-          Last pushed on {formatDate(new Date(props.lastPushedAt))}
-        </p>
-      }
+      <p className='text-sm text-slate-200 max-sm:text-xs sm:max-lg:mt-4'>
+        Last pushed on {formatDate(new Date(props.lastPushedAt))}
+      </p>
     </div>
   )
 }
