@@ -36,3 +36,6 @@ pnpm preview
 
 This will start a local server to preview the production build. It will be available at http://localhost:3000. You can adjust the local URL in the `package.json` file if needed.
 # lynntheophene.com
+
+
+this work is mainly done by jestsee, i just tried copying it for learning purpose , you can find her work here : https://www.jestsee.com/
