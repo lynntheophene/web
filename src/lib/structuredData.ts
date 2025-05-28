@@ -26,7 +26,7 @@ export const personSchema: WithContext<Person> = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Lynn Theophene',
-  url: 'https://theophenelynn.vercel.app
+  url: 'https://theophenelynn.vercel.app',
   // image: `${import.meta.env.SITE}${avatar.src}`,
   sameAs: [
     //'https://www.twitter.com/lynntheophene',  #edit when you have a twitter
