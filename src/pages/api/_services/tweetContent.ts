@@ -27,5 +27,4 @@ const getTweetContent = async (id: string) => {
   }
 }
 
-
 export default getTweetContent

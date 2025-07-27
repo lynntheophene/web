@@ -1,8 +1,10 @@
-import { useState } from 'react'
 import { Github } from '@icons/Github'
 import HeatMap, { type SVGProps } from '@uiw/react-heat-map'
+import { useState } from 'react'
+
 import { formatDate, formatNumber, getDateSuffix } from '@/lib/utils'
 import type { GithubContributionData } from '@/types'
+
 import BentoBadge from '../BentoBadge'
 
 const getDateProps = () => {
@@ -34,7 +36,7 @@ interface Props extends GithubContributionData {}
 const BentoGithubActivity = (props: Props) => {
   const defaultValue = `${formatNumber(props.totalContributions)} contributions in the last year`
   const [hoveredTile, setHoveredTile] = useState<string | null>(defaultValue)
-  
+
   return (
     <div className='relative flex h-full flex-col justify-between px-4 pb-5 pt-4 max-md:gap-4'>
       <div className='flex items-baseline justify-between gap-4 max-xs:flex-col'>

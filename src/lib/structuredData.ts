@@ -8,8 +8,7 @@ export const mainWebsite: WithContext<WebSite> = {
   '@type': 'WebSite',
   url: import.meta.env.SITE,
   name: 'Lynn Theophene - Personal Website',
-  description:
-    `I blend design and engineering to build meaningful tech. A software developer with a builder's mindset, based in India.`,
+  description: `I blend design and engineering to build meaningful tech. A software developer with a builder's mindset, based in India.`,
   inLanguage: 'en_US'
 }
 

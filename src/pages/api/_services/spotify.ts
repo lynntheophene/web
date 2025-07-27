@@ -93,8 +93,10 @@ const getSpotifyData = async () => {
   return { isPlaying: true, ...mapSpotifyData(track) }
 }
 
-export type SpotifyData = (ReturnType<typeof mapSpotifyData> & {
-  isPlaying: boolean
-}) | null
+export type SpotifyData =
+  | (ReturnType<typeof mapSpotifyData> & {
+      isPlaying: boolean
+    })
+  | null
 
 export default getSpotifyData

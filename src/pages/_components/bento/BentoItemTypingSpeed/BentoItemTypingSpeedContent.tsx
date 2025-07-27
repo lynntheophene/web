@@ -12,7 +12,6 @@ import BentoBadge from '../BentoBadge'
 const mapTypingDetailData = (data: MonkeyTypeData) => {
   const LANGUAGE: Record<MonkeyTypeLanguage, string> = {
     english: 'EN'
-    
   }
   return [
     { icon: Timer, category: 'time', value: `${data.time}s` },

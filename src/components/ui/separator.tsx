@@ -1,15 +1,14 @@
 import * as SeparatorPrimitive from '@radix-ui/react-separator'
+import type { ComponentRef } from 'react'
 import * as React from 'react'
 
 // ...existing code...
-
 import { cn } from '@/lib/utils'
-import type { ComponentRef } from 'react'
 
-const Separator = React.forwardRef<ComponentRef<typeof SeparatorPrimitive.Root> ,
+const Separator = React.forwardRef<
+  ComponentRef<typeof SeparatorPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
-  >
-  (
+>(
   (
     { className, orientation = 'horizontal', decorative = true, ...props },
     ref

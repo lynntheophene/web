@@ -26,10 +26,10 @@ const { Content, headings } = await render(entry)
 const getLastUpdatedTime = client.api.github['last-updated-file']
 const lastUpdated = await getLastUpdatedTime
   .$get({ query: { path: `projects/${entry.id}.mdx` } })
-  .then((res) => res.json());
+  .then((res) => res.json())
 
-const latestCommitUrl = lastUpdated?.latestCommitUrl ?? '';
-const lastUpdatedTime = lastUpdated?.lastUpdatedTime ?? '';
+const latestCommitUrl = lastUpdated?.latestCommitUrl ?? ''
+const lastUpdatedTime = lastUpdated?.lastUpdatedTime ?? ''
 
 const { minutes, words } = readingTime(entry.body!)
 

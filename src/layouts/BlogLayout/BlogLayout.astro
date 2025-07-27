@@ -1,7 +1,6 @@
 ---
 import { ArrowRight } from '@icons/ArrowRight'
 
-
 import BlogInfo from '@/components/BlogInfo.astro'
 import { ArrowOutward } from '@/components/icons/ArrowOutward'
 // import Image from '@/components/Image'
@@ -24,13 +23,11 @@ import BaseLayout from '../BaseLayout.astro'
 //   format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif"
 // }
 
-
-
 const {
   id,
   headings,
   title,
-  description,// heroImage, was removed for simplicity
+  description, // heroImage, was removed for simplicity
   pubDate,
   updatedDate,
   latestCommitUrl,
@@ -79,7 +76,7 @@ const {
     </h3>
     <ul class='mt-8 flex flex-wrap gap-2'>
       {
-        tags.map((item:string) => (
+        tags.map((item: string) => (
           <li class='rounded bg-zinc-900 px-2 py-1 font-mono text-xs tracking-tight text-zinc-500'>
             {item}
           </li>
