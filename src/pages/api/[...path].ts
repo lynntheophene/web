@@ -3,12 +3,12 @@ import type { APIRoute } from 'astro'
 import { z } from 'astro:schema'
 import { Hono } from 'hono'
 
+import foodService from './_services/foodService'
 import github from './_services/github'
 import getLinkMetadata from './_services/linkMetadata'
 import getMonkeytypeData from './_services/monkeytype'
 import getSpotifyData from './_services/spotify'
 import getTweetContent from './_services/tweetContent'
-import foodService from './_services/foodService'
 
 const app = new Hono()
   .basePath('/api')

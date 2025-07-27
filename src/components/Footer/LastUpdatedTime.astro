@@ -28,7 +28,8 @@ const { class: className } = Astro.props
 {
   data ? (
     <p class:list={['text-xs min-[961px]:self-end', className]}>
-      Last updated by lynntheophene <br class='xs:hidden' /> on {formattedDate} UTC+7
+      Last updated by lynntheophene <br class='xs:hidden' /> on {formattedDate}{' '}
+      UTC+7
     </p>
   ) : (
     // TODO: handle error

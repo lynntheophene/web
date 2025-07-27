@@ -173,7 +173,6 @@ const Tooltip = React.forwardRef<
 
 Tooltip.displayName = 'Tooltip'
 
-
 export {
   Tooltip,
   TooltipContent,

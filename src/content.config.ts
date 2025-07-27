@@ -3,10 +3,10 @@ import { defineCollection, z } from 'astro:content'
 
 import { iconSchema } from './content/_icons'
 
-      const blog_collection = defineCollection({
-      loader: glob({ pattern: '**/[^_]*.mdx', base: './src/content/blog' }),
-      schema: ({ image }) =>
-      z.object({
+const blog_collection = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.mdx', base: './src/content/blog' }),
+  schema: ({ image }) =>
+    z.object({
       title: z.string(),
       description: z.string(),
       heroImage: image(), // <-- use image() here
@@ -19,10 +19,11 @@ import { iconSchema } from './content/_icons'
     })
 })
 
-      const projects_collection = defineCollection({
-        loader: glob({ pattern: '**/[^_]*.mdx', base: './src/content/projects' }),
-        schema: ({ image }) =>
-        z.object({
+const projects_collection = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.mdx', base: './src/content/projects' }),
+  schema: ({ image }) =>
+    z
+      .object({
         year: z.number(),
         title: z.string(),
         htmlTitle: z.string().optional(),
@@ -51,6 +52,6 @@ import { iconSchema } from './content/_icons'
 })
 
 export const collections = {
-  blog : blog_collection,
-  projects : projects_collection
+  blog: blog_collection,
+  projects: projects_collection
 }
