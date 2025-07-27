@@ -8,6 +8,7 @@ import getLinkMetadata from './_services/linkMetadata'
 import getMonkeytypeData from './_services/monkeytype'
 import getSpotifyData from './_services/spotify'
 import getTweetContent from './_services/tweetContent'
+import foodService from './_services/foodService'
 
 const app = new Hono()
   .basePath('/api')
@@ -16,6 +17,7 @@ const app = new Hono()
     return c.json({ error: 'Something went wrong' }, 500)
   })
   .route('/github', github)
+  .route('/food', foodService)
   .get(
     '/link-metadata',
     zValidator('query', z.object({ url: z.string() })),

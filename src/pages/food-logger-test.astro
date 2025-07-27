@@ -1,0 +1,178 @@
+---
+export const prerender = false;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Food Logger Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen py-8">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl font-bold text-center mb-8">Food Logger Test Page</h1>
+      <p class="text-center text-gray-600 mb-8">
+        This page demonstrates the fixed food logging functionality that resolves the UUID error.
+      </p>
+      
+      <div id="camera-container"></div>
+      
+      <div class="mt-8 max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Error Fix Details</h2>
+        <div class="space-y-2 text-sm">
+          <p><strong>Previous Issue:</strong> UUID error when inserting "potato_1" as food_item_id</p>
+          <p><strong>Error Code:</strong> 22P02 - invalid input syntax for type uuid</p>
+          <p><strong>Fix:</strong> Convert food names to proper UUID format before database insertion</p>
+          <p><strong>Implementation:</strong> API validates and converts food names to UUIDs</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import { createElement } from 'react';
+      import { createRoot } from 'react-dom/client';
+      
+      // In a real implementation, you would import your React component here
+      // For this demo, we'll create a simplified version
+      const CameraDemo = () => {
+        const [foodName, setFoodName] = React.useState('');
+        const [quantity, setQuantity] = React.useState('1');
+        const [mealType, setMealType] = React.useState('breakfast');
+        const [isLogging, setIsLogging] = React.useState(false);
+        const [lastError, setLastError] = React.useState(null);
+        const [lastSuccess, setLastSuccess] = React.useState(null);
+
+        const handleSubmit = async (e) => {
+          e.preventDefault();
+          
+          if (!foodName.trim()) {
+            setLastError('Please enter a food name');
+            return;
+          }
+
+          setIsLogging(true);
+          setLastError(null);
+          setLastSuccess(null);
+
+          try {
+            const response = await fetch('/api/food/entries', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                user_id: '550e8400-e29b-41d4-a716-446655440000',
+                food_item_name: foodName,
+                quantity: parseInt(quantity),
+                meal_type: mealType,
+              }),
+            });
+
+            if (!response.ok) {
+              const errorData = await response.json();
+              throw new Error(errorData.details || errorData.error || 'Failed to log food entry');
+            }
+
+            const result = await response.json();
+            setLastSuccess(`Successfully logged: ${foodName} (${quantity}) for ${mealType}`);
+            setFoodName('');
+            setQuantity('1');
+            
+          } catch (error) {
+            setLastError(error.message);
+          } finally {
+            setIsLogging(false);
+          }
+        };
+
+        return React.createElement('div', { className: 'max-w-md mx-auto p-6 bg-white rounded-lg shadow-md' }, [
+          React.createElement('h2', { key: 'title', className: 'text-2xl font-bold mb-4' }, 'Food Logger'),
+          
+          lastError && React.createElement('div', {
+            key: 'error',
+            className: 'bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4'
+          }, lastError),
+          
+          lastSuccess && React.createElement('div', {
+            key: 'success',
+            className: 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4'
+          }, lastSuccess),
+
+          React.createElement('form', { key: 'form', onSubmit: handleSubmit, className: 'space-y-4' }, [
+            React.createElement('div', { key: 'food-field' }, [
+              React.createElement('label', {
+                key: 'food-label',
+                htmlFor: 'foodName',
+                className: 'block text-sm font-medium text-gray-700 mb-1'
+              }, 'Food Item'),
+              React.createElement('input', {
+                key: 'food-input',
+                type: 'text',
+                id: 'foodName',
+                value: foodName,
+                onChange: (e) => setFoodName(e.target.value),
+                className: 'w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500',
+                placeholder: 'e.g., potato, apple, banana'
+              })
+            ]),
+
+            React.createElement('div', { key: 'quantity-field' }, [
+              React.createElement('label', {
+                key: 'quantity-label',
+                htmlFor: 'quantity',
+                className: 'block text-sm font-medium text-gray-700 mb-1'
+              }, 'Quantity'),
+              React.createElement('input', {
+                key: 'quantity-input',
+                type: 'number',
+                id: 'quantity',
+                value: quantity,
+                onChange: (e) => setQuantity(e.target.value),
+                min: '1',
+                className: 'w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+              })
+            ]),
+
+            React.createElement('div', { key: 'meal-field' }, [
+              React.createElement('label', {
+                key: 'meal-label',
+                htmlFor: 'mealType',
+                className: 'block text-sm font-medium text-gray-700 mb-1'
+              }, 'Meal Type'),
+              React.createElement('select', {
+                key: 'meal-select',
+                id: 'mealType',
+                value: mealType,
+                onChange: (e) => setMealType(e.target.value),
+                className: 'w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+              }, [
+                React.createElement('option', { key: 'breakfast', value: 'breakfast' }, 'Breakfast'),
+                React.createElement('option', { key: 'lunch', value: 'lunch' }, 'Lunch'),
+                React.createElement('option', { key: 'dinner', value: 'dinner' }, 'Dinner'),
+                React.createElement('option', { key: 'snack', value: 'snack' }, 'Snack')
+              ])
+            ]),
+
+            React.createElement('button', {
+              key: 'submit',
+              type: 'submit',
+              disabled: isLogging,
+              className: 'w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed'
+            }, isLogging ? 'Logging...' : 'Log Food')
+          ])
+        ]);
+      };
+
+      // Mount the component
+      const container = document.getElementById('camera-container');
+      const root = createRoot(container);
+      root.render(React.createElement(CameraDemo));
+    </script>
+    
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  </body>
+</html>
