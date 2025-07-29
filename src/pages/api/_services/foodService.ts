@@ -114,7 +114,6 @@ const createFoodEntryWithIdSchema = z.object({
 })
 
 const app = new Hono<{ Variables: Variables }>()
-  .basePath('/food')
 
   // POST /api/food/entries - Create a new food entry (requires authentication)
   .post(
