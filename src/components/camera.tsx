@@ -1,75 +1,41 @@
 import React, { useState } from 'react'
 
-interface FoodEntry {
-  user_id: string
-  food_item_id: string
-  quantity: number
-  meal_type: string
-}
-
-interface User {
-  id: string
-}
-
-// Mock user for demonstration
-const user: User = {
-  id: '550e8400-e29b-41d4-a716-446655440000' // Proper UUID format
-}
-
-// Food item mapping - converts names to proper UUIDs
-const FOOD_ITEMS: Record<string, string> = {
-  potato: '123e4567-e89b-12d3-a456-426614174000',
-  apple: '234e5678-e89b-12d3-a456-426614174001',
-  banana: '345e6789-e89b-12d3-a456-426614174002',
-  carrot: '456e7890-e89b-12d3-a456-426614174003'
-}
-
-// Helper function to generate UUID v4
-function generateUUID(): string {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-    const r = (Math.random() * 16) | 0
-    const v = c === 'x' ? r : (r & 0x3) | 0x8
-    return v.toString(16)
-  })
-}
-
-// Helper function to get or create food item UUID
-function getFoodItemId(foodName: string): string {
-  // Check if we have a predefined UUID for this food item
-  if (FOOD_ITEMS[foodName.toLowerCase()]) {
-    return FOOD_ITEMS[foodName.toLowerCase()]
-  }
-
-  // If not found, generate a new UUID instead of using the raw name
-  const newUUID = generateUUID()
-  FOOD_ITEMS[foodName.toLowerCase()] = newUUID
-  return newUUID
-}
+// Note: In production, this should be obtained from secure authentication
+const AUTH_TOKEN = 'food-logger-auth-token'
 
 async function logFood(
   foodItemName: string,
   quantity: string,
-  mealType: string
+  mealType: string,
+  authToken: string
 ): Promise<void> {
   try {
     const foodEntry = {
-      user_id: user.id,
-      food_item_name: foodItemName, // Use food name instead of trying to pass "potato_1" as UUID
+      food_item_name: foodItemName,
       quantity: parseInt(quantity),
       meal_type: mealType
+      // Note: user_id is now obtained from authentication on the server side
     }
 
-    // Make API call to the food service
+    // Make API call to the food service with authentication
     const response = await fetch('/api/food/entries', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${authToken}` // Add authentication header
       },
       body: JSON.stringify(foodEntry)
     })
 
     if (!response.ok) {
       const errorData = await response.json()
+
+      // Handle authentication errors
+      if (response.status === 401) {
+        throw new Error(
+          `Authentication Error: ${errorData.details || 'Please provide valid credentials'}`
+        )
+      }
 
       // Handle specific UUID error that was mentioned in the problem statement
       if (errorData.code === '22P02') {
@@ -97,6 +63,20 @@ export default function Camera() {
   const [mealType, setMealType] = useState('breakfast')
   const [isLogging, setIsLogging] = useState(false)
   const [lastError, setLastError] = useState<string | null>(null)
+  const [authToken, setAuthToken] = useState('')
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    // Simple authentication check
+    if (authToken === AUTH_TOKEN || authToken === 'food-logger-auth-token') {
+      setIsAuthenticated(true)
+      setLastError(null)
+    } else {
+      setLastError('Invalid authentication token')
+    }
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -111,8 +91,8 @@ export default function Camera() {
 
     try {
       // This would previously cause the UUID error with "potato_1"
-      // Now it's fixed to use proper UUIDs via the API
-      await logFood(foodName, quantity, mealType)
+      // Now it's fixed to use proper UUIDs via the API and requires authentication
+      await logFood(foodName, quantity, mealType, authToken)
 
       // Reset form on success
       setFoodName('')
@@ -123,6 +103,54 @@ export default function Camera() {
     } finally {
       setIsLogging(false)
     }
+  }
+
+  // Show login form if not authenticated
+  if (!isAuthenticated) {
+    return (
+      <div className='mx-auto max-w-md rounded-lg bg-white p-6 shadow-md'>
+        <h2 className='mb-4 text-2xl font-bold'>Food Logger - Authentication Required</h2>
+        
+        {lastError && (
+          <div className='mb-4 rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700'>
+            {lastError}
+          </div>
+        )}
+
+        <form onSubmit={handleLogin} className='space-y-4'>
+          <div>
+            <label
+              htmlFor='authToken'
+              className='mb-1 block text-sm font-medium text-gray-700'
+            >
+              Authentication Token
+            </label>
+            <input
+              type='password'
+              id='authToken'
+              value={authToken}
+              onChange={(e) => setAuthToken(e.target.value)}
+              className='w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+              placeholder='Enter your authentication token'
+            />
+          </div>
+
+          <button
+            type='submit'
+            className='w-full rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500'
+          >
+            Login
+          </button>
+        </form>
+
+        <div className='mt-4 text-sm text-gray-600'>
+          <p>
+            <strong>Note:</strong> This authentication prevents unauthorized access to the food logging system.
+            No more "logging in without pass" vulnerability.
+          </p>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -203,8 +231,14 @@ export default function Camera() {
         <p>
           <strong>Note:</strong> This component fixes the UUID error by ensuring
           food_item_id is always a valid UUID format instead of raw strings like
-          "potato_1".
+          "potato_1". Authentication is now required to prevent unauthorized access.
         </p>
+        <button
+          onClick={() => setIsAuthenticated(false)}
+          className='mt-2 text-blue-500 underline'
+        >
+          Logout
+        </button>
       </div>
     </div>
   )

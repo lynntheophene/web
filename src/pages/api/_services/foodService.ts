@@ -41,6 +41,51 @@ function getFoodItemId(foodName: string): string {
   return newUUID
 }
 
+// Define types for Hono context with user_id
+type Variables = {
+  user_id: string
+}
+
+// Simple authentication middleware
+async function authenticate(c: any, next: any) {
+  const authHeader = c.req.header('Authorization')
+  
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return c.json(
+      {
+        error: 'Authentication required',
+        details: 'Please provide a valid authentication token'
+      },
+      401
+    )
+  }
+
+  const token = authHeader.substring(7) // Remove 'Bearer ' prefix
+  
+  // Simple token validation - in production, this should be more secure
+  // For now, we'll use a simple password-based token
+  const validTokens = [
+    'food-logger-auth-token', // Simple token for demo
+    process.env.FOOD_LOGGER_TOKEN || 'default-token'
+  ]
+  
+  if (!validTokens.includes(token)) {
+    return c.json(
+      {
+        error: 'Invalid authentication token',
+        details: 'The provided token is not valid'
+      },
+      401
+    )
+  }
+
+  // For demo purposes, we'll derive user_id from the token
+  // In a real app, this would come from a JWT or session
+  c.set('user_id', '550e8400-e29b-41d4-a716-446655440000')
+  
+  await next()
+}
+
 // Mock database operations
 interface FoodEntry {
   id: string
@@ -54,32 +99,32 @@ interface FoodEntry {
 // In-memory storage for demonstration
 const foodEntries: FoodEntry[] = []
 
-// Schema for creating food entries
+// Schema for creating food entries - remove user_id as it comes from auth
 const createFoodEntrySchema = z.object({
-  user_id: z.string().uuid('user_id must be a valid UUID'),
   food_item_name: z.string().min(1, 'food_item_name is required'),
   quantity: z.number().int().positive('quantity must be a positive integer'),
   meal_type: z.enum(['breakfast', 'lunch', 'dinner', 'snack'])
 })
 
-// Alternative schema if food_item_id is provided directly
+// Alternative schema if food_item_id is provided directly - remove user_id
 const createFoodEntryWithIdSchema = z.object({
-  user_id: z.string().uuid('user_id must be a valid UUID'),
   food_item_id: z.string().uuid('food_item_id must be a valid UUID'),
   quantity: z.number().int().positive('quantity must be a positive integer'),
   meal_type: z.enum(['breakfast', 'lunch', 'dinner', 'snack'])
 })
 
-const app = new Hono()
+const app = new Hono<{ Variables: Variables }>()
   .basePath('/food')
 
-  // POST /api/food/entries - Create a new food entry
+  // POST /api/food/entries - Create a new food entry (requires authentication)
   .post(
     '/entries',
+    authenticate, // Add authentication middleware
     zValidator('json', createFoodEntrySchema.or(createFoodEntryWithIdSchema)),
     async (c) => {
       try {
         const body = c.req.valid('json')
+        const user_id = c.get('user_id') // Get user_id from authenticated context
 
         let foodItemId: string
 
@@ -101,22 +146,11 @@ const app = new Hono()
           foodItemId = getFoodItemId(body.food_item_name)
         }
 
-        // Validate user_id UUID
-        if (!isValidUUID(body.user_id)) {
-          return c.json(
-            {
-              error: 'Invalid UUID format',
-              details: `user_id "${body.user_id}" is not a valid UUID`
-            },
-            400
-          )
-        }
-
-        // Create new food entry
+        // Create new food entry with authenticated user_id
         const newEntry: FoodEntry = {
           id: generateUUID(),
-          user_id: body.user_id,
-          food_item_id: foodItemId, // This is now guaranteed to be a valid UUID
+          user_id: user_id, // Use authenticated user_id instead of accepting it from request body
+          food_item_id: foodItemId,
           quantity: body.quantity,
           meal_type: body.meal_type,
           created_at: new Date().toISOString()
@@ -174,11 +208,16 @@ const app = new Hono()
     }
   )
 
-  // GET /api/food/entries - Get all food entries
-  .get('/entries', async (c) => {
+  // GET /api/food/entries - Get all food entries (requires authentication)
+  .get('/entries', authenticate, async (c) => {
+    const user_id = c.get('user_id')
+    
+    // Filter entries by authenticated user
+    const userEntries = foodEntries.filter(entry => entry.user_id === user_id)
+    
     return c.json({
       success: true,
-      data: foodEntries
+      data: userEntries
     })
   })
 
