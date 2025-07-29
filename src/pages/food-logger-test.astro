@@ -73,13 +73,14 @@ export const prerender = false
             const response = await fetch('/api/food/entries', {
               method: 'POST',
               headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer food-logger-auth-token' // Add authentication
               },
               body: JSON.stringify({
-                user_id: '550e8400-e29b-41d4-a716-446655440000',
                 food_item_name: foodName,
                 quantity: parseInt(quantity),
                 meal_type: mealType
+                // Note: user_id is now obtained from authentication on server side
               })
             })
 
@@ -254,10 +255,10 @@ export const prerender = false
     </script>
 
     <script
-      crossorigin
+      crossorigin=""
       src='https://unpkg.com/react@18/umd/react.development.js'></script>
     <script
-      crossorigin
+      crossorigin=""
       src='https://unpkg.com/react-dom@18/umd/react-dom.development.js'
     ></script>
   </body>
