@@ -16,13 +16,24 @@ A personal website showcasing my work, built with Astro.
    ```sh
    mv .env.example .env
    ```
-3. Install the dependency
+3. Install dependencies
+
+   **Recommended (fastest):**
    ```sh
    pnpm i
    ```
+   
+   **Alternative with npm:**
+   ```sh
+   npm install
+   ```
+   *Note: This project is optimized for pnpm, but npm will work with the included .npmrc configuration.*
+
 4. Run the development server
    ```sh
    pnpm dev
+   # or
+   npm run dev
    ```
 5. Open your browser and navigate to http://localhost:4321.
 
@@ -32,6 +43,8 @@ To serve the built project locally, run the following command:
 
 ```sh
 pnpm preview
+# or
+npm run preview
 ```
 
 This will start a local server to preview the production build. It will be available at http://localhost:3000. You can adjust the local URL in the `package.json` file if needed.
