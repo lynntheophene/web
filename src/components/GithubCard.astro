@@ -2,7 +2,7 @@
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 
-import getLastUpdatedTime from '@/pages/api/_services/github/repoInfo'
+import client from '@/lib/client'
 
 import { Github } from './icons/Github'
 import Link from './Link'
@@ -17,12 +17,10 @@ dayjs.extend(relativeTime)
 
 const { owner, repository, class: className } = Astro.props
 
-let data: Awaited<ReturnType<typeof getLastUpdatedTime>> | null = null
-try {
-  data = await getLastUpdatedTime(owner, repository)
-} catch (e) {
-  data = null
-}
+const response = await client.api.github['repo-info'][':owner'][
+  ':repository'
+].$get({ param: { owner, repository } })
+const data = response.status === 200 ? await response.json() : null
 
 if (!data) return
 

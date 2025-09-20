@@ -1,14 +1,12 @@
-// Prefer a relative base in the browser; on server/build use SITE or dev localhost
-let base = ''
+import {
+  PUBLIC_VERCEL_ENV,
+  PUBLIC_VERCEL_PROJECT_PRODUCTION_URL,
+  PUBLIC_VERCEL_URL
+} from 'astro:env/client'
 
-if (typeof window === 'undefined') {
-  // SSR/build
-  const site = import.meta.env.SITE?.replace(/\/$/, '')
-  if (site) {
-    base = site
-  } else if (import.meta.env.DEV) {
-    base = 'http://localhost:4321'
-  }
-}
+const url =
+  PUBLIC_VERCEL_ENV === 'production'
+    ? PUBLIC_VERCEL_PROJECT_PRODUCTION_URL
+    : PUBLIC_VERCEL_URL
 
-export const BASE_URL = base || ''
+export const BASE_URL = url ? `https://${url}` : 'http://localhost:4321'

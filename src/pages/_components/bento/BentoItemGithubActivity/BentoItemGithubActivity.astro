@@ -1,14 +1,10 @@
 ---
-import getGithubContributions from '@/pages/api/_services/github/contributions'
+import client from '@/lib/client'
 
 import BentoGithubActivityChart from './BentoItemGithubActivityChart'
 
-let data = null as Awaited<ReturnType<typeof getGithubContributions>> | null
-try {
-  data = await getGithubContributions()
-} catch (e) {
-  data = null
-}
+const response = await client.api.github.contributions.$get()
+const data = response.status === 200 ? await response.json() : null
 
 Astro.response.headers.set('Cache-Control', 'public, max-age=86400')
 ---

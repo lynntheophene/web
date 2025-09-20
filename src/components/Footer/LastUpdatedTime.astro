@@ -1,17 +1,20 @@
 ---
+import client from '@/lib/client'
 import { formatDateByTimeZone } from '@/lib/utils'
-import getLastUpdatedTime from '@/pages/api/_services/github/repoInfo'
 
 interface Props {
   class?: string
 }
 
-let data: Awaited<ReturnType<typeof getLastUpdatedTime>> | null = null
-try {
-  data = await getLastUpdatedTime('lynntheophene', 'web')
-} catch (e) {
-  data = null
-}
+const response = await client.api.github['repo-info'][':owner'][
+  ':repository'
+].$get({
+  param: {
+    owner: 'lynntheophene',
+    repository: 'web'
+  }
+})
+const data = response.status === 200 ? await response.json() : null
 
 if (!data) return
 

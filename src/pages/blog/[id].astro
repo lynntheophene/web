@@ -5,7 +5,7 @@ import readingTime from 'reading-time'
 
 import ContentWrapper from '@/components/ContentWrapper.astro'
 import BlogLayout from '@/layouts/BlogLayout'
-import getLastUpdatedTimeByFile from '@/pages/api/_services/github/lastUpdatedFile'
+import client from '@/lib/client'
 
 
 export const getStaticPaths = (async () => {
@@ -22,10 +22,13 @@ export const getStaticPaths = (async () => {
 const { entry } = Astro.props
 const { Content, headings } = await render(entry)
 
-const lastUpdated = await getLastUpdatedTimeByFile(`blog/${entry.id}.mdx`)
+const getLastUpdatedTime = client.api.github['last-updated-file']
+const lastUpdated = await getLastUpdatedTime
+  .$get({ query: { path: `blog/${entry.id}.mdx` } })
+  .then((res) => res.json());
 
-const latestCommitUrl = lastUpdated?.latestCommitUrl ?? ''
-const lastUpdatedTime = lastUpdated?.lastUpdatedTime ?? ''
+const latestCommitUrl = lastUpdated?.latestCommitUrl ?? '';
+const lastUpdatedTime = lastUpdated?.lastUpdatedTime ?? '';
 
 const { minutes } = readingTime(entry.body!)
 ---
