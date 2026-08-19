@@ -6,19 +6,24 @@ interface Props {
   class?: string
 }
 
-const response = await client.api.github['repo-info'][':owner'][
-  ':repository'
-].$get({
-  param: {
-    owner: 'lynntheophene',
-    repository: 'web'
-  }
-})
-const data = response.status === 200 ? await response.json() : null
+let fetched = null
+try {
+  const response = await client.api.github['repo-info'][':owner'][
+    ':repository'
+  ].$get({
+    param: {
+      owner: 'lynntheophene',
+      repository: 'web'
+    }
+  })
+  fetched = response.status === 200 ? await response.json() : null
+} catch (err) {
+  fetched = null
+}
 
-if (!data) return
+const data = fetched ?? null
 
-const date = new Date(data.pushedAt)
+const date = data ? new Date(data.pushedAt) : new Date()
 
 const formattedDate = formatDateByTimeZone(date)
 

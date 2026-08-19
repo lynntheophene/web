@@ -22,10 +22,15 @@ export const getStaticPaths = (async () => {
 const { entry } = Astro.props
 const { Content, headings } = await render(entry)
 
-const getLastUpdatedTime = client.api.github['last-updated-file']
-const lastUpdated = await getLastUpdatedTime
-  .$get({ query: { path: `blog/${entry.id}.mdx` } })
-  .then((res) => res.json());
+let lastUpdated = null
+try {
+  const getLastUpdatedTime = client.api.github['last-updated-file']
+  lastUpdated = await getLastUpdatedTime
+    .$get({ query: { path: `blog/${entry.id}.mdx` } })
+    .then((res) => res.json())
+} catch (err) {
+  lastUpdated = null
+}
 
 const latestCommitUrl = lastUpdated?.latestCommitUrl ?? '';
 const lastUpdatedTime = lastUpdated?.lastUpdatedTime ?? '';
